@@ -146,7 +146,9 @@
                val.css = "style=cursor:default;";
                val.noLink = "return false";
             }
-            console.log(sessionStorage.current_locale)
+            if(sessionStorage.current_locale == "fr-CA"){
+                val.locale_name = val.name_2
+            }
             var repo_rendered = Mustache.render(template_html,val);
             item_rendered.push(repo_rendered);
         });
