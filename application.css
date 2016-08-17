@@ -28,6 +28,11 @@
     bottom:10px;
 }
 
+.flex-control-paging li a{
+    background:transparent;
+    border: 1px solid #fff;
+}
+
 .flex-direction-nav a{
     height:45px;
 }
