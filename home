@@ -148,7 +148,8 @@
                val.noLink = "return false";
             }
             if(sessionStorage.current_locale == "fr-CA"){
-                val.locale_name = val.name_2
+                val.locale_name = val.name_2;
+                val.locale_iamge_url = val.image_url_2;
             }
             var repo_rendered = Mustache.render(template_html,val);
             item_rendered.push(repo_rendered);
