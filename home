@@ -57,14 +57,15 @@
                 <div id="hours_empty_section_id"></div>
                 <a href="../contact_us#open_hours" class="btn btn-default"  style="font-size:14px;" data-i18n="general.click_more_button"></a>
             </div>
-            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-               <div class="header" data-i18n="general.directions"></div>
-               <a href='https://www.google.ca/maps?espv=2&q=place+vertu&bav=on.2,or.r_cp.r_qf.&biw=1440&bih=734&dpr=1&ion=1&um=1&ie=UTF-8&sa=X&ei=fjrSVL3jKsqzggTJ7YHoBA&ved=0CAYQ_AUoAQ'><img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_direction.jpg" class="" alt="" style="width:100%"></a>
+            <div id="feature_container">
+                <script id="feature_template" type="x-tmpl-mustache/text">
+                    <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+                       <div class="header" data-i18n="general.directions"></div>
+                       <a href='https://www.google.ca/maps?espv=2&q=place+vertu&bav=on.2,or.r_cp.r_qf.&biw=1440&bih=734&dpr=1&ion=1&um=1&ie=UTF-8&sa=X&ei=fjrSVL3jKsqzggTJ7YHoBA&ved=0CAYQ_AUoAQ'><img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_direction.jpg" class="" alt="" style="width:100%"></a>
+                    </div>
+                </script>
             </div>
-            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-                <div class="header" data-i18n="general.gift_card"></div>
-                <a href="../customer_services#gift_cards"><img src="http://assets.codecloudapp.com/sites/5447ebb66e6f641987020000/548b2fb683e62b59405192773ae50d26/giftcard.png" class="" alt="" style="width:100%"></a>
-            </div>
+            
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
                <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
                <span data-i18n="general.join_txt" style="font-size:14px"></span>
