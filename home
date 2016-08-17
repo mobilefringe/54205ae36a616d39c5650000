@@ -60,7 +60,7 @@
             <div id="feature_container">
                 <script id="feature_template" type="x-tmpl-mustache/text">
                     <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-                       <div class="header" data-i18n="general.directions"></div>
+                       <div class="header">{{locale_name}}</div>
                        <a href='https://www.google.ca/maps?espv=2&q=place+vertu&bav=on.2,or.r_cp.r_qf.&biw=1440&bih=734&dpr=1&ion=1&um=1&ie=UTF-8&sa=X&ei=fjrSVL3jKsqzggTJ7YHoBA&ved=0CAYQ_AUoAQ'><img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_direction.jpg" class="" alt="" style="width:100%"></a>
                     </div>
                 </script>
