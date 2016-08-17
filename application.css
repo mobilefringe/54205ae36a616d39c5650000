@@ -20,6 +20,10 @@
     color: #000000 !important;
 }
 
+.flexslider{
+    margin-bottom:0;
+}
+
 .flex-direction-nav a{
     height:45px;
 }
