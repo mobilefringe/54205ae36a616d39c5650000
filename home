@@ -1,0 +1,232 @@
+<style>
+    .header-area{
+        margin-bottom: 0px;
+    }
+</style>
+
+<div class="home">
+     <div data-ride="carousel" class="carousel slide" id="carousel-example-generic">
+        <ol class="carousel-indicators" id="banner_indicator" style="{{show_style}}">
+            <script id="indicator_template" type="x-tmpl-mustache">
+                <li data-slide-to="{{slide_number}}" data-target="#carousel-example-generic" class="{{active_carousel}}"></li>                        
+            </script>
+        </ol>
+        <div class="carousel-inner" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache">
+                <div class="item">
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img alt="..." src="{{photo_url_abs}}">
+                    </a>
+                </div>
+            </script>
+        </div>
+        
+        <div id="controls">
+            <a data-slide="prev" role="button" href="#carousel-example-generic" class="left carousel-control">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a data-slide="next" role="button" href="#carousel-example-generic" class="right carousel-control">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="feature-items-section">
+    <div class="container">
+        <div class="row feature-items">
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+               <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
+               <div id="todays-hours">
+                   <script id="todays_hours_template" type="x-tmpl-mustache">
+                        <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
+                        <div>{{holiday_name}}</div>
+                        <span style="{{is_open_css}}; font-size:15px;">
+                            {{open_time_localized}} - {{close_time_localized}}
+                        </span>
+                        <span style="{{is_closed_css}};">
+                            Closed
+                        </span>
+                    </script>
+                </div>
+                <div id="hours_not_empty_section_id">
+                    <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
+                    <script id="holiday_hours_template" type="x-tmpl-mustache">
+                        
+                        <li class="">
+                            <span class="holiday-name">{{holiday_name}}</span>
+                            <div style="{{is_open_css}}; font-size:15px;">
+                                {{open_time_localized}} - {{close_time_localized}}
+                            </div>
+                            <div style="{{is_closed_css}};">
+                                Closed
+                            </div>
+                        </li>
+                        
+                    </script>
+                    <ul class="holiday-hours" id="holiday-hours">
+                        <!--this content to be rendered by renderHolidayHours(..) -->
+                    </ul>
+                </div>
+                <div id="hours_empty_section_id"></div>
+                <a href="../contact_us#open_hours" class="btn btn-default"  style="font-size:14px;" data-i18n="general.click_more_button"></a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+               <div class="header" data-i18n="general.directions"></div>
+               <a href='https://www.google.ca/maps?espv=2&q=place+vertu&bav=on.2,or.r_cp.r_qf.&biw=1440&bih=734&dpr=1&ion=1&um=1&ie=UTF-8&sa=X&ei=fjrSVL3jKsqzggTJ7YHoBA&ved=0CAYQ_AUoAQ'><img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_direction.jpg" class="" alt="" style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+                <div class="header" data-i18n="general.gift_card"></div>
+                <a href="../customer_services#gift_cards"><img src="http://assets.codecloudapp.com/sites/5447ebb66e6f641987020000/548b2fb683e62b59405192773ae50d26/giftcard.png" class="" alt="" style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
+               <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
+               <span data-i18n="general.join_txt" style="font-size:14px"></span>
+               <div class="newsletter-sign-up" style="margin-top:15px">
+                    <form action="http://mobilefringe.createsend.com/t/d/s/tydkit/" method="post" id="subForm">
+                       <label for="subscribe_email" style="display:none"> subscribe email </label>
+                            <input id="fieldEmail" name="cm-tydkit-tydkit" type="email" required placeholder="enter email" /> 
+                       <div class="checkbox">
+                        <span style="font-size:11px">
+                          <input type="checkbox" class="info_check" id="agree_terms" style="width:15px"/>
+                          <span data-i18n="general.agree_newsletter"></span>
+                        </span>
+                      </div>
+                        <button class="btn btn-default"  data-i18n="general.submit"></button>
+                       <br />
+                       <span id="success_subscribe" style="font-size:20px;padding:10px">Thank You!</span>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    
+    
+        
+    $(document).ready(function() {
+        function renderPageData(){
+            //console.log('rendering page data');
+            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),2);
+            renderTodaysHours('#todays_hours_template','#todays-hours');
+            var repoList = getRepoList();
+            renderIndicator('#indicator_template','#banner_indicator', repoList);
+            renderBanner('#banner_template','#home_banner',repoList);
+            
+            
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+        }
+        loadMallDataCached(renderPageData);
+        
+        
+        $('#subForm').submit(function (e) {
+           if ($("#agree_terms").prop("checked") != true){
+               alert("Please agree to the term and conditions.");
+               $("#agree_terms").focus();
+               return false;
+           }
+           e.preventDefault();
+           $.getJSON(
+               this.action + "?callback=?",
+               $(this).serialize(),
+               function (data) {
+                   if (data.Status === 400) {
+                       alert("Please try again later.");
+                   } else { // 200
+                       $("#success_subscribe").fadeIn();
+                   }
+           });
+       });
+    });
+    
+    
+    function renderBanner(banner_template, home_banner, repo){
+        
+        var item_list = [];
+        var item_rendered = [];
+        var banner_template_html = $(banner_template).html();
+        Mustache.parse(banner_template_html);   // optional, speeds up future uses
+    
+        $.each( repo , function( key, val ) {
+            if( val.name == "banner"){
+                $.each( val.images , function( key, val ) {
+                   if(val.url == ""){
+                       val.css = "style=cursor:default;";
+                       val.noLink = "return false";
+                   }
+                    item_list.push(val);
+                   
+                });
+            }
+        });
+        item_list.sort(function(a, b){
+            if(a.name < b.name) return -1;
+            if(a.name > b.name) return 1;
+            return 0;
+        });
+        $.each( item_list , function( key, val ) {
+                var repo_rendered = Mustache.render(banner_template_html,val);
+                item_rendered.push(repo_rendered);
+               
+        });
+        
+       
+        $(home_banner).show();
+        $(home_banner).html(item_rendered.join(''));
+        $('.item').first().addClass('active');
+    }
+
+
+    function sortByHolidayDate(a, b){
+        var aDate = a.holiday_date;
+        var bDate = b.holiday_date;
+    
+        return ((aDate < bDate) ? -1 : ((aDate > bDate) ? 1 : 0));  
+    }    
+    
+    function renderIndicator(indicator_template, home_indicator, repo){
+        
+        var item_list = [];
+        var item_rendered = [];
+        var banner_template_html = $(indicator_template).html();
+        Mustache.parse(banner_template_html);   // optional, speeds up future uses
+        var bannerCount = 0;
+        
+        $.each( repo , function( key, val ) {
+            if( val.name == "banner"){
+                $.each( val.images , function( key, val ) {
+                    item_list.push(val);
+                });
+            }
+        });
+        item_list.sort(function(a, b){
+            if(a.name < b.name) return -1;
+            if(a.name > b.name) return 1;
+            return 0;
+        });
+        $.each( item_list , function( key, val ) {
+          
+               
+            if (bannerCount == 0){
+                val.active_carousel = "active";
+            }
+            val.slide_number = bannerCount;
+            
+            var repo_rendered = Mustache.render(banner_template_html,val);
+            item_rendered.push(repo_rendered);
+             bannerCount ++;
+        });
+        
+        if(item_list.length <= 1){
+            $(home_indicator).hide();
+            $('#controls').hide();
+        } else {
+             $(home_indicator).show();
+        }
+        $(home_indicator).html(item_rendered.join(''));
+    }
+</script>
