@@ -33,6 +33,10 @@
     border: 1px solid #fff;
 }
 
+.flex-control-paging li a.flex-active{
+    background:#fff;
+}
+
 .flex-direction-nav a{
     height:45px;
 }
