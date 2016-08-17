@@ -149,11 +149,11 @@
             }
             if(sessionStorage.current_locale == "fr-CA"){
                 val.locale_name = val.name_2;
-                val.locale_iamge_url = val.image_url_2;
+                val.locale_image_url = val.image_url_2;
             }
             else if(sessionStorage.current_locale == "en-CA"){
                 val.locale_name = val.name;
-                val.locale_iamge_url = val.image_url;
+                val.locale_image_url = val.image_url;
             }
             var repo_rendered = Mustache.render(template_html,val);
             item_rendered.push(repo_rendered);
