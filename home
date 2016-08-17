@@ -104,6 +104,9 @@
             
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
+            $('.flexslider').flexslider({
+                animation: "slide",
+            });
         }
         loadMallDataCached(renderPageData);
         
