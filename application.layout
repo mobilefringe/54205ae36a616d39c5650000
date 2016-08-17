@@ -674,25 +674,25 @@
             }
             
             $('#en-CA').click(function(e){
-                e.PreventDefault();
+                e.preventDefault();
                 setPrimaryLanguage();
                 window.location.reload();
             });
             
             $('#fr-CA').click(function(e){
-                e.PreventDefault();
+                e.preventDefault();
                 setSecondaryLanguage();
                 window.location.reload();
             });
             
             $('#en-CA-mobile').click(function(e){
-                e.PreventDefault();
+                e.preventDefault();
                 setPrimaryLanguage();
                 window.location.reload();
             });
             
             $('#fr-CA-mobile').click(function(e){
-                e.PreventDefault();
+                e.preventDefault();
                 setSecondaryLanguage();
                 window.location.reload();
             });
