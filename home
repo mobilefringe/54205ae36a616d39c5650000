@@ -146,6 +146,7 @@
                val.css = "style=cursor:default;";
                val.noLink = "return false";
             }
+            console.log(sessionStorage)
             var repo_rendered = Mustache.render(template_html,val);
             item_rendered.push(repo_rendered);
         });
