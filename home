@@ -61,7 +61,7 @@
                 <script id="feature_template" type="x-tmpl-mustache/text">
                     <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
                         <div class="header">{{locale_name}}</div>
-                        <a href="{{url}}" {{css}} onclick="{{noLink}}" class="darken">
+                        <a href="{{url}}" {{css}} onclick="{{noLink}}">
                         <img src="{{locale_image_url}}" alt="{{name}}" />
                     </div>
                 </script>
