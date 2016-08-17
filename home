@@ -31,13 +31,14 @@
         </div>
     </div>
 </div>
+
 <div class="feature-items-section">
     <div class="container">
         <div class="row feature-items">
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-               <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
-               <div id="todays-hours">
-                   <script id="todays_hours_template" type="x-tmpl-mustache">
+                <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
+                <div id="todays-hours">
+                    <script id="todays_hours_template" type="x-tmpl-mustache">
                         <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
                         <div>{{holiday_name}}</div>
                         <span style="{{is_open_css}}; font-size:15px;">
