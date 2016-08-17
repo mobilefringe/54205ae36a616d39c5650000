@@ -626,7 +626,7 @@
     <script type="text/javascript">
     
     
-        $(document).ready(function() {
+        $(document).ready(function(e) {
             
 
             //Using i18n for localization, for more info please visit http://i18next.com/
@@ -673,22 +673,26 @@
                 stickySidebar();
             }
             
-            $('#en-CA').click(function(){
+            $('#en-CA').click(function(e){
+                e.PreventDefault();
                 setPrimaryLanguage();
                 window.location.reload();
             });
             
-            $('#fr-CA').click(function(){
+            $('#fr-CA').click(function(e){
+                e.PreventDefault();
                 setSecondaryLanguage();
                 window.location.reload();
             });
             
-            $('#en-CA-mobile').click(function(){
+            $('#en-CA-mobile').click(function(e){
+                e.PreventDefault();
                 setPrimaryLanguage();
                 window.location.reload();
             });
             
-            $('#fr-CA-mobile').click(function(){
+            $('#fr-CA-mobile').click(function(e){
+                e.PreventDefault();
                 setSecondaryLanguage();
                 window.location.reload();
             });
