@@ -104,6 +104,8 @@
             var banners = getBanners();
             renderBanner('#banner_template','#home_banner',banners);
             
+            var feature_items = getFeatureList();
+            renderFeatureItems('#feature_container','#feature_template', feature_items);
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
             $('.flexslider').flexslider({
