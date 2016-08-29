@@ -180,23 +180,23 @@
                                 });
                             
                             
-                                //add the mouse up handler for hiding the pop over when done hovering
-                                // f.select(svg_id).mouseout(function() {
-                                //     this.removeClass("map-mouse-over");
-                                //     $("#pop-over").hide(0);
+                                add the mouse up handler for hiding the pop over when done hovering
+                                f.select(svg_id).mouseout(function() {
+                                    this.removeClass("map-mouse-over");
+                                    $("#pop-over").hide(0);
                                     
-                                // });
+                                });
                                 
-                                //add the mouse up function for when the user clicks a store
-                                // f.select(svg_id).mouseup(function() {
+                                add the mouse up function for when the user clicks a store
+                                f.select(svg_id).mouseup(function() {
                                     
-                                //     if(!isMobile && !didPanZoom){
+                                    if(!isMobile && !didPanZoom){
                                         
-                                //         goToStore(value);
-                                //     }
-                                //     didPanZoom = false;
+                                        goToStore(value);
+                                    }
+                                    didPanZoom = false;
                                           
-                                // });
+                                });
                             }
                         }
                     });
