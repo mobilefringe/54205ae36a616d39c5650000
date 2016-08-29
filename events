@@ -1,0 +1,238 @@
+<style>
+    .day .past .event{
+        color:#ddd;
+    }
+</style>
+
+<div class="container promotions">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <h1 class="sidebar-title" id="title_text"  data-i18n="nav.events"></h1>
+            <center id="cal1" class="cal1">
+                <div class="date" id="clndr"></div>
+            </center>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <div id="events_not_empty_section">
+                
+                <ul class="promotion-list" id="events_list">
+                    <h2 data-i18n="general.loading_events"></h2>
+                    <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
+                    <script id="event_item_template" type="x-tmpl-mustache">
+                        <li class="promotion-list-item row">
+                            <div class="promo-image col-xs-3">
+                                <a href="../events/{{ slug }}">
+                                    <img src="{{event_image_url_abs}}" style="width:100%">
+                                </a>
+                            </div>
+                            <div class="promo-details col-xs-9">
+                                <div class="name">
+                                    <h3>
+                                        <a href="../events/{{ slug }}">{{ name }}</a>
+                                    </h3>
+                                </div>
+                                <div class="dates">
+                                    {{ start_date }} <span data-i18n="general.to"></span> {{ end_date }}
+                                </div>
+                                <div class="description">
+                                    <p>{{ description }} </p>
+                                </div>
+                                 <div class="social-links">
+                                    <span>
+                                        <a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.com/events/{{slug}}" target="_blank">
+                                            <img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png">
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.com/events/{{slug}}" target="_blank">
+                                           <img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png">
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </script>
+                    
+                    <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITHOUT AN IMAGE-->
+                    <script id="event_item_template_no_image" type="x-tmpl-mustache">
+                        <li class="promotion-list-item row">
+                            <div class="promo-details col-xs-12">
+                                <div class="name">
+                                    <h3>
+                                        <a href="../events/{{ slug }}">{{ name }}</a>
+                                    </h3>
+                                </div>
+                                <div class="dates">
+                                    {{ start_date }} <span data-i18n="general.to"></span> {{ end_date }}
+                                </div>
+                                <div class="description">
+                                    <p>{{ description }}</p>
+                                </div>
+                            <div class="social-links">
+                                    <span>
+                                        <a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.kodekloud.io/events/{{slug}}" target="_blank">
+                                            <i class="fa fa-facebook-official"></i>
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.kodekloud.io/events/{{slug}}" target="_blank">
+                                            <i class="fa fa-twitter-square"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </script>
+                    <!-- END MUSTACHE TEMPLATE FOR EVENT ITEM-->
+                </ul>  
+            </div>
+            <div id="events_empty_section" style="display:none">
+                <h2 data-i18n="general.no_events"></h2>
+            </div>
+        </div>
+ 
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        
+        function renderPageData(){
+            //renders the events list by referencing the template id and the html id
+            //for where to place the rendered content. See mallmaverick.js for implementation
+            var event_list = getEventsList();
+            
+            var all_events = getEventsList();
+            all_events = all_events.reverse();
+            events_array = []
+            $.each( all_events , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date)
+                if (today >= webDate) {
+                    events_array.push(val)
+                } 
+            });
+            events_array.sort(sortByStartDate);
+            renderEventsListTemplate('#event_item_template','#event_item_template_no_image','#events_list','#events_not_empty_section','#events_empty_section',events_array);
+            //$(document).i18n();
+            //please see http://kylestetz.github.io/CLNDR/
+            $('#clndr').clndr({
+                showAdjacentMonths: false,
+                events:getEventsList(),
+                  multiDayEvents: {
+                    startDate: 'start_date',
+                    endDate: 'end_date'
+                  },
+                  clickEvents: {
+                    click: function(target) {
+                      
+                    },
+                    onMonthChange: function(month) {
+                        $('.clndr-previous-button').html('<i class="fa fa-angle-left fa-2x"></i>');
+                        $('.clndr-next-button').html('<i class="fa fa-angle-right fa-2x"></i>');
+                    }
+                  },
+                  doneRendering: function() {
+                    
+                  }
+            });
+            
+           // $('.clndr-previous-button').html("<");
+            // $('.clndr-next-button').html(">");
+            $('.clndr-previous-button').html('<i class="fa fa-angle-left fa-2x"></i>');
+            $('.clndr-next-button').html('<i class="fa fa-angle-right fa-2x"></i>');   $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+                
+            $(".facebook-share img").hover(
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/49e992eb70ac82a631edbaaac81e520b/social_fb_selected.png");
+                },
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png");
+            });
+            $(".twitter-share img").hover(
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/49e992eb70ac82a631edbaaac81e520b/share_twit_selected.png");
+                },
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png");
+            });
+        }
+        
+        loadMallDataCached(renderPageData);
+    });
+    function sortByStartDate(a, b){
+        var aId = a.start_date;
+        var bId = b.start_date;
+        
+        return ((aId > bId ) ? -1 : ((aId < bId) ? 1 : 0));
+    }
+    
+    if(sessionStorage.current_locale == "fr-CA"){
+        moment.locale('fr', {
+    months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
+    monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
+    weekdays : "dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi".split("_"),
+    weekdaysShort : "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
+    weekdaysMin : "Di_Lu_Ma_Me_Je_Ve_Sa".split("_"),
+    longDateFormat : {
+        LT : "HH:mm",
+        LTS : "HH:mm:ss",
+        L : "DD/MM/YYYY",
+        LL : "D MMMM YYYY",
+        LLL : "D MMMM YYYY LT",
+        LLLL : "dddd D MMMM YYYY LT"
+    },
+    calendar : {
+        sameDay: "[Aujourd'hui à] LT",
+        nextDay: '[Demain à] LT',
+        nextWeek: 'dddd [à] LT',
+        lastDay: '[Hier à] LT',
+        lastWeek: 'dddd [dernier à] LT',
+        sameElse: 'L'
+    },
+    relativeTime : {
+        future : "dans %s",
+        past : "il y a %s",
+        s : "quelques secondes",
+        m : "une minute",
+        mm : "%d minutes",
+        h : "une heure",
+        hh : "%d heures",
+        d : "un jour",
+        dd : "%d jours",
+        M : "un mois",
+        MM : "%d mois",
+        y : "une année",
+        yy : "%d années"
+    },
+    ordinalParse : /\d{1,2}(er|ème)/,
+    ordinal : function (number) {
+        return number + (number === 1 ? 'er' : 'ème');
+    },
+    meridiemParse: /PD|MD/,
+    isPM: function (input) {
+        return input.charAt(0) === 'M';
+    },
+    // in case the meridiem units are not separated around 12, then implement
+    // this function (look at locale/id.js for an example)
+    // meridiemHour : function (hour, meridiem) {
+    //     return /* 0-23 hour, given meridiem token and hour 1-12 */
+    // },
+    meridiem : function (hours, minutes, isLower) {
+        return hours < 12 ? 'PD' : 'MD';
+    },
+    week : {
+        dow : 1, // Monday is the first day of the week.
+        doy : 4  // The week that contains Jan 4th is the first week of the year.
+    }
+});
+        moment.locale('fr');
+    }
+
+
+    if(sessionStorage.current_locale == "fr-CA"){
+        $("#title_text").css({ "font-size": "16px"}); 
+    }
+    
+</script>
