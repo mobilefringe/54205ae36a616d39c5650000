@@ -114,6 +114,10 @@
         
 <script>
     $(document).ready(function() {
+        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+        $("#pop-over").hide();
+        var didPanZoom = false;
+        
         function renderPageData(){
             //renders the store list by referencing the template id and the html id
             //for where to place the rendered content. See mallmaverick.js for implementation
@@ -144,6 +148,8 @@
             });
             renderSVGMap(regions);
             
+            //$(document).i18n();
+            
         }
         
         loadMallDataCached(renderPageData);
@@ -154,9 +160,28 @@
             }
         }
         
+        function renderSVGMap(reg){
+            map = $('#mapsvg').mapSvg({
+                source: getSVGMapURL(),    // Path to SVG map
+                colors: {stroke: '#aaa', hover: '#EF4D86'},
+                disableAll: true,
+                height:800,
+                width:1140,
+                regions: reg,
+                tooltipsMode:'custom',
+                loadingText: "loading...",
+                zoom: true,
+                zoomButtons: {'show': true,'location': 'right' },
+                pan:true,
+                panLimit:true,
+                cursor:'pointer',
+                responsive:true,
+                zoomLimit: [0,10],
+                viewBox:[420,420,1650,1650]
+            });
+        }
         
-        
-
+    });
     
 </script>
 
