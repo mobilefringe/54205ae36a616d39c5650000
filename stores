@@ -1,0 +1,183 @@
+<div id="pop-over">
+    <span class="pull-left">
+        <div id="pop-over-map-name">Default Name</div>
+        <div id="pop-over-map-phone">Phone Number</div>
+    </span>
+    <span class="pullright"><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"></span>
+</div>
+<div class="container store-list">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <div id="">
+            <h1 class="sidebar-title" data-i18n="nav.stores"></h1>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="by_a_z">
+                                <span data-i18n="nav.subnav.stores_a-z"></span>
+                                <i class="pull-right fa fa-angle-down fa-lg"></i>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in alpha-table">
+                        <div class="panel-body store-letters">
+                            <a href="#A">A</a>
+                            <a href="#B">B</a>
+                            <a href="#C">C</a>
+                            <a href="#D">D</a>
+                            <a href="#E">E</a>
+                            <a href="#F">F</a>
+                            <a href="#G">G</a>
+                            <a href="#H">H</a>
+                            <a href="#I">I</a>
+                            <a href="#J">J</a>
+                            <a href="#K">K</a>
+                            <a href="#L">L</a>
+                            <a href="#M">M</a>
+                            <a href="#N">N</a>
+                            <a href="#O">O</a>
+                            <a href="#P">P</a>
+                            <a href="#Q">Q</a>
+                            <a href="#R">R</a>
+                            <a href="#S">S</a>
+                            <a href="#T">T</a>
+                            <a href="#U">U</a>
+                            <a href="#V">V</a>
+                            <a href="#W">W</a>
+                            <a href="#X">X</a>
+                            <a href="#Y">Y</a>
+                            <a href="#Z">Z</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default categories">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" id="by_categories">
+                            <span data-i18n="nav.subnav.categories"></span>
+                            <i class="pull-right fa fa-angle-down fa-lg"></i>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body store-categories list-group" id="store_categories">
+                            <script id="category_item_template" type="x-tmpl-mustache">
+                                <a class="list-group-item" href="#cat_{{id}}">{{name}}</a>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
+
+            <div style="overflow:hidden" class="map-border">
+            <div id="zControls">
+                <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
+                <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
+                
+            </div>
+            <div id="map" class="panzoom-elements" style=""></div>
+            </div>
+            
+            <div class="list-group" id="store_list">
+                <h2>Loading Store Directory.....</h2>
+            </div>
+            <div id="no_stores_list" style="display:none">
+                <h2 data-i18n="general.no_stores"></h2>
+            </div>
+            <script id="store_header_template" type="x-tmpl-mustache">
+                
+                <a class="list-group-item">
+                    <a class="anchor" name="{{header_id}}"></a>
+                    <h2>{{header}}</h2>
+                </a>
+            </script>
+            <script id="store_item_template" type="x-tmpl-mustache">
+                <a class="list-group-item" href="../stores/{{slug}}">
+                    <span class="store-name">{{name}}</span>
+                    <span class="promotions-flag" style="display:{{has_promotions_css}}">
+                        <i class="fa fa-tag fa-lg"></i>
+                    </span>
+                    <span class="jobs-flag" style="display:{{has_jobs_css}}">
+                        <i class="fa fa-suitcase fa-lg"></i>
+                    </span>
+                    <span class="store-phone pull-right hidden-phone phone-number">{{phone}}</span>
+                    <span class="store-phone pull-right">
+                        <i class="fa fa-phone fa-lg"></i>
+                    </span>
+                </a>
+            </script>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/jquery.js"></script>
+<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/raphael.js"></script>
+<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="http://cdn.mallmaverick.com/system/site_images/photos/000/005/107/original/mallmaverick_svgmap.js?1412885524"></script>
+
+        
+<script>
+    $(document).ready(function() {
+        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+        $("#pop-over").hide();
+        var didPanZoom = false;
+        
+        function renderPageData(){
+            //renders the store list by referencing the template id and the html id
+            //for where to place the rendered content. See mallmaverick.js for implementation
+            renderCategoriesListTemplate('#category_item_template','#store_categories',getStoreCategories());
+            renderStoresListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
+            
+            $('#by_a_z').click(function(){
+                renderStoresListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
+            });
+            
+            $('#by_categories').click(function(){
+                renderStoresByCategoriesListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
+            });
+            regions = {};
+            $.each( getStoresList() , function( key, val ) {
+                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
+                    obj = {};
+                    if(val.store_front_url_abs.indexOf('missing.png') > -1){
+                        obj["tooltip"] = "<div class='tooltip_div'><p class='tooltip_name text-center'>"+val.name+"</p></div>"
+                    }
+                    else{
+                        obj["tooltip"] = "<div class='tooltip_div'><img src='" + val.store_front_url_abs + "'><p class='tooltip_name text-center'>"+val.name+"</p></div>"
+                    }
+                    obj["attr"] = {}
+                    obj["attr"]["href"] = "/stores/"+val.slug
+                    regions[val.svgmap_region] = obj
+                }
+            });
+            renderSVGMap();
+            
+            //$(document).i18n();
+            
+        }
+        
+        loadMallDataCached(renderPageData);
+        
+        function goToStore(store_details){
+            if(typeof(store_details) != 'undefined' && store_details != null){
+                window.location.href = "/stores/"+store_details.slug;
+            }
+        }
+        
+        
+        
+
+    
+</script>
+
+
+
+
+
+
+	
+	
