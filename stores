@@ -180,7 +180,7 @@
                                 });
                             
                             
-                                add the mouse up handler for hiding the pop over when done hovering
+                                
                                 f.select(svg_id).mouseout(function() {
                                     this.removeClass("map-mouse-over");
                                     $("#pop-over").hide(0);
