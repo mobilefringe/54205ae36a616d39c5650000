@@ -1,0 +1,160 @@
+<div class="container promotions">
+    <div class="row">
+       
+            <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+                <h1 class="sidebar-title" data-i18n="nav.promotions"></h1>
+                <div class="panel-group stores" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="by_a_z">
+                                    <span data-i18n="nav.stores"></span>
+                                    <i class="pull-right fa fa-angle-down fa-lg"></i>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body list-group" id="stores_with_promotions">
+                                <script id="store_item_template" type="x-tmpl-mustache">
+                                    <a class="list-group-item" href="#{{name}}">
+                                        {{name}}
+                                    </a>
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
+                <div id="promotions_not_empty_section">
+                    <ul class="promotion-list " id="promotion_list">
+                        <h2>Loading Promotions.....</h2>
+                    
+                    </ul>
+                </div>
+                <script id="promotion_item_template" type="x-tmpl-mustache">
+                    
+                    <li class="promotion-list-item row">
+                        <a name="{{promotionable_name}}"></a>
+                        <div class="promo-image col-xs-3">
+                            <a href="../promotions/{{ slug }}">
+                                <img src="{{promo_image_url_abs}}" style="width:100%">
+                            </a>
+                        </div>
+                        <div class="promo-details col-xs-9">
+                            <div class="name">
+                                <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                            </div>
+                            <div class="store-name">
+                                <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                            </div>
+                            <div class="dates">
+                                {{ start_date }}  <span data-i18n="general.to"></span> {{ end_date }}
+                            </div>
+                            <div class="description">
+                                <p>{{{ description }}}</p>
+                            </div>
+                            <div class="social-links">
+                                <span>
+                                        <a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.kodekloud.io/events/{{slug}}" target="_blank">
+                                            <i class="fa fa-facebook-official"></i>
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.kodekloud.io/events/{{slug}}" target="_blank">
+                                            <i class="fa fa-twitter-square"></i>
+                                        </a>
+                                    </span>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+                <script id="promotion_item_template_no_image" type="x-tmpl-mustache">
+                    <li class="promotion-list-item row">
+                        <a name="{{promotionable_name}}"></a>
+                        <div class="promo-details col-xs-12">
+                            <div class="name">
+                                <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                            </div>
+                            <div class="store-name">
+                                <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                            </div>
+                            <div class="dates">
+                                {{ start_date }}  <span data-i18n="general.to"></span> {{ end_date }}
+                            </div>
+                            <div class="description">
+                                <p> {{{ rich_description }}} </p>
+                            </div>
+                            <div class="social-links">
+                                <span><a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.kodekloud.io/promotions/{{slug}}" target="_blank"><img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png"></a></span>
+                                <span><a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.kodekloud.io/promotions/{{slug}}" target="_blank">
+                                       <img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png">
+                                       </a></span>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+                    
+                
+                <div id='promotions_empty_section' style="display:none">
+                    <h2 data-i18n="general.no_promotions"></h2>
+                </div>
+                
+            </div>
+       
+       
+    </div>
+</div>
+
+<script>
+
+    
+    
+        
+    $(document).ready(function() {
+        
+        function renderPageData(){
+            var promotion_list = getPromotionsListByStoreName();
+            all_promos = getPromotionsList();
+            all_promos = all_promos.reverse();
+            promo_array = []
+            $.each( all_promos , function( key, val ){
+                today = new Date();
+                webDate = new Date(val.show_on_web_date)
+                if (today >= webDate) {
+                    promo_array.push(val)
+                } 
+            });
+            promo_array.sort(sortByStartDate);
+            renderPromotionsListTemplate('#promotion_item_template','#promotion_item_template_no_image','#promotion_list','#promotions_not_empty_section','#promotions_empty_section', promo_array);
+            renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
+
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+            
+            $(".facebook-share img").hover(
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/49e992eb70ac82a631edbaaac81e520b/social_fb_selected.png");
+                },
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png");
+            });
+            $(".twitter-share img").hover(
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/49e992eb70ac82a631edbaaac81e520b/share_twit_selected.png");
+                },
+                function () {
+                    $(this).attr("src","http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png");
+            });
+        }
+        
+        loadMallDataCached(renderPageData);
+    });
+     function sortByStartDate(a, b){
+        var aId = a.start_date;
+        var bId = b.start_date;
+        
+        return ((aId > bId ) ? -1 : ((aId < bId) ? 1 : 0));
+    }
+    
+</script>
