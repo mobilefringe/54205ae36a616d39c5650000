@@ -165,10 +165,9 @@
                 var stores = getStoresList();
                 Snap.load(getSVGMapURL(), function (f) {
                     $.each( stores, function( key, value ) {
-                        console.log(key);
-                        console.log(value);
                         if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
                             var svg_id = "#" + value.svgmap_region;
+                            console.log(svg_id)
                             f.select(svg_id).mouseover(function() {
                                 if(typeof(value) != 'undefined' && value != null){
                                     this.addClass("map-mouse-over");
