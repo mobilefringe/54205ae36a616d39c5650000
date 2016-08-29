@@ -188,15 +188,15 @@
                             // });
                             
                             //add the mouse up function for when the user clicks a store
-                            f.select(svg_id).mouseup(function() {
+                            // f.select(svg_id).mouseup(function() {
                                 
-                                if(!isMobile && !didPanZoom){
+                            //     if(!isMobile && !didPanZoom){
                                     
-                                    goToStore(value);
-                                }
-                                didPanZoom = false;
+                            //         goToStore(value);
+                            //     }
+                            //     didPanZoom = false;
                                       
-                            });
+                            // });
                         }
                     });
                    
