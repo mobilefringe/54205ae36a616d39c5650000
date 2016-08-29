@@ -167,7 +167,7 @@
                     $.each( stores, function( key, value ) {
                         if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
                             var svg_id = "#" + value.svgmap_region;
-                            console.log(f.select(svg_id) == null)
+                            console.log(f.select(svg_id) != null)
                             if(svg_id != null){
                                 f.select(svg_id).mouseover(function() {
                                     if(typeof(value) != 'undefined' && value != null){
