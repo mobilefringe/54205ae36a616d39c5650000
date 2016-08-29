@@ -72,14 +72,7 @@
         </div>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
-
-            <div style="overflow:hidden" class="map-border">
-            <div id="zControls">
-                <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
-                <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
-                
-            </div>
-            <div id="map" class="panzoom-elements" style=""></div>
+            <div id="mapsvg" class="panzoom-elements" style=""></div>
             </div>
             
             <div class="list-group" id="store_list">
