@@ -154,7 +154,7 @@
                     regions[val.svgmap_region] = obj
                 }
             });
-            renderSVGMap();
+            renderSVGMap(regions);
             
             //$(document).i18n();
             
