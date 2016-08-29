@@ -179,6 +179,10 @@
                 zoomLimit: [0,10],
                 viewBox:[420,420,1650,1650]
             });
+            $('#loading').hide();
+                $('#zControls').hide();
+                $('#map').hide();
+                $( "#page_content" ).fadeIn( "fast");
         }
         
     });
