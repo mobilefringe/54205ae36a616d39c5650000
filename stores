@@ -72,7 +72,15 @@
         </div>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
-            <div id="mapsvg" class="panzoom-elements" style=""></div>
+
+            <div style="overflow:hidden" class="map-border">
+            <div id="zControls">
+                <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
+                <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
+                
+            </div>
+            <div id="map" class="panzoom-elements" style=""></div>
+            </div>
             
             <div class="list-group" id="store_list">
                 <h2>Loading Store Directory.....</h2>
@@ -106,11 +114,9 @@
     </div>
 </div>
 
-<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/jquery.js"></script>
-<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/raphael.js"></script>
-<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="http://cdn.mallmaverick.com/system/site_images/photos/000/005/107/original/mallmaverick_svgmap.js?1412885524"></script>
-
+<!--For more information please see http://learnjs.io/blog/2013/11/30/snapsvg-resources/-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+<script src="http://kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/e1fb5e17ab727d248230fbcb51da868f/jquery.panzoom.min.js"></script>
         
 <script>
     $(document).ready(function() {
@@ -131,22 +137,7 @@
             $('#by_categories').click(function(){
                 renderStoresByCategoriesListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
             });
-            regions = {};
-            $.each( getStoresList() , function( key, val ) {
-                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
-                    obj = {};
-                    if(val.store_front_url_abs.indexOf('missing.png') > -1){
-                        obj["tooltip"] = "<div class='tooltip_div'><p class='tooltip_name text-center'>"+val.name+"</p></div>"
-                    }
-                    else{
-                        obj["tooltip"] = "<div class='tooltip_div'><img src='" + val.store_front_url_abs + "'><p class='tooltip_name text-center'>"+val.name+"</p></div>"
-                    }
-                    obj["attr"] = {}
-                    obj["attr"]["href"] = "/stores/"+val.slug
-                    regions[val.svgmap_region] = obj
-                }
-            });
-            renderSVGMap(regions);
+            renderSVGMap();
             
             //$(document).i18n();
             
@@ -160,30 +151,103 @@
             }
         }
         
-        function renderSVGMap(reg){
-            map = $('#mapsvg').mapSvg({
-                source: getSVGMapURL(),    // Path to SVG map
-                colors: {stroke: '#aaa', hover: '#EF4D86'},
-                disableAll: true,
-                height:1548,
-                width:1987,
-                regions: reg,
-                tooltipsMode:'custom',
-                loadingText: "loading...",
-                zoom: true,
-                zoomButtons: {'show': true,'location': 'right' },
-                pan:true,
-                panLimit:true,
-                cursor:'pointer',
-                responsive:true,
-                zoomLimit: [0,10],
-                viewBox:[420,420,1650,1650]
-            });
-            $('#loading').hide();
-            $( "#page_content" ).fadeIn( "fast");
+        
+        function renderSVGMap(){
+            if(navigator.appVersion.indexOf("MSIE 9.") == -1){
+                
+                $('#map').bind('mousemove', function(e){
+                    //console.log(e.pageX+","+e.pageY);
+                   $('#pop-over').css({'top':e.pageY+20,'left':e.pageX-70});
+                });
+                
+                var s = Snap("#map");
+                //var stores = [{'svg_id':'#goldsgym','store_id':'14336'},{'svg_id':'#_x38_0','store_id':'14342'},{'svg_id':'#_x37_7','store_id':'14386'},{'svg_id':'#_x31_05','store_id':'14334'},{'svg_id':'#_x31_62','store_id':'14344'},{'svg_id':'#_x31_61','store_id':'14345'} ];
+                var stores = getStoresList();
+                Snap.load(getSVGMapURL(), function (f) {
+                    $.each( stores, function( key, value ) {
+                        console.log(key);
+                        console.log(value);
+                        if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
+                            var svg_id = "#" + value.svgmap_region;
+                            f.select(svg_id).mouseover(function() {
+                                if(typeof(value) != 'undefined' && value != null){
+                                    this.addClass("map-mouse-over");
+                                    $("#pop-over").show();
+                                    $("#pop-over-map-name").html(value.name);
+                                    $("#pop-over-map-phone").html(value.phone);
+                                }
+                                      
+                            });
+                            
+                            //add the mouse up handler for hiding the pop over when done hovering
+                            f.select(svg_id).mouseout(function() {
+                                this.removeClass("map-mouse-over");
+                                $("#pop-over").hide(0);
+                                
+                            });
+                            
+                            //add the mouse up function for when the user clicks a store
+                            f.select(svg_id).mouseup(function() {
+                                
+                                if(!isMobile && !didPanZoom){
+                                    
+                                    goToStore(value);
+                                }
+                                didPanZoom = false;
+                                      
+                            });
+                        }
+                    });
+                   
+                    s.append(f.select("svg"));
+                    
+                });
+                
+                
+                var startingMapTransform = 'scale(0.43)';
+                var startingPanX = -250;
+                var startingPanY = -200;
+                if(isMobile) {
+                        startingMapTransform = 'scale(0.20)';
+                        startingPanX = -170;
+                        startingPanY = -200;
+                }
+                $('#loading').hide();
+                $( "#page_content" ).fadeIn( "fast", function() {
+                    var panzoom = $(".panzoom-elements").panzoom({
+                        cursor: "move",
+                        increment: 0.1,
+                        minScale: 0.15,
+                        maxScale: 1,
+                        transition: true,
+                        duration: 150,
+                        easing: "ease-in-out",
+                        $zoomIn: $('.zoom-in'),
+                        $zoomOut: $('.zoom-out'),
+                        $zoomRange: $('.zoom-range'),
+                        startTransform: startingMapTransform
+            
+                    });
+                    $(".panzoom-elements").panzoom("pan", startingPanX, startingPanY, { relative: true });
+                    
+                    panzoom.on('panzoomchange', function(e, panzoom, matrix, changed) {
+                      didPanZoom = true;
+                    });
+                    
+                    panzoom.on('panzoomend', function(e, panzoom, matrix, changed) {
+                      didPanZoom = false;
+                    });
+                });
+            }else{
+                $('#loading').hide();
+                $('#zControls').hide();
+                $('#map').hide();
+                $( "#page_content" ).fadeIn( "fast");
+            }
         }
         
     });
+
     
 </script>
 
