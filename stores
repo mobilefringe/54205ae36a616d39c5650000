@@ -187,7 +187,6 @@
                                     
                                 });
                                 
-                                add the mouse up function for when the user clicks a store
                                 f.select(svg_id).mouseup(function() {
                                     
                                     if(!isMobile && !didPanZoom){
