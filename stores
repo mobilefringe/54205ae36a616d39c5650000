@@ -73,7 +73,6 @@
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
             <div id="mapsvg" class="panzoom-elements" style=""></div>
-            </div>
             
             <div class="list-group" id="store_list">
                 <h2>Loading Store Directory.....</h2>
