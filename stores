@@ -168,7 +168,7 @@
                         if(value.svgmap_region != null && typeof(value.svgmap_region)  != 'undefined'){
                             var svg_id = "#" + value.svgmap_region;
                             if(f.select(svg_id) != null){
-                                console.log(f.select(svg_id))
+                                console.log(f.select(svg_id) == null)
                                 // f.select(svg_id).mouseover(function() {
                                 //     if(typeof(value) != 'undefined' && value != null){
                                 //         this.addClass("map-mouse-over");
