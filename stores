@@ -114,10 +114,6 @@
         
 <script>
     $(document).ready(function() {
-        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
-        $("#pop-over").hide();
-        var didPanZoom = false;
-        
         function renderPageData(){
             //renders the store list by referencing the template id and the html id
             //for where to place the rendered content. See mallmaverick.js for implementation
