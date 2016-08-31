@@ -8,8 +8,13 @@
 .map-mouse-over {
    stroke: #000;
    fill:   #66FFFF;
+   
 }
-  
+
+.map-mouse-over:hover{
+    fill:   #66FFFF !important;
+}  
+
 .sticky-wrapper{
     height: auto !important;
     max-width:960px;
