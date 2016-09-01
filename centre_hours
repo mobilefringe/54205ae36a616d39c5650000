@@ -1,0 +1,302 @@
+
+<div class="hours">
+<span class="primary-locale">
+    <h2>
+        <span id="todays-hours">
+            <script id="todays_hours_template" type="x-tmpl-mustache">
+                <span data-i18n="general.todays_hours"><!--Today's Hours--></span>
+                <span style="{{is_open_css}};">
+                    {{open_time_localized}} - {{close_time_localized}}
+                </span>
+                <span style="{{is_closed_css}};" data-i18n="general.closed">
+                    <!--Closed-->
+                </span>        
+            </script>
+        </span>
+    </h2>
+
+        <!-- START MUSTACHE TEMPLATE FOR REGULAR HOURS ITEM ENGLISH-->
+        <script id="regular_hours_template" type="x-tmpl-mustache">
+                <span data-i18n="days_of_week.{{day_of_week}}"></span>
+                <div class="pull-right" style="{{is_open_css}};">
+                    {{open_time_localized}} - {{close_time_localized}}
+                </div>
+                <div class="pull-right" style="{{is_closed_css}};" data-i18n="general.closed">
+                    <!--Closed-->
+                </div>
+        </script>
+        <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->
+        
+
+    
+    <h3 data-i18n="general.regular_hours"><!--Regular Hours--></h3>
+    <ul class="list-group">
+        <li class="list-group-item" id="reg_hours_sun"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_mon"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_tue"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_wed"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_thu"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_fri"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_sat"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+    </ul>
+    <div id="hours_not_empty_section_id" style="display:inline;">
+        <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
+        <script id="holiday_hours_template" type="x-tmpl-mustache">
+            {{meta_keywords}}
+            <li class="list-group-item clearfix">
+                <span class="pull-left">
+                    {{holiday_name}}</br>
+                    {{holiday_date_localized}}
+                </span>
+                <span class="pull-right">
+                    <span style="{{is_open_css}};">
+                        {{open_time_localized}} - {{close_time_localized}}
+                    </span>
+                    <span style="{{is_closed_css}};">
+                        Closed
+                    </span>
+                </span>
+            </li>
+        </script>
+        <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->
+        <h3 data-i18n="general.holiday_hours"><!--Holiday Hours--></h3>
+        <ul class="list-group" id="holiday-hours">
+            <!--this content to be rendered by renderHolidayHours(..) -->
+        </ul>
+    </div>
+    <div id="hours_empty_section_id">
+        
+    </div>
+    
+    <h3 data-i18n="general.store_hours"></h3>
+    <div id="store_hours_not_empty_section_id" style="display:inline;">
+        <!--START MUSTACHE TEMPLATE FOR STORE HOURS ITEM-->
+        
+        <div class="row">
+            <script id="store_hours_template" type="x-tmpl-mustache">
+                <div class="col-md-5" style="margin-bottom:15px;">
+                    <p><strong>{{name}}</strong></p>
+                    {{{hours_text}}}
+                </div>
+            </script>
+        </div>
+         <!--END MUSTACHE TEMPLATE FOR STORE HOURS ITEM-->
+    </div>
+
+    
+    </span>
+
+<span class="secondary-locale">
+    <h2>
+        <span id="todays-hours_fr">
+            <script id="todays_hours_template_fr" type="x-tmpl-mustache">
+                <span data-i18n="general.todays_hours"><!--Today's Hours--></span>
+                <span style="{{is_open_css}};">
+                    {{open_time_localized_fr}} à {{close_time_localized_fr}}
+                </span>
+                <span style="{{is_closed_css}};" data-i18n="general.closed">
+                    <!--Closed-->
+                </span>        
+            </script>
+        </span>
+    </h2>
+
+        <!-- START MUSTACHE TEMPLATE FOR REGULAR HOURS ITEM ENGLISH-->
+        <script id="regular_hours_template_fr" type="x-tmpl-mustache">
+                <span data-i18n="days_of_week.{{day_of_week}}"></span>
+                <div class="pull-right" style="{{is_open_css}};">
+                    {{open_time_localized_fr}} à {{close_time_localized_fr}}
+                </div>
+                <div class="pull-right" style="{{is_closed_css}};" data-i18n="general.closed">
+                    <!--Closed-->
+                </div>
+        </script>
+        <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->
+        
+
+    
+    <h3 data-i18n="general.regular_hours"><!--Regular Hours--></h3>
+    <ul class="list-group">
+        <li class="list-group-item" id="reg_hours_sun_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_mon_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_tue_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_wed_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_thu_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_fri_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+        <li class="list-group-item" id="reg_hours_sat_fr"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+    </ul>
+    <div id="hours_not_empty_section_id_fr" style="display:inline;">
+        <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
+        <script id="holiday_hours_template_fr" type="x-tmpl-mustache">
+            {{meta_keywords}}
+            <li class="list-group-item clearfix">
+                <spanclass="pull-left">
+                    {{holiday_name}}</br>
+                    {{holiday_date_localized}}
+                </span>
+                <span class="pull-right">
+                    <span style="{{is_open_css}};">
+                        {{open_time_localized_fr}} à {{close_time_localized_fr}}
+                    </span>
+                    <span style="{{is_closed_css}};">
+                        Closed
+                    </span>
+                </span>
+            </li>
+        </script>
+        <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->
+        <h3 data-i18n="general.holiday_hours"><!--Holiday Hours--></h3>
+        <ul class="list-group" id="holiday-hours_fr">
+            <!--this content to be rendered by renderHolidayHours(..) -->
+        </ul>
+    </div>
+    <div id="hours_empty_section_id_fr">
+        
+    </div>
+    
+    
+    
+     <h3 data-i18n="general.store_hours"></h3>
+    <div id="store_hours_not_empty_section_id_fr" style="display:inline;">
+        <!--START MUSTACHE TEMPLATE FOR STORE HOURS ITEM-->
+        
+        <div class="row">
+            <script id="store_hours_template_fr" type="x-tmpl-mustache">
+                <div class="col-md-5" style="margin-bottom:15px;">
+                    <p><strong>{{name}}</strong></p>
+                    {{{hours_text}}}
+                </div>
+            </script>
+        </div>
+         <!--END MUSTACHE TEMPLATE FOR STORE HOURS ITEM-->
+    </div>
+    </span>
+</div>
+<script>
+    $(document).ready(function() {
+        
+        function renderPageData(){
+             //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
+            renderRegularDayHours('#regular_hours_template','#reg_hours_sun',0);
+            renderRegularDayHours('#regular_hours_template','#reg_hours_mon',1);
+            renderRegularDayHours('#regular_hours_template','#reg_hours_tue',2);
+            renderRegularDayHours('#regular_hours_template','#reg_hours_wed',3);
+            renderRegularDayHours('#regular_hours_template','#reg_hours_thu',4);
+            renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
+            renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
+          
+            
+            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
+            renderTodaysHours('#todays_hours_template','#todays-hours');
+            var store_list = getStoresList();
+            
+            renderStoreHours('#store_hours_template','#store_hours_not_empty_section_id', store_list);
+            
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun_fr',0);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_mon_fr',1);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_tue_fr',2);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_wed_fr',3);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_thu_fr',4);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_fri_fr',5);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sat_fr',6);
+          
+          console.log(getPropertyHours());
+            renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyHours(),100);
+            renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
+            var store_list = getStoresList();
+             renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
+        }
+        
+        loadMallDataCached(renderPageData);
+    });
+    
+    function renderStoreHours(template_id, html_id, store){
+        var item_rendered = [];
+        var template_html = $(template_id).html();
+        Mustache.parse(template_html);
+        var count = 0;
+        
+        $.each( store , function( key, val ) {
+            localizeObject(val);
+            var hours = getHoursForIds(val.store_hours);
+            var hours_text = '';
+            
+            if (hours.length > 0){
+                $.each( hours, function( key, value ) { 
+                    var day = getStoreDay(value.day_of_week);
+                    setLocaleDateFormats(value);
+                    if(sessionStorage.current_locale == sessionStorage.secondary_locale){
+                        var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
+                    } else{
+                        var day_text = '<p>'+ day + ': ' + value.open_time_localized + ' - ' + value.close_time_localized +'</p>';
+                    }
+                    hours_text += day_text;  
+                });
+                count += 1;
+                val.hours_text = hours_text;
+                var blog_rendered = Mustache.render(template_html,val);
+                item_rendered.push(blog_rendered);
+            }
+            
+             
+        });
+        
+        $(html_id).html(item_rendered.join(''));
+        
+    }
+    
+    function getStoreDay(day_week){
+        var day;
+        if(sessionStorage.current_locale == sessionStorage.secondary_locale){
+            switch (day_week){
+                case 0:
+                    day = "Dimanche";
+                    break;
+                case 1:
+                    day = "Lundi";
+                    break;
+                case 2:
+                    day = "Mardi";
+                    break;
+                case 3:
+                    day = "Mercredi";
+                    break;
+                case 4:
+                    day = "Jeudi";
+                    break;
+                case 5:
+                    day = "Vendredi";
+                    break;
+                case 6:
+                    day = "Samedi";
+                    break;
+            }
+        } else {
+            switch (day_week){
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+            }
+        }
+        return day;
+    }
+</script>
+
