@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <h1 style="font-weight:bold" data-i18n="general.404_header"></h1>
+        <p style="text-align:center;font-size:17px" data-i18n="general.404_message"></p>
+    
+    </div>
+    
+    <%=/centre_hours%>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#loading').hide();
+        $('#page_content').fadeIn();
+        $(document).i18n();
+    });
+</script>
