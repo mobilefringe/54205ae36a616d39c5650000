@@ -56,12 +56,12 @@
                             </div>
                             <div class="social-links">
                                 <span>
-                                        <a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.kodekloud.io/events/{{slug}}" target="_blank">
+                                        <a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.com/events/{{slug}}" target="_blank">
                                             <i class="fa fa-facebook-official"></i>
                                         </a>
                                     </span>
                                     <span>
-                                        <a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.kodekloud.io/events/{{slug}}" target="_blank">
+                                        <a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.com/events/{{slug}}" target="_blank">
                                             <i class="fa fa-twitter-square"></i>
                                         </a>
                                     </span>
