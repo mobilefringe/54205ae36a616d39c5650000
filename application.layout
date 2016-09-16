@@ -107,8 +107,8 @@
     
         var mm_base = "http://placevertu.mallmaverick.com";
         setEndPoint(mm_base+"/api/v2/placevertu/all.json");
-        sessionStorage.setItem('primary_locale', 'en-CA');
-        sessionStorage.setItem('secondary_locale', 'fr-CA');
+        sessionStorage.setItem('primary_locale', 'fr-CA');
+        sessionStorage.setItem('secondary_locale', 'en-CA');
         
         if(getRequestParam('lang') == 'fr'){
             sessionStorage.setItem('current_locale',sessionStorage.secondary_locale);
