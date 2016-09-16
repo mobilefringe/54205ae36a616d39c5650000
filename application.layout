@@ -681,7 +681,7 @@
             
             $('#fr-CA').click(function(e){
                 e.preventDefault();
-                setSecondaryLanguage();
+                setPrimaryLanguage();
                 window.location.reload();
             });
             
@@ -693,7 +693,7 @@
             
             $('#fr-CA-mobile').click(function(e){
                 e.preventDefault();
-                setSecondaryLanguage();
+                setPrimaryLanguage();
                 window.location.reload();
             });
             
