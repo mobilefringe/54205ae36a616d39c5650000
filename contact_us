@@ -1,55 +1,42 @@
 <div class="container">
     <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3"  id="sidebar">
-            <h1 class="hidden-xs">Contact Us</h1>
-            <img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
-            <ul class="button-panel">
-                <li><a href="#directions" class="btn btn-default"><span data-i18n="nav.subnav.directions"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--DIRECTIONS--></a></li>
-                <li><a href="#how_to_get_here" class="btn btn-default" ><span data-i18n="nav.subnav.how_to_get_here"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--HOW TO GET HERE--></a></li>
-                <li><a href="#parking_information" class="btn btn-default"><span data-i18n="nav.subnav.parking_information"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--PARKINING INFORMATION--></a></li>
-                <li><a href="#administration_hours" class="btn btn-default"><span data-i18n="nav.subnav.administration_hours"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--ADMINISTRATION HOURS--></a></li>
-                <li><a href="#accessibility" class="btn btn-default"><span data-i18n="nav.subnav.accessibility"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--ACCESSIBILITY--></a></li>
-                <li><a href='#open_hours' class="btn btn-default" ><span data-i18n="nav.subnav.opening_hours"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--OPENING HOURS--></a></li>
-            </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-9"  id="right-content">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
             <h1 class="visible-xs" data-i18n="nav.contact"><!--CONTACT--></h1>
             
             <!--DIRECTIONS-->
-            <a class="anchor" name="directions"></a>
-            <h2 data-i18n="nav.subnav.directions">&nbsp;</h2>
-            <div style="min-height:350px">
+            <a name="directions"></a>
+            <h2 data-i18n="nav.subnav.directions"><!--DIRECTIONS--></h2>
             <%=/centre_address_map%>
-            </div>
-            <a class="anchor" name="how_to_get_here"></a>
-            <h2 data-i18n="nav.subnav.how_to_get_here"><!--HOW TO GET HERE-->&nbsp;</h2>
-            <div class="primary-locale">
+            
+            <a name="how_to_get_here"></a>
+            <h2 data-i18n="nav.subnav.how_to_get_here"><!--HOW TO GET HERE--></h2>
+            <div class="en-CA">
                 <!-- How to Get Here (English) CONTENT BLOCK START-->    
                 <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f34e6e6f64068c080000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f34e6e6f64068c080000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f34e6e6f64068c080000'>
-                	  <%=content_block_54c7f34e6e6f64068c080000%>
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544717506e6f643793000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544717506e6f643793000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544717506e6f643793000000'>
+                	  <%=content_block_544717506e6f643793000000%>
                   </div>
                   <script>
                       $(function(){
-                		if (typeof $('#edit_54c7f34e6e6f64068c080000').editable != 'undefined') {
-                			$('#content_block_54c7f34e6e6f64068c080000').show();
-                	        $('#edit_54c7f34e6e6f64068c080000').editable({
+                		if (typeof $('#edit_544717506e6f643793000000').editable != 'undefined') {
+                			$('#content_block_544717506e6f643793000000').show();
+                	        $('#edit_544717506e6f643793000000').editable({
                 				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
                 				inlineMode: false,
                                 paragraphy: true,
                                 alwaysBlank: true,
                                 toolbarFixed: true,
                                 imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
+                                saveURL: '../save_content_block',
                                 saveRequestType: 'POST',
-                	            saveParams: {name:'How to get here (English)', id: '54c7f34e6e6f64068c080000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            saveParams: {name:'How to Get Here (English)', id: '544717506e6f643793000000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
                 	            autosave: false,
-                				minHeight: 200,
+                				minHeight: 400,
                 				imageUploadToS3: {
                                     bucket: 'kodekloud',
                                     region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/65e3d9c9dba11e3b202006f385b1b77e/${filename}',
+                                    keyStart: 'site/5431987c6e6f64102a020000/dbd8fba7c503a5f2b297239616ce0def/${filename}',
                 					callback: function (url, key) {
                                       $.ajax({
                                             url : "../add_upload_from_content_block",
@@ -71,51 +58,51 @@
                 					  utf8: '&#x2713;',
                                       acl: 'public-read', // ACL according to Amazon Documentation.
                                       AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyMTozNC45NTlaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'vcit3PjJ5SzU6SyKHZuJW8kx4F8=', // Signature computed in the backend.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozMjo0OC4yNDRaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'F1RCZW/heBvV6M8desXnsh9DkUE=', // Signature computed in the backend.
                                     }
                                 }
                             
                 	        })
                 		}
-                		$('#status_54c7f34e6e6f64068c080000').hide();
+                		$('#status_544717506e6f643793000000').hide();
                         
-                        $('#content_block_54c7f34e6e6f64068c080000').click(function(event){
+                        $('#content_block_544717506e6f643793000000').click(function(event){
                             event.preventDefault();
-                            $('#edit_54c7f34e6e6f64068c080000').editable("save");
+                            $('#edit_544717506e6f643793000000').editable("save");
                         });
                       });
                   </script>
                 </section>    
                 <!-- How to Get Here (English) CONTENT BLOCK END -->
             </div>
-            <div class="secondary-locale">
+            <div class="fr-CA">
                 <!-- How to Get Here (French) CONTENT BLOCK START-->    
                 <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f3646e6f64068c090000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f3646e6f64068c090000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f3646e6f64068c090000'>
-                	  <%=content_block_54c7f3646e6f64068c090000%>
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544717636e6f646765060000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544717636e6f646765060000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544717636e6f646765060000'>
+                	  <%=content_block_544717636e6f646765060000%>
                   </div>
                   <script>
                       $(function(){
-                		if (typeof $('#edit_54c7f3646e6f64068c090000').editable != 'undefined') {
-                			$('#content_block_54c7f3646e6f64068c090000').show();
-                	        $('#edit_54c7f3646e6f64068c090000').editable({
+                		if (typeof $('#edit_544717636e6f646765060000').editable != 'undefined') {
+                			$('#content_block_544717636e6f646765060000').show();
+                	        $('#edit_544717636e6f646765060000').editable({
                 				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
                 				inlineMode: false,
                                 paragraphy: true,
                                 alwaysBlank: true,
                                 toolbarFixed: true,
                                 imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
+                                saveURL: '../save_content_block',
                                 saveRequestType: 'POST',
-                	            saveParams: {name:'How to get here (French)', id: '54c7f3646e6f64068c090000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            saveParams: {name:'How to Get Here (French)', id: '544717636e6f646765060000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
                 	            autosave: false,
-                				minHeight: 200,
+                				minHeight: 400,
                 				imageUploadToS3: {
                                     bucket: 'kodekloud',
                                     region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/0ee070553667d46a69bf3af35b87de00/${filename}',
+                                    keyStart: 'site/5431987c6e6f64102a020000/5e6b268e3880368165e3e9fa8f0be5c4/${filename}',
                 					callback: function (url, key) {
                                       $.ajax({
                                             url : "../add_upload_from_content_block",
@@ -137,55 +124,55 @@
                 					  utf8: '&#x2713;',
                                       acl: 'public-read', // ACL according to Amazon Documentation.
                                       AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyMTo1Ni45NTRaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'M6/G32hYmmGHomaMZt3ixLix5ao=', // Signature computed in the backend.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozMzowNy4wMzFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'dBwS0YLN0bnDfprpwzcOgElWABQ=', // Signature computed in the backend.
                                     }
                                 }
                             
                 	        })
                 		}
-                		$('#status_54c7f3646e6f64068c090000').hide();
+                		$('#status_544717636e6f646765060000').hide();
                         
-                        $('#content_block_54c7f3646e6f64068c090000').click(function(event){
+                        $('#content_block_544717636e6f646765060000').click(function(event){
                             event.preventDefault();
-                            $('#edit_54c7f3646e6f64068c090000').editable("save");
+                            $('#edit_544717636e6f646765060000').editable("save");
                         });
                       });
                   </script>
-                </section>      
+                </section>    
                 <!-- How to Get Here (French) CONTENT BLOCK END -->
             </div>
                 
             <!--PARKING INFORMATION-->
-            <a class="anchor" name="parking_information"></a>
-            <h2 data-i18n="nav.subnav.parking_information"><!--PARKING INFORMATION-->&nbsp;</h2>
-            <div class="primary-locale">
+            <a name="parking_information"></a>
+            <h2 data-i18n="nav.subnav.parking_information"><!--PARKING INFORMATION--></h2>
+            <div class="en-CA">
                 <!-- Parking (English) CONTENT BLOCK START-->    
                 <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f38e6e6f6471b4030000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f38e6e6f6471b4030000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f38e6e6f6471b4030000'>
-                	  <%=content_block_54c7f38e6e6f6471b4030000%>
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544717cc6e6f6404db000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544717cc6e6f6404db000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544717cc6e6f6404db000000'>
+                	  <%=content_block_544717cc6e6f6404db000000%>
                   </div>
                   <script>
                       $(function(){
-                		if (typeof $('#edit_54c7f38e6e6f6471b4030000').editable != 'undefined') {
-                			$('#content_block_54c7f38e6e6f6471b4030000').show();
-                	        $('#edit_54c7f38e6e6f6471b4030000').editable({
+                		if (typeof $('#edit_544717cc6e6f6404db000000').editable != 'undefined') {
+                			$('#content_block_544717cc6e6f6404db000000').show();
+                	        $('#edit_544717cc6e6f6404db000000').editable({
                 				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
                 				inlineMode: false,
                                 paragraphy: true,
                                 alwaysBlank: true,
                                 toolbarFixed: true,
                                 imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
+                                saveURL: '../save_content_block',
                                 saveRequestType: 'POST',
-                	            saveParams: {name:'Parking Information (English)', id: '54c7f38e6e6f6471b4030000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            saveParams: {name:'Parking (English)', id: '544717cc6e6f6404db000000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
                 	            autosave: false,
                 				minHeight: 200,
                 				imageUploadToS3: {
                                     bucket: 'kodekloud',
                                     region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/9c4c911f4f3e37c8f4a9de04beeaed0b/${filename}',
+                                    keyStart: 'site/5431987c6e6f64102a020000/fa5a743e187349628e00f144dcad2211/${filename}',
                 					callback: function (url, key) {
                                       $.ajax({
                                             url : "../add_upload_from_content_block",
@@ -207,51 +194,51 @@
                 					  utf8: '&#x2713;',
                                       acl: 'public-read', // ACL according to Amazon Documentation.
                                       AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyMjozOC43OThaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'Gt0b0uoAVBLl0fXl2dyKgAR5vzE=', // Signature computed in the backend.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozNDo1Mi4yOTZaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'txQ4msHkTB74EA+MSZaKybaz8O8=', // Signature computed in the backend.
                                     }
                                 }
                             
                 	        })
                 		}
-                		$('#status_54c7f38e6e6f6471b4030000').hide();
+                		$('#status_544717cc6e6f6404db000000').hide();
                         
-                        $('#content_block_54c7f38e6e6f6471b4030000').click(function(event){
+                        $('#content_block_544717cc6e6f6404db000000').click(function(event){
                             event.preventDefault();
-                            $('#edit_54c7f38e6e6f6471b4030000').editable("save");
+                            $('#edit_544717cc6e6f6404db000000').editable("save");
                         });
                       });
                   </script>
-                </section>     
+                </section>    
                 <!-- Parking (English) CONTENT BLOCK END -->
             </div>
-            <div class="secondary-locale">
+            <div class="fr-CA">
                 <!-- Parking (French) CONTENT BLOCK START-->    
                 <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f3a06e6f6470ae040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f3a06e6f6470ae040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f3a06e6f6470ae040000'>
-                	  <%=content_block_54c7f3a06e6f6470ae040000%>
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544717e66e6f643ab8000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544717e66e6f643ab8000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544717e66e6f643ab8000000'>
+                	  <%=content_block_544717e66e6f643ab8000000%>
                   </div>
                   <script>
                       $(function(){
-                		if (typeof $('#edit_54c7f3a06e6f6470ae040000').editable != 'undefined') {
-                			$('#content_block_54c7f3a06e6f6470ae040000').show();
-                	        $('#edit_54c7f3a06e6f6470ae040000').editable({
+                		if (typeof $('#edit_544717e66e6f643ab8000000').editable != 'undefined') {
+                			$('#content_block_544717e66e6f643ab8000000').show();
+                	        $('#edit_544717e66e6f643ab8000000').editable({
                 				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
                 				inlineMode: false,
                                 paragraphy: true,
                                 alwaysBlank: true,
                                 toolbarFixed: true,
                                 imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
+                                saveURL: '../save_content_block',
                                 saveRequestType: 'POST',
-                	            saveParams: {name:'Parking Information (French)', id: '54c7f3a06e6f6470ae040000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            saveParams: {name:'Parking (French)', id: '544717e66e6f643ab8000000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
                 	            autosave: false,
                 				minHeight: 200,
                 				imageUploadToS3: {
                                     bucket: 'kodekloud',
                                     region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/cba70cb1180d3a3a668c2773320ac529/${filename}',
+                                    keyStart: 'site/5431987c6e6f64102a020000/ea41d7383664463506bc3f260187b43d/${filename}',
                 					callback: function (url, key) {
                                       $.ajax({
                                             url : "../add_upload_from_content_block",
@@ -273,331 +260,55 @@
                 					  utf8: '&#x2713;',
                                       acl: 'public-read', // ACL according to Amazon Documentation.
                                       AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyMjo1Ni43NDdaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: '3r1iQbMZzoR1OJblOsF01L0Vw1c=', // Signature computed in the backend.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozNToxOC42MThaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'ChziPBAWaUCKgq5nrpP3WEqrd5s=', // Signature computed in the backend.
                                     }
                                 }
                             
                 	        })
                 		}
-                		$('#status_54c7f3a06e6f6470ae040000').hide();
+                		$('#status_544717e66e6f643ab8000000').hide();
                         
-                        $('#content_block_54c7f3a06e6f6470ae040000').click(function(event){
+                        $('#content_block_544717e66e6f643ab8000000').click(function(event){
                             event.preventDefault();
-                            $('#edit_54c7f3a06e6f6470ae040000').editable("save");
+                            $('#edit_544717e66e6f643ab8000000').editable("save");
                         });
                       });
                   </script>
-                </section>      
+                </section>    
                 <!-- Parking (French) CONTENT BLOCK END -->
             </div>
             
-        
-            
-            <!-- CONTACT -->
-            <a class="anchor" name="administration_hours"></a>
-            <h2 data-i18n="nav.subnav.administration_hours"><!--ADMINISTRATION HOURS--></h2>
-            <div class="primary-locale">
-                <!-- Contact (English) CONTENT BLOCK START-->    
-                <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f3f36e6f6471b4040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f3f36e6f6471b4040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f3f36e6f6471b4040000'>
-                	  <%=content_block_54c7f3f36e6f6471b4040000%>
-                  </div>
-                  <script>
-                      $(function(){
-                		if (typeof $('#edit_54c7f3f36e6f6471b4040000').editable != 'undefined') {
-                			$('#content_block_54c7f3f36e6f6471b4040000').show();
-                	        $('#edit_54c7f3f36e6f6471b4040000').editable({
-                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
-                				inlineMode: false,
-                                paragraphy: true,
-                                alwaysBlank: true,
-                                toolbarFixed: true,
-                                imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
-                                saveRequestType: 'POST',
-                	            saveParams: {name:'Contact (English)', id: '54c7f3f36e6f6471b4040000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
-                	            autosave: false,
-                				minHeight: 200,
-                				imageUploadToS3: {
-                                    bucket: 'kodekloud',
-                                    region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/b7e818c6b4857ca06e7dcee57ba25efa/${filename}',
-                					callback: function (url, key) {
-                                      $.ajax({
-                                            url : "../add_upload_from_content_block",
-                                            type: "POST",
-                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
-                                            success: function(data, textStatus, jqXHR)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            },
-                                            error: function (jqXHR, textStatus, errorThrown)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            }
-                                        });
-                                    },
-                                    params: {
-                					  utf8: '&#x2713;',
-                                      acl: 'public-read', // ACL according to Amazon Documentation.
-                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyNDoxOS44NTdaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'MA4tW07pbeykIyRluQBjhqL4QI4=', // Signature computed in the backend.
-                                    }
-                                }
-                            
-                	        })
-                		}
-                		$('#status_54c7f3f36e6f6471b4040000').hide();
-                        
-                        $('#content_block_54c7f3f36e6f6471b4040000').click(function(event){
-                            event.preventDefault();
-                            $('#edit_54c7f3f36e6f6471b4040000').editable("save");
-                        });
-                      });
-                  </script>
-                </section>    
-                <!-- Contact (English) CONTENT BLOCK END -->
-            </div>
-            <div class="secondary-locale">
-                <!-- Contact (French) CONTENT BLOCK START-->    
-                <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f4046e6f64068c0a0000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f4046e6f64068c0a0000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f4046e6f64068c0a0000'>
-                	  <%=content_block_54c7f4046e6f64068c0a0000%>
-                  </div>
-                  <script>
-                      $(function(){
-                		if (typeof $('#edit_54c7f4046e6f64068c0a0000').editable != 'undefined') {
-                			$('#content_block_54c7f4046e6f64068c0a0000').show();
-                	        $('#edit_54c7f4046e6f64068c0a0000').editable({
-                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
-                				inlineMode: false,
-                                paragraphy: true,
-                                alwaysBlank: true,
-                                toolbarFixed: true,
-                                imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
-                                saveRequestType: 'POST',
-                	            saveParams: {name:'Contact (French)', id: '54c7f4046e6f64068c0a0000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
-                	            autosave: false,
-                				minHeight: 200,
-                				imageUploadToS3: {
-                                    bucket: 'kodekloud',
-                                    region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/1960392393bb0aa386ad780f94a46d59/${filename}',
-                					callback: function (url, key) {
-                                      $.ajax({
-                                            url : "../add_upload_from_content_block",
-                                            type: "POST",
-                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
-                                            success: function(data, textStatus, jqXHR)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            },
-                                            error: function (jqXHR, textStatus, errorThrown)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            }
-                                        });
-                                    },
-                                    params: {
-                					  utf8: '&#x2713;',
-                                      acl: 'public-read', // ACL according to Amazon Documentation.
-                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyNDozNi44MTVaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: '+XFuA8Oei125axWBM4qN2FwhB+Q=', // Signature computed in the backend.
-                                    }
-                                }
-                            
-                	        })
-                		}
-                		$('#status_54c7f4046e6f64068c0a0000').hide();
-                        
-                        $('#content_block_54c7f4046e6f64068c0a0000').click(function(event){
-                            event.preventDefault();
-                            $('#edit_54c7f4046e6f64068c0a0000').editable("save");
-                        });
-                      });
-                  </script>
-                </section>    
-                <!-- Contact (French) CONTENT BLOCK END -->
-            </div>
-            
-            <!--ACCESSIBILITY-->
-            <a class="anchor" name="accessibility"></a>
-         
-            <h2 data-i18n="nav.subnav.accessibility"><!--ACCESSIBILITY--></h2>
-            <div class="primary-locale">
-                <!-- Accessibility (English) CONTENT BLOCK START-->    
-                <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f42e6e6f6471b4050000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f42e6e6f6471b4050000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f42e6e6f6471b4050000'>
-                	  <%=content_block_54c7f42e6e6f6471b4050000%>
-                  </div>
-                  <script>
-                      $(function(){
-                		if (typeof $('#edit_54c7f42e6e6f6471b4050000').editable != 'undefined') {
-                			$('#content_block_54c7f42e6e6f6471b4050000').show();
-                	        $('#edit_54c7f42e6e6f6471b4050000').editable({
-                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
-                				inlineMode: false,
-                                paragraphy: true,
-                                alwaysBlank: true,
-                                toolbarFixed: true,
-                                imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
-                                saveRequestType: 'POST',
-                	            saveParams: {name:'Accessibility (English)', id: '54c7f42e6e6f6471b4050000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
-                	            autosave: false,
-                				minHeight: 200,
-                				imageUploadToS3: {
-                                    bucket: 'kodekloud',
-                                    region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/74b6f3ab418a98b10a7f30f201f298c6/${filename}',
-                					callback: function (url, key) {
-                                      $.ajax({
-                                            url : "../add_upload_from_content_block",
-                                            type: "POST",
-                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
-                                            success: function(data, textStatus, jqXHR)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            },
-                                            error: function (jqXHR, textStatus, errorThrown)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            }
-                                        });
-                                    },
-                                    params: {
-                					  utf8: '&#x2713;',
-                                      acl: 'public-read', // ACL according to Amazon Documentation.
-                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyNToxOC44MTdaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'Xhjj49+p9szg7O/ZiR0iiScd75I=', // Signature computed in the backend.
-                                    }
-                                }
-                            
-                	        })
-                		}
-                		$('#status_54c7f42e6e6f6471b4050000').hide();
-                        
-                        $('#content_block_54c7f42e6e6f6471b4050000').click(function(event){
-                            event.preventDefault();
-                            $('#edit_54c7f42e6e6f6471b4050000').editable("save");
-                        });
-                      });
-                  </script>
-                </section>    
-                <!-- Accessibility (English) CONTENT BLOCK END -->
-            </div>
-            <div class="secondary-locale">
-                <!-- Accessibility (French) CONTENT BLOCK START-->    
-                <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f43e6e6f6433e1000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f43e6e6f6433e1000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f43e6e6f6433e1000000'>
-                	  <%=content_block_54c7f43e6e6f6433e1000000%>
-                  </div>
-                  <script>
-                      $(function(){
-                		if (typeof $('#edit_54c7f43e6e6f6433e1000000').editable != 'undefined') {
-                			$('#content_block_54c7f43e6e6f6433e1000000').show();
-                	        $('#edit_54c7f43e6e6f6433e1000000').editable({
-                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
-                				inlineMode: false,
-                                paragraphy: true,
-                                alwaysBlank: true,
-                                toolbarFixed: true,
-                                imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
-                                saveRequestType: 'POST',
-                	            saveParams: {name:'Accessibility (French)', id: '54c7f43e6e6f6433e1000000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
-                	            autosave: false,
-                				minHeight: 200,
-                				imageUploadToS3: {
-                                    bucket: 'kodekloud',
-                                    region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/c3d2ced55751d250d1c0ebba102c5ac9/${filename}',
-                					callback: function (url, key) {
-                                      $.ajax({
-                                            url : "../add_upload_from_content_block",
-                                            type: "POST",
-                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
-                                            success: function(data, textStatus, jqXHR)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            },
-                                            error: function (jqXHR, textStatus, errorThrown)
-                                            {
-                                                console.log('saved image to uploads');
-                                                console.log(textStatus);
-                                            }
-                                        });
-                                    },
-                                    params: {
-                					  utf8: '&#x2713;',
-                                      acl: 'public-read', // ACL according to Amazon Documentation.
-                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyNTozNC4xOThaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'aE60dKio6zTP9S6MRMy4P3t8a1Q=', // Signature computed in the backend.
-                                    }
-                                }
-                            
-                	        })
-                		}
-                		$('#status_54c7f43e6e6f6433e1000000').hide();
-                        
-                        $('#content_block_54c7f43e6e6f6433e1000000').click(function(event){
-                            event.preventDefault();
-                            $('#edit_54c7f43e6e6f6433e1000000').editable("save");
-                        });
-                      });
-                  </script>
-                </section>    
-                <!-- Accessibility (French) CONTENT BLOCK END -->
-                
-            </div>
-            
-                <!--CENTRE HOURS-->
-            <a class="anchor" name="open_hours" id="open_hours"></a>
+            <!--CENTRE HOURS-->
+            <a name="opening_hours"></a>
             <%=/centre_hours%>
-            <div class="primary-locale">
+            <div class="en-CA">
                 <!-- Store Hours (English) CONTENT BLOCK START-->    
                 <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f45a6e6f646b49060000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f45a6e6f646b49060000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f45a6e6f646b49060000'>
-                	  <%=content_block_54c7f45a6e6f646b49060000%>
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5447193a6e6f643b58000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5447193a6e6f643b58000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5447193a6e6f643b58000000'>
+                	  <%=content_block_5447193a6e6f643b58000000%>
                   </div>
                   <script>
                       $(function(){
-                		if (typeof $('#edit_54c7f45a6e6f646b49060000').editable != 'undefined') {
-                			$('#content_block_54c7f45a6e6f646b49060000').show();
-                	        $('#edit_54c7f45a6e6f646b49060000').editable({
+                		if (typeof $('#edit_5447193a6e6f643b58000000').editable != 'undefined') {
+                			$('#content_block_5447193a6e6f643b58000000').show();
+                	        $('#edit_5447193a6e6f643b58000000').editable({
                 				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
                 				inlineMode: false,
                                 paragraphy: true,
                                 alwaysBlank: true,
                                 toolbarFixed: true,
                                 imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
+                                saveURL: '../save_content_block',
                                 saveRequestType: 'POST',
-                	            saveParams: {name:'Store Hours (English)', id: '54c7f45a6e6f646b49060000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            saveParams: {name:'Store Hours (English)', id: '5447193a6e6f643b58000000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
                 	            autosave: false,
                 				minHeight: 200,
                 				imageUploadToS3: {
                                     bucket: 'kodekloud',
                                     region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/2b866443161faf3d2727f31587cf402f/${filename}',
+                                    keyStart: 'site/5431987c6e6f64102a020000/3b00676cfdc82f5c323bbe0c2c939281/${filename}',
                 					callback: function (url, key) {
                                       $.ajax({
                                             url : "../add_upload_from_content_block",
@@ -619,51 +330,51 @@
                 					  utf8: '&#x2713;',
                                       acl: 'public-read', // ACL according to Amazon Documentation.
                                       AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyNjowMi41NzdaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'fz0g5HwIlg5gFpQmFPopzfoXKBw=', // Signature computed in the backend.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjo0MDo1OC40NjFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'RIJA7B5HvMdUhGTomGNcSjslv8A=', // Signature computed in the backend.
                                     }
                                 }
                             
                 	        })
                 		}
-                		$('#status_54c7f45a6e6f646b49060000').hide();
+                		$('#status_5447193a6e6f643b58000000').hide();
                         
-                        $('#content_block_54c7f45a6e6f646b49060000').click(function(event){
+                        $('#content_block_5447193a6e6f643b58000000').click(function(event){
                             event.preventDefault();
-                            $('#edit_54c7f45a6e6f646b49060000').editable("save");
+                            $('#edit_5447193a6e6f643b58000000').editable("save");
                         });
                       });
                   </script>
-                </section>   
+                </section>    
                 <!-- Store Hours (English) CONTENT BLOCK END -->
             </div>
-            <div class="secondary-locale">
+            <div class="fr-CA">
                 <!-- Store Hours (French) CONTENT BLOCK START-->    
                 <section id="editor" class="froala-element">
-                  <a href="#" style="font-size:20px;display:none" id="content_block_54c7f46b6e6f64068c0b0000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54c7f46b6e6f64068c0b0000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
-                  <div id='edit_54c7f46b6e6f64068c0b0000'>
-                	  <%=content_block_54c7f46b6e6f64068c0b0000%>
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544719586e6f6404db030000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544719586e6f6404db030000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544719586e6f6404db030000'>
+                	  <%=content_block_544719586e6f6404db030000%>
                   </div>
                   <script>
                       $(function(){
-                		if (typeof $('#edit_54c7f46b6e6f64068c0b0000').editable != 'undefined') {
-                			$('#content_block_54c7f46b6e6f64068c0b0000').show();
-                	        $('#edit_54c7f46b6e6f64068c0b0000').editable({
+                		if (typeof $('#edit_544719586e6f6404db030000').editable != 'undefined') {
+                			$('#content_block_544719586e6f6404db030000').show();
+                	        $('#edit_544719586e6f6404db030000').editable({
                 				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
                 				inlineMode: false,
                                 paragraphy: true,
                                 alwaysBlank: true,
                                 toolbarFixed: true,
                                 imageMove: true,
-                                saveURL: '/web_pages/save_content_block',
+                                saveURL: '../save_content_block',
                                 saveRequestType: 'POST',
-                	            saveParams: {name:'Store Hours (French)', id: '54c7f46b6e6f64068c0b0000',web_page_id: '5447ebb66e6f641987390000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            saveParams: {name:'Store Hours (French)', id: '544719586e6f6404db030000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
                 	            autosave: false,
                 				minHeight: 200,
                 				imageUploadToS3: {
                                     bucket: 'kodekloud',
                                     region: 's3',
-                                    keyStart: 'site/5447ebb66e6f641987020000/838d51d39d02eee333fedeb45ab8f4b1/${filename}',
+                                    keyStart: 'site/5431987c6e6f64102a020000/d47fbf07dbcf9f5e8b391f4645da6abf/${filename}',
                 					callback: function (url, key) {
                                       $.ajax({
                                             url : "../add_upload_from_content_block",
@@ -685,18 +396,18 @@
                 					  utf8: '&#x2713;',
                                       acl: 'public-read', // ACL according to Amazon Documentation.
                                       AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
-                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0xMS0xMFQyMDoyNjoxOS4wNDJaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
-                                      signature: 'tvmdB1J6iUm2F3jJXDSr8cPm0Ps=', // Signature computed in the backend.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjo0MToyOC41NDZaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'aUdYLy92mALORS5nrfvaeJ7ZXKo=', // Signature computed in the backend.
                                     }
                                 }
                             
                 	        })
                 		}
-                		$('#status_54c7f46b6e6f64068c0b0000').hide();
+                		$('#status_544719586e6f6404db030000').hide();
                         
-                        $('#content_block_54c7f46b6e6f64068c0b0000').click(function(event){
+                        $('#content_block_544719586e6f6404db030000').click(function(event){
                             event.preventDefault();
-                            $('#edit_54c7f46b6e6f64068c0b0000').editable("save");
+                            $('#edit_544719586e6f6404db030000').editable("save");
                         });
                       });
                   </script>
@@ -704,17 +415,291 @@
                 <!-- Store Hours (French) CONTENT BLOCK END -->
             </div>
             
+            <!--ADMINISTRATION HOURS-->
+            <a name="administration_hours"></a>
+            <h2 data-i18n="nav.subnav.administration_hours"><!--ADMINISTRATION HOURS--></h2>
+            <div class="en-CA">
+                <!-- Administration Hours (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544718036e6f6404db010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544718036e6f6404db010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544718036e6f6404db010000'>
+                	  <%=content_block_544718036e6f6404db010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544718036e6f6404db010000').editable != 'undefined') {
+                			$('#content_block_544718036e6f6404db010000').show();
+                	        $('#edit_544718036e6f6404db010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Administration Hours (English)', id: '544718036e6f6404db010000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/b46f0a329c96c53947b8fd2a7e1a6278/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozNTo0Ny44NzBaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: '8+Aec9LAOJJe9JtG9LyfXaWZ3js=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544718036e6f6404db010000').hide();
+                        
+                        $('#content_block_544718036e6f6404db010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544718036e6f6404db010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Administration Hours (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Administration Hours (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544718166e6f643ab8010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544718166e6f643ab8010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544718166e6f643ab8010000'>
+                	  <%=content_block_544718166e6f643ab8010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544718166e6f643ab8010000').editable != 'undefined') {
+                			$('#content_block_544718166e6f643ab8010000').show();
+                	        $('#edit_544718166e6f643ab8010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Administration Hours (French)', id: '544718166e6f643ab8010000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/92bc43b617775e13c1f45c92163840ad/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozNjowNi44NzNaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'QxiHtPvLCi3+m4kcMYcrBnceK5M=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544718166e6f643ab8010000').hide();
+                        
+                        $('#content_block_544718166e6f643ab8010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544718166e6f643ab8010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Administration Hours (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--ACCESSIBILITY-->
+            <a name="accessibility"></a>
+            <h2 data-i18n="nav.subnav.accessibility"><!--ACCESSIBILITY--></h2>
+            <div class="en-CA">
+                <!-- Accessibility (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544718386e6f6404db020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544718386e6f6404db020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544718386e6f6404db020000'>
+                	  <%=content_block_544718386e6f6404db020000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544718386e6f6404db020000').editable != 'undefined') {
+                			$('#content_block_544718386e6f6404db020000').show();
+                	        $('#edit_544718386e6f6404db020000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Accessibility (English)', id: '544718386e6f6404db020000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/9b9cae1247d434be160de88c81487666/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozNjo0MC4zMTNaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'rjskGMhaShibg4P6aB70UF9tq1o=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544718386e6f6404db020000').hide();
+                        
+                        $('#content_block_544718386e6f6404db020000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544718386e6f6404db020000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Accessibility (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Accessibility (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544718496e6f643ab8020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544718496e6f643ab8020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544718496e6f643ab8020000'>
+                	  <%=content_block_544718496e6f643ab8020000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544718496e6f643ab8020000').editable != 'undefined') {
+                			$('#content_block_544718496e6f643ab8020000').show();
+                	        $('#edit_544718496e6f643ab8020000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Accessibility (French)', id: '544718496e6f643ab8020000',web_page_id: '5431987c6e6f64102a170000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/111e974932d4befbc427b163bf97671c/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjozNjo1Ny43OTZaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'emsne9xsgYSztTv1WqT/w7KrE1A=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544718496e6f643ab8020000').hide();
+                        
+                        $('#content_block_544718496e6f643ab8020000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544718496e6f643ab8020000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Accessibility (French) CONTENT BLOCK END -->
+            </div>
         </div>
         
-        
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs">Contact Us</h1>
+            <img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
+            <ul class="button-panel">
+                <li><a href="#directions" class="btn btn-default"><span data-i18n="nav.subnav.directions"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--DIRECTIONS--></a></li>
+                <li><a href="#how_to_get_here" class="btn btn-default" ><span data-i18n="nav.subnav.how_to_get_here"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--HOW TO GET HERE--></a></li>
+                <li><a href="#parking_information" class="btn btn-default"><span data-i18n="nav.subnav.parking_information"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--PARKINING INFORMATION--></a></li>
+                <li><a href="#opening_hours" class="btn btn-default" ><span data-i18n="nav.subnav.opening_hours"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--OPENING HOURS--></a></li>
+                <li><a href="#administration_hours" class="btn btn-default"><span data-i18n="nav.subnav.administration_hours"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--ADMINISTRATION HOURS--></a></li>
+                <li><a href="#accessibility" class="btn btn-default"><span data-i18n="nav.subnav.accessibility"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--ACCESSIBILITY--></a></li>
+            </ul>
+        </div>
     </div>
 </div>
-<script>
-    $(document).ready(function() {
-        $('#loading').hide();
-        $('#page_content').fadeIn('fast');
-
-    });
-
-</script>
 
