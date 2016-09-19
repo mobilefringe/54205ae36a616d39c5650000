@@ -29,7 +29,7 @@
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.css" rel="stylesheet">
+
 
     
     <!-- Custom Fonts -->
@@ -47,7 +47,6 @@
     
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.js"></script>
     
     <!--Mustache is a client side templating engine https://github.com/janl/mustache.js/ -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
@@ -107,8 +106,8 @@
     
         var mm_base = "http://placevertu.mallmaverick.com";
         setEndPoint(mm_base+"/api/v2/placevertu/all.json");
-        sessionStorage.setItem('primary_locale', 'fr-CA');
-        sessionStorage.setItem('secondary_locale', 'en-CA');
+        sessionStorage.setItem('primary_locale', 'en-CA');
+        sessionStorage.setItem('secondary_locale', 'fr-CA');
         
         if(getRequestParam('lang') == 'fr'){
             sessionStorage.setItem('current_locale',sessionStorage.secondary_locale);
@@ -148,9 +147,9 @@
                                 <a id="fr-CA" href="#" data-i18n="nav.locale.french"></a>
                             </p>
                         </div>
-                        &nbsp;&nbsp;&nbsp;<div class="social-link" style="">
+                        <div class="social-link" style="">
                             <a href="https://www.facebook.com/placevertu" target="_blank">
-                               <i class="fa fa-facebook-official"></i>                                
+                                <i class="fa fa-facebook-official"></i>                                
                             </a>
                         </div>
                         <div class="search" style="" >
@@ -271,11 +270,12 @@
                             </li>
                         </ul>
                     </li>
-
+                    <li class="page-scroll" style="">
+                        <a href="../jobs" data-i18n="nav.jobs"></a>
+                    </li>
                     <li class="page-scroll dropdown" style="">
                         <a href="../about_us" data-i18n="nav.about"></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/jobs"  ><span data-i18n="nav.jobs"></span></a></li>
                             <li><a href="/about_us#place_vertu"  ><span data-i18n="nav.subnav.place_vertu"></span></a></li>
                             <li><a href="/about_us#leasing_information" ><span data-i18n="nav.subnav.leasing_information"></span><!--LEASING INFORMATION--></a></li>
                             <li><a href="/about_us#charities" ><span data-i18n="nav.subnav.charities"></span><!--CHARITIES & NON-PROFIT --></a></li>
@@ -334,11 +334,12 @@
                             </li>
                         </ul>
                     </li>
-                  
+                    <li class="page-scroll" style="">
+                        <a href="../jobs" data-i18n="nav.jobs"></a>
+                    </li>
                     <li class="page-scroll dropdown" style="">
                         <a href="../about_us" data-i18n="nav.about"></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/jobs"  ><span data-i18n="nav.jobs"></span></a></li>
                             <li><a href="/about_us#place_vertu"  ><span data-i18n="nav.subnav.place_vertu"></span></a></li>
                             <li><a href="/about_us#leasing_information" ><span data-i18n="nav.subnav.leasing_information"></span><!--LEASING INFORMATION--></a></li>
                             <li><a href="/about_us#charities" ><span data-i18n="nav.subnav.charities"></span><!--CHARITIES & NON-PROFIT --></a></li>
@@ -458,7 +459,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll" style="">
-                        <a href="../stores" data-i18n="nav.stores"></a>
+                        <a href="../stores" data-i18n="nav.directory"></a>
                     </li>
                     <li class="page-scroll" style="">
                         <a href="../promotions" data-i18n="nav.promotions"></a>
@@ -490,9 +491,11 @@
                         </ul>
                     </li>
                     <li class="page-scroll" style="">
+                        <a href="/jobs" data-i18n="nav.jobs"></a>
+                    </li>
+                    <li class="page-scroll" style="">
                         <a href="/about_us" data-i18n="nav.about"></a>
                         <ul class="sub-bottom">
-                            <li><a href="/jobs"><span data-i18n="nav.jobs"></span></a></li>
                             <li><a href="/about_us#place_vertu"  ><span data-i18n="nav.subnav.place_vertu"></span></a></li>
                             <li><a href="/about_us#leasing_information" ><span data-i18n="nav.subnav.leasing_information"></span><!--LEASING INFORMATION--></a></li>
                             <li><a href="/about_us#charities" ><span data-i18n="nav.subnav.charities"></span><!--CHARITIES & NON-PROFIT --></a></li>
@@ -520,7 +523,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll" style="">
-                        <a href="../stores" data-i18n="nav.stores"></a>
+                        <a href="../stores" data-i18n="nav.directory"></a>
                     </li>
                     <li class="page-scroll" style="">
                         <a href="../promotions" data-i18n="nav.promotions"></a>
@@ -552,9 +555,11 @@
                         </ul>
                     </li>
                     <li class="page-scroll" style="">
+                        <a href="/jobs" data-i18n="nav.jobs"></a>
+                    </li>
+                    <li class="page-scroll" style="">
                         <a href="/about_us" data-i18n="nav.about"></a>
                         <ul class="sub-bottom">
-                            <li><a href="/jobs"  ><span data-i18n="nav.jobs"></span></a></li>
                             <li><a href="/about_us#place_vertu"  ><span data-i18n="nav.subnav.place_vertu"></span></a></li>
                             <li><a href="/about_us#leasing_information" ><span data-i18n="nav.subnav.leasing_information"></span><!--LEASING INFORMATION--></a></li>
                             <li><a href="/about_us#charities" ><span data-i18n="nav.subnav.charities"></span><!--CHARITIES & NON-PROFIT --></a></li>
@@ -582,12 +587,12 @@
     <div class="footer-signature ">
         <div class="container">
             <div class="row">
-                <div class="col-md-2">
-                    <div class="signature-item">
+                <div class="col-md-3">
+                    <div class="pull-left">
                         <img class="image" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/icon_wifi.png" >
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <div class="pull-right">
                         <span class="signature-item">
                             <p><span id="center_signature"><!--2014 Centre Name--></span> <span data-i18n="general.all_rights_reserved"><!-- All Rights Reserved--></span></p>
@@ -606,7 +611,7 @@
                         
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 ">
                     <span class="signature-item property-logo pull-left">
                             <a href="http://www.20vic.com" target="_blank"><img class="left" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/icon_20vic.png" ></a>
                     </span>
@@ -626,7 +631,7 @@
     <script type="text/javascript">
     
     
-        $(document).ready(function(e) {
+        $(document).ready(function() {
             
 
             //Using i18n for localization, for more info please visit http://i18next.com/
@@ -637,12 +642,12 @@
                 }
                 if(current_local == sessionStorage.primary_locale){
                     setPrimaryLanguage();
-                    $('#en-CA').removeClass('langSelect');
-                    $('#fr-CA').addClass('langSelect');
+                    $('#en-CA').addClass('langSelect');
+                    $('#fr-CA').removeClass('langSelect');
                 }else{
                     setSecondaryLanguage();
-                    $('#fr-CA').removeClass('langSelect');
-                    $('#en-CA').addClass('langSelect');
+                    $('#fr-CA').addClass('langSelect');
+                    $('#en-CA').removeClass('langSelect');
                 }
             });
             
@@ -673,27 +678,23 @@
                 stickySidebar();
             }
             
-            $('#en-CA').click(function(e){
-                e.preventDefault();
-                setSecondaryLanguage();
-                window.location.reload();
-            });
-            
-            $('#fr-CA').click(function(e){
-                e.preventDefault();
+            $('#en-CA').click(function(){
                 setPrimaryLanguage();
                 window.location.reload();
             });
             
-            $('#en-CA-mobile').click(function(e){
-                e.preventDefault();
+            $('#fr-CA').click(function(){
                 setSecondaryLanguage();
                 window.location.reload();
             });
             
-            $('#fr-CA-mobile').click(function(e){
-                e.preventDefault();
+            $('#en-CA-mobile').click(function(){
                 setPrimaryLanguage();
+                window.location.reload();
+            });
+            
+            $('#fr-CA-mobile').click(function(){
+                setSecondaryLanguage();
                 window.location.reload();
             });
             
@@ -714,7 +715,7 @@
                 
             }
             //loadMallData is located in mallmaverick.js, the call back method ensures the data is loaded
-            loadMallData(renderPageData);
+            loadMallDataCached(renderPageData);
             
             $("#nav_items_sticky").sticky({topSpacing:0});
             
