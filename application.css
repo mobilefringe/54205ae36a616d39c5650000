@@ -11,6 +11,10 @@
    
 }
 
+.flex-control-paging li a{
+    color:transparent;
+}
+
 .map-mouse-over:hover{
     fill:   #66FFFF !important;
 }  
