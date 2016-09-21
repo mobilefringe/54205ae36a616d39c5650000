@@ -48,6 +48,7 @@
       "6": "Samedi"
   },
   "general":{
+      "enter_email":"entrez votre courriel",
       "to": "au",
       "hours": "Heures",
       "todays_hours":"Heures d'ouverture",
