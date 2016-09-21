@@ -35,6 +35,8 @@
 }
 .flex-control-nav{
     bottom:10px;
+    right:10px;
+    text-align:right;
 }
 
 .flex-control-paging li a{
