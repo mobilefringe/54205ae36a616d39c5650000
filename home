@@ -74,7 +74,7 @@
                <div class="newsletter-sign-up" style="margin-top:15px">
                     <form action="http://mobilefringe.createsend.com/t/d/s/tydkit/" method="post" id="subForm">
                        <label for="subscribe_email" style="display:none"> subscribe email </label>
-                            <input id="fieldEmail" name="cm-tydkit-tydkit" type="email" required placeholder="enter email" /> 
+                            <input id="fieldEmail" name="cm-tydkit-tydkit" type="email" required placeholder="entrez votre courriel" /> 
                        <div class="checkbox">
                         <span style="font-size:11px">
                           <input type="checkbox" class="info_check" id="agree_terms" style="width:15px"/>
