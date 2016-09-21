@@ -112,6 +112,12 @@
             $('.flexslider').flexslider({
                 animation: "slide",
             });
+            if (sessionStorage.current_locale == "fr-CA"){
+                $('#fieldEmail').attr('placeholder', 'entrez votre courriel'); 
+            }
+            else{
+                $('#fieldEmail').attr('placeholder', 'enter email'); 
+            }
         }
         loadMallDataCached(renderPageData);
         
