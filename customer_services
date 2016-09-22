@@ -21,6 +21,7 @@
             <!--GIFT CARDS-->
             <a class="anchor" name="gift_cards"></a>
             <h2 data-i18n="nav.subnav.gift_cards"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="gift_cards"></div>
         </div>    
     </div>
 </div>
