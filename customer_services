@@ -61,11 +61,11 @@
     
     
     function load_json(json, container){
-        $.getJSON(pages_json).done(function(data) {
+        $.getJSON(json).done(function(data) {
             if(sessionStorage.current_locale == "en-CA"){
-                $('#gift_cards').html(data.body);
+                $(container).html(data.body);
             }else{
-                $('#gift_cards').html(data.body_2);
+                $(container).html(data.body_2);
             }
         })
     }
