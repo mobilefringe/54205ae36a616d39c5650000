@@ -27,21 +27,21 @@
             <h2 data-i18n="nav.subnav.customer_services"></h2>
             <div id="customer_services"></div>
             
-            <a class="anchor" name=""></a>
-            <h2 data-i18n="nav.subnav."></h2>
-            <div id=""></div>
+            <a class="anchor" name="fitness_walking_club"></a>
+            <h2 data-i18n="nav.subnav.fitness_walking_club"></h2>
+            <div id="fitness_walking_club"></div>
             
-            <a class="anchor" name=""></a>
-            <h2 data-i18n="nav.subnav."></h2>
-            <div id=""></div>
+            <a class="anchor" name="welcome_to_families"></a>
+            <h2 data-i18n="nav.subnav.welcome_to_families"></h2>
+            <div id="welcome_to_families"></div>
             
-            <a class="anchor" name=""></a>
-            <h2 data-i18n="nav.subnav."></h2>
-            <div id=""></div>
+            <a class="anchor" name="wifi"></a>
+            <h2 data-i18n="nav.subnav.wifi"></h2>
+            <div id="wifi"></div>
             
-            <a class="anchor" name=""></a>
-            <h2 data-i18n="nav.subnav."></h2>
-            <div id=""></div>
+            <a class="anchor" name="security"></a>
+            <h2 data-i18n="nav.subnav.security"></h2>
+            <div id="security"></div>
         </div>    
     </div>
 </div>
