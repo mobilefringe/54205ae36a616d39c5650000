@@ -32,14 +32,7 @@
             <a class="anchor" name="administration_hours"></a>
             <h2 data-i18n="nav.subnav.administration_hours"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="administration_hours"></div>
-            
-            <a class="anchor" name="gift_cards"></a>
-            <h2 data-i18n="nav.subnav.open_hours"><!--GIFT CARDS-->&nbsp;</h2>
-            <div id="open_hours"></div>
-            
-     
-            
-                <!--CENTRE HOURS-->
+            <!--CENTRE HOURS-->
             <a class="anchor" name="open_hours" id="open_hours"></a>
             <%=/centre_hours%>
            
@@ -50,10 +43,29 @@
 </div>
 <script>
     $(document).ready(function() {
-        $('#loading').hide();
-        $('#page_content').fadeIn('fast');
-
+        loadMallDataCached(renderPageData);
     });
-
+    
+    function renderPageData(){
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        prefix = get_prefix();
+        load_json(prefix+"/pages/placevertu-how-to-get-here.json", "#how_to_get_here");
+        load_json(prefix+"/pages/placevertu-parking-information.json", "#parking_information");
+        load_json(prefix+"/pages/placevertu-contact.json", "#administration_hours");
+        
+        $('#loading').hide();
+        $('#page_content').fadeIn();
+    }
+    
+    
+    function load_json(json, container){
+        $.getJSON(json).done(function(data) {
+            if(sessionStorage.current_locale == "en-CA"){
+                $(container).html(data.body);
+            }else{
+                $(container).html(data.body_2);
+            }
+        })
+    }
 </script>
-
