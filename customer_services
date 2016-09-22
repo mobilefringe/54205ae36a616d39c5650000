@@ -55,6 +55,12 @@
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
         var pages_json = prefix+"/pages/placevertu-gift-cards.json"
+        $('#loading').hide();
+        $('#page_content').fadeIn();
+    }
+    
+    
+    function load_json(json, container){
         $.getJSON(pages_json).done(function(data) {
             if(sessionStorage.current_locale == "en-CA"){
                 $('#gift_cards').html(data.body);
@@ -62,7 +68,5 @@
                 $('#gift_cards').html(data.body_2);
             }
         })
-        $('#loading').hide();
-        $('#page_content').fadeIn();
     }
 </script>
