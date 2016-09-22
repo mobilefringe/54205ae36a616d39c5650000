@@ -55,6 +55,7 @@
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
         var pages_json = prefix+"/pages/placevertu-gift-cards.json"
+        load_json(pages_json, "#gift_cards")
         $('#loading').hide();
         $('#page_content').fadeIn();
     }
