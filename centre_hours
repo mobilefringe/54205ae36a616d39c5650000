@@ -224,7 +224,7 @@
                 $.each( hours, function( key, value ) { 
                     var day = getStoreDay(value.day_of_week);
                     setLocaleDateFormats(value);
-                    if(sessionStorage.current_locale == sessionStorage.secondary_locale){
+                    if(sessionStorage.current_locale == sessionStorage.primary_locale){
                         var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
                     } else{
                         var day_text = '<p>'+ day + ': ' + value.open_time_localized + ' - ' + value.close_time_localized +'</p>';
