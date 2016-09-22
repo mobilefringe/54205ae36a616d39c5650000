@@ -50,7 +50,7 @@
         loadMallDataCached(renderPageData);
     });
     
-    function renderPagedata(){
+    function renderPageData(){
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
