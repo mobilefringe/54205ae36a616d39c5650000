@@ -55,7 +55,7 @@
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
         var pages_json = prefix+"/pages/placevertu-gift-cards.json"
-        load_json(prefix+"/pages/placevertu-wifi.json", "#gift_cards");
+        load_json(prefix+"/pages/placevertu-wifi.json", "#wifi");
         load_json(prefix+"/pages/placevertu-welcome-to-families.json", "#gift_cards");
         load_json(prefix+"/pages/placevertu-fitness-walking-club.json", "#gift_cards");
         load_json(prefix+"/pages/placevertu-customer-services.json", "#gift_cards");
