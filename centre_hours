@@ -200,11 +200,10 @@
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_fri_fr',5);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sat_fr',6);
           
-          console.log(getPropertyHours());
             renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyHours(),100);
             renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
             var store_list = getStoresList();
-             renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
+            renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
         }
         
         loadMallDataCached(renderPageData);
@@ -247,7 +246,7 @@
     
     function getStoreDay(day_week){
         var day;
-        if(sessionStorage.current_locale == sessionStorage.secondary_locale){
+        if(sessionStorage.current_locale == sessionStorage.primary_locale){
             switch (day_week){
                 case 0:
                     day = "Dimanche";
