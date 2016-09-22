@@ -60,6 +60,7 @@
         load_json(prefix+"/pages/placevertu-fitness-walking-club.json", "#fitness_walking_club");
         load_json(prefix+"/pages/placevertu-customer-services.json", "#customer_services");
         load_json(prefix+"/pages/placevertu-gift-cards.json", "#gift_cards");
+        load_json(prefix+"/pages/placevertu-security.json", "#security");
         
         $('#loading').hide();
         $('#page_content').fadeIn();
