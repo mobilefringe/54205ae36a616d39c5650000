@@ -47,7 +47,16 @@
 </div>
 <script>
     $(document).ready(function() {
+        loadMallDataCached(renderPageData);
+    });
+    
+    function renderPagedata(){
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        prefix = get_prefix();
+        var pages_json = prefix+"/pages/placevertu-gift-cards.json"
+        
         $('#loading').hide();
         $('#page_content').fadeIn();
-    });
+    }
 </script>
