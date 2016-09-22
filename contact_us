@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-3"  id="">
+           <h1 class="hidden-xs sidebar-title" data-i18n="nav.contact"><strong><!--Contact Us--></strong></h1>
+            <img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
+            <ul class="button-panel">
+                <li><a href="#directions" class="btn btn-default"><span data-i18n="nav.subnav.directions"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--DIRECTIONS--></a></li>
+                <li><a href="#how_to_get_here" class="btn btn-default" ><span data-i18n="nav.subnav.how_to_get_here"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--HOW TO GET HERE--></a></li>
+                <li><a href="#parking_information" class="btn btn-default"><span data-i18n="nav.subnav.parking_information"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--PARKINING INFORMATION--></a></li>
+                <li><a href="#administration_hours" class="btn btn-default"><span data-i18n="nav.subnav.administration_hours"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--ADMINISTRATION HOURS--></a></li>
+                <li><a href='#open_hours' class="btn btn-default" ><span data-i18n="nav.subnav.opening_hours"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--OPENING HOURS--></a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-9"  id="right-content">
+            <h1 class="visible-xs" data-i18n="nav.contact"><!--CONTACT--></h1>
+            
+            <!--DIRECTIONS-->
+            <a class="anchor" name="directions"></a>
+            <h2 data-i18n="nav.subnav.directions">&nbsp;</h2>
+            <div style="min-height:350px">
+                <%=/centre_address_map%>
+            </div>
+            
+            <a class="anchor" name="how_to_get_here"></a>
+            <h2 data-i18n="nav.subnav.how_to_get_here"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="how_to_get_here"></div>
+            
+            <a class="anchor" name="parking_information"></a>
+            <h2 data-i18n="nav.subnav.parking_information"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="parking_information"></div>
+            
+            <a class="anchor" name="administration_hours"></a>
+            <h2 data-i18n="nav.subnav.administration_hours"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="administration_hours"></div>
+            
+            <a class="anchor" name="gift_cards"></a>
+            <h2 data-i18n="nav.subnav.open_hours"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="open_hours"></div>
+            
+     
+            
+                <!--CENTRE HOURS-->
+            <a class="anchor" name="open_hours" id="open_hours"></a>
+            <%=/centre_hours%>
+           
+        </div>
+        
+        
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#loading').hide();
+        $('#page_content').fadeIn('fast');
+
+    });
+
+</script>
+
