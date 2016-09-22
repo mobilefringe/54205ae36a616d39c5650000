@@ -1,6 +1,6 @@
 
 <div class="hours">
-<span class="primary-locale">
+<span class="secondary-locale">
     <h2>
         <span id="todays-hours">
             <script id="todays_hours_template" type="x-tmpl-mustache">
@@ -86,7 +86,7 @@
     
     </span>
 
-<span class="secondary-locale">
+<span class="primary-locale">
     <h2>
         <span id="todays-hours_fr">
             <script id="todays_hours_template_fr" type="x-tmpl-mustache">
