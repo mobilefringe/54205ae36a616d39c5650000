@@ -56,8 +56,7 @@
         prefix = get_prefix();
         var pages_json = prefix+"/pages/placevertu-gift-cards.json"
         $.getJSON(pages_json).done(function(data) {
-            $('#mm_title').html(data.title)
-            $('#mm_page_content').html(data.body);
+            $('#gift_cards').html(data.body);
         })
         $('#loading').hide();
         $('#page_content').fadeIn();
