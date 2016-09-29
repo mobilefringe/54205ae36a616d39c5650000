@@ -225,9 +225,19 @@
                     var day = getStoreDay(value.day_of_week);
                     setLocaleDateFormats(value);
                     if(sessionStorage.current_locale == sessionStorage.primary_locale){
-                        var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
+                        if (value.is_closed == true){
+                            var day_text = '<p>'+ day + ': Fermé</p>'
+                        }
+                        else{
+                            var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
+                        }
                     } else{
-                        var day_text = '<p>'+ day + ': ' + value.open_time_localized + ' - ' + value.close_time_localized +'</p>';
+                        if (value.is_closed == true){
+                            var day_text = '<p>'+ day + ': Closed</p>'
+                        }else{
+                            var day_text = '<p>'+ day + ': ' + value.open_time_localized + ' - ' + value.close_time_localized +'</p>';    
+                        }
+                        
                     }
                     hours_text += day_text;  
                 });
