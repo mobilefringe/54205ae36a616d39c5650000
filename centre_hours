@@ -226,7 +226,7 @@
                     setLocaleDateFormats(value);
                     if(sessionStorage.current_locale == sessionStorage.primary_locale){
                         if (value.is_closed == true){
-                            console.log("here")
+                            
                             var day_text = '<p>'+ day + ': Fermé</p>'
                         }
                         else{
