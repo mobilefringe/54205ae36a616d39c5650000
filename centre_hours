@@ -230,6 +230,7 @@
                             var day_text = '<p>'+ day + ': Fermé</p>'
                         }
                         else{
+                            console.log(value.open_time_localized_fr )
                             var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
                         }
                     } else{
