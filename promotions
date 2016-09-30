@@ -1,7 +1,7 @@
 <div class="container promotions">
     <div class="row">
        
-            <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+            <div class="col-xs-12 col-sm-4 col-md-3" id="">
                 <h1 class="sidebar-title" data-i18n="nav.promotions"></h1>
                 <div class="panel-group stores" id="accordion">
                     <div class="panel panel-default">
