@@ -2,7 +2,7 @@
     <div class="row">
        <div class="col-xs-12 col-sm-4 col-md-3">
             <h1 class="hidden-xs sidebar-title" data-i18n="nav.services"><!--Customer Services--></h1>
-            <img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_customerservices.jpg" class="hidden-xs" alt="">
+            <img src="https://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_customerservices.jpg" class="hidden-xs" alt="">
             <ul class="button-panel">
                 <li><a href="#gift_cards" class="btn btn-default"><span data-i18n="nav.subnav.gift_cards"></span>
                 <i class="pull-right fa fa-angle-right fa-lg"></i>
