@@ -665,8 +665,8 @@
                 i18n.setLng(sessionStorage.secondary_locale, function(t) {
                     $(document).i18n();
                 });
-                $('.primary-locale').hide(); // Shows
-                $('.secondary-locale').show();
+                $('.primary-locale').show(); // Shows
+                $('.secondary-locale').hide();
                 sessionStorage.setItem('current_locale', sessionStorage.secondary_locale);
                 $("#search_input").attr("placeholder", i18n.t("general.search_placeholder"));
                 $("#search_input_mobile").attr("placeholder", i18n.t("general.search_placeholder"));
