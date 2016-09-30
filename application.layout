@@ -421,7 +421,7 @@
                     <li class="page-scroll primary-locale" style="">
                         <a id="fr-CA-mobile" href="#" data-i18n="nav.locale.french"></a>
                     </li>
-                    <li class="page-scroll secondary-locale" style="">
+                    <li class="page-scroll" style="">
                         <a id="en-CA-mobile" href="#" data-i18n="nav.locale.english"></a>
                     </li>
                     <li class="page-scroll" style="">
