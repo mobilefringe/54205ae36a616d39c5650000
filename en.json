@@ -48,7 +48,13 @@
       "6": "Saturday"
   },
   "general":{
-      "popup_name": "INSCRIVEZ-VOUS À NOTRE INFOLETTRE",
+      "popup_name": "JOIN OUR NEWSLETTER",
+      "popup_desc": "Sign up and never miss exclusive offers, promotions, events and other contests just as exciting!",
+      "popup_field_name": "NAME",
+      "popup_field_email": "EMAIL",
+      "popup_field_postal": "POSTAL CODE",
+      "popup_agree": "I agree to receive emails from Place Vertu",
+      "popup_hide": "Don’t show this message today",
       "enter_email": "enter email",
       "hours":"Hours",
       "todays_hours":"Today's Hours",
