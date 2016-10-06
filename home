@@ -12,9 +12,9 @@
         </p>
         
         <div class="subscribe">
-            <input type="text" placeholder="<%I18n.t('general.popup_field_name')%>" id="subscribe_first_name">
-            <input type="text" placeholder="NOM" id="subscribe_last_name">                            
-            <input type="text" placeholder="COURRIEL" id="subscribe_email_popup">
+            <input type="text" placeholder="<%I18n.t('general.popup_field_name')%>" id="subscribe_name">
+            <input type="text" placeholder="" id="subscribe_email">                            
+            <input type="text" placeholder="" id="subscribe_email_popup">
                 
             <a href="javascript:subscribe_email_popup();" class="btn submit_btn"> 
                 SUBMIT
@@ -139,6 +139,9 @@
             });
             if (sessionStorage.current_locale == "fr-CA"){
                 $('#fieldEmail').attr('placeholder', 'entrez votre courriel'); 
+                $('#subscribe_first_name').attr('placeholder', ''); 
+                $('#subscribe_first_name').attr('placeholder', ''); 
+                $('#subscribe_first_name').attr('placeholder', ''); 
             }
             else{
                 $('#fieldEmail').attr('placeholder', 'enter email'); 
