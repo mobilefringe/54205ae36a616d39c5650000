@@ -73,9 +73,9 @@
     margin:0;
 }
 
-.popup_newsletter .subscribe p #hide_popup {
+#hide_popup {
     margin: 0 0 5px;
-    width:inherit;
+    width:10px;
 }
 
 .popup_newsletter {
