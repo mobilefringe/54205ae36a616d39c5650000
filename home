@@ -152,7 +152,13 @@
         })
         
         $('#popup_form').submit(function(e){
-            subscribe_email_popup();
+            if ($('#agree_newsletter').is(':checked') == false){
+                
+            }
+            else{
+                subscribe_email_popup();    
+            }
+            
             e.preventDefault()
         })
         function renderPageData(){
