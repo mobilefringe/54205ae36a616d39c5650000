@@ -50,6 +50,10 @@
     margin:0;
 }
 
+.popup_newsletter .subscribe {
+    text-align: center;
+}
+
 .popup_newsletter p {
     text-align: center;
     font-size: 14px;
