@@ -49,6 +49,13 @@
     letter-spacing: .1em;
 }
 
+.popup_newsletter p {
+    text-align: center;
+    font-size: 13pt;
+    line-height: 20pt;
+    padding: 20px 0;
+}
+
 .popup_newsletter {
     padding: 50px;
     width: 320px;
