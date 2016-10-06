@@ -151,8 +151,9 @@
             Cookies.set('popup', "true", { expires: 1 });
         })
         
-        $('#popup_form').submit(function(){
+        $('#popup_form').submit(function(e){
             subscribe_email_popup();
+            e.preventDefault()
         })
         function renderPageData(){
             //console.log('rendering page data');
