@@ -73,7 +73,7 @@
     margin:0;
 }
 
-#hide_popup {
+.popup_newsletter #hide_popup {
     margin: 0 0 5px;
     width:10px;
 }
