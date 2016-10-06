@@ -131,7 +131,7 @@
             function (data) {
                 if (data.Status === 400) {
                     alert("Veuillez essayer de nouveau s’il vous plaît.");
-                } else { // 200
+                } else {
                     $("#success_subscribe_popup").fadeIn();
                 }
         });    
