@@ -5,7 +5,7 @@
 </style>
 <div class="popup_bg" style="display: block;">    
     <div class="popup_newsletter" style="padding-bottom: 15px;padding-right: 25px;padding-left: 25px;">
-        <a href="javascript:close_popup();" class="popup_close"><font><font>X</font></font></a>
+        <a href="javascript:close_popup();" class="popup_close">X</a>
         <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
         <p>
            Sign up and never miss exclusive offers, promotions, events and other competitions just as exciting!
