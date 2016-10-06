@@ -77,6 +77,10 @@
     background: #000;
 }
 
+.submit_btn:hover{
+    color:#fff;
+}
+
 .popup_newsletter #hide_popup {
     margin: 0 0 5px;
     width:10px;
