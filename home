@@ -120,24 +120,21 @@
     }
     
     function subscribe_email_popup(){ 
-        if (isValidEmailAddress($("#subscribe_email_popup").val())){   
-            var action="http://mobilefringe.createsend.com/t/d/s/ykblt/"
-            var data = {}
-            data["cm-ykblt-ykblt"] = $("#subscribe_email_popup").val();
-            data["cm-name"] = $("#subscribe_first_name").val() + " " + $("#subscribe_last_name").val();
-            $.getJSON(
-                action + "?callback=?",
-                data,
-                function (data) {
-                    if (data.Status === 400) {
-                        alert("Veuillez essayer de nouveau s’il vous plaît.");
-                    } else { // 200
-                        $("#success_subscribe_popup").fadeIn();
-                    }
-            });    
-        } else {
-            alert("Veuillez entrez un courriel valide.")
-        }
+        var action="http://mobilefringe.createsend.com/t/d/s/ykblt/"
+        var data = {}
+        data["cm-tydkit-tydkit"] = $("#subscribe_email").val();
+        data["cm-name"] = $("#subscribe_name").val();
+        data["cm-f-hktlld"] = $("#subscribe_postal_code").val();
+        $.getJSON(
+            action + "?callback=?",
+            data,
+            function (data) {
+                if (data.Status === 400) {
+                    alert("Veuillez essayer de nouveau s’il vous plaît.");
+                } else { // 200
+                    $("#success_subscribe_popup").fadeIn();
+                }
+        });    
     }
     
         
