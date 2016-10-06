@@ -75,7 +75,7 @@
 
 .popup_newsletter .subscribe p #hide_popup {
     margin: 0 0 5px;
-    width:initial;
+    width:onherit;
 }
 
 .popup_newsletter {
