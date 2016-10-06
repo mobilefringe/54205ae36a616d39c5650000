@@ -48,6 +48,7 @@
       "6": "Saturday"
   },
   "general":{
+      "popup_name": "INSCRIVEZ-VOUS À NOTRE INFOLETTRE",
       "enter_email": "enter email",
       "hours":"Hours",
       "todays_hours":"Today's Hours",
