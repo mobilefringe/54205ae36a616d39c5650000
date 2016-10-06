@@ -152,7 +152,7 @@
         })
         
         $('#popup_form').submit(function(){
-            
+            subscribe_email_popup();
         })
         function renderPageData(){
             //console.log('rendering page data');
