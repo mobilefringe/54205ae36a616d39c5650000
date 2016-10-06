@@ -153,8 +153,15 @@
         
         $('#popup_form').submit(function(e){
             if ($('#agree_newsletter').is(':checked') == false){
+                if (sessionStorage.current_locale == "fr-CA"){
+                    alert("Veuillez entrez un courriel valide.")
+                }
+                else{
+                    alert("Please enter valid email.")
+                }
                 
             }
+            
             else{
                 subscribe_email_popup();    
             }
