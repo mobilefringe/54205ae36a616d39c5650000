@@ -17,7 +17,7 @@
             <input title="EMAIL" type="text" placeholder="COURRIEL" id="subscribe_email_popup">
                 
             <a href="javascript:subscribe_email_popup();" class="btn"> 
-                <img alt="popup picture" id="subscribe_letter_btn_img" src="https://www.mallmaverick.com/system/site_images/photos/000/001/876/original/submit.png?1393866496"> 
+                SUBMIT
             </a>
             
             <span id="success_subscribe_popup" style="display: none;"><font><font>Thank you for your registration!</font></font></span>
