@@ -39,6 +39,16 @@
     font-family: Helvetica;
 }
 
+.popup_newsletter h1 {
+    padding: 0;
+    text-align: center;
+    font-size: 25pt;
+    font-weight: 100;
+    color: #000;
+    line-height: 28pt;
+    letter-spacing: .1em;
+}
+
 .popup_newsletter {
     padding: 50px;
     width: 320px;
