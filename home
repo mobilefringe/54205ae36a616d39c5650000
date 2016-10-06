@@ -11,16 +11,16 @@
         <p data-i18n="general.popup_desc"></p>
         
         <div class="subscribe">
-            <input type="text" placeholder="" id="subscribe_name" required>
+            <input type="text" placeholder="" id="subscribe_name" >
             <input type="text" placeholder="" id="subscribe_email" required>                            
-            <input type="text" placeholder="" id="subscribe_postal_code" required>
+            <input type="text" placeholder="" id="subscribe_postal_code" >
                 <br />
             <a href="javascript:subscribe_email_popup();" class="btn submit_btn" data-i18n="general.submit"> </a>
             <br />
             <span id="success_subscribe_popup" style="display: none;" data-i18n="general.popup_thankyou"></span>
             <label style="display: block;padding-right: 0px;padding-top: 10px;">
                 <input title="checkbox " type="checkbox" id="agree_newsletter" required>
-                <span data-i18n="general.popup_hide"></span>
+                <span data-i18n="general.popup_agree"></span>
             </label>
             <label style="display: block;padding-right: 0px;padding-top: 10px;">
                 <input title="checkbox " type="checkbox" id="hide_popup">
