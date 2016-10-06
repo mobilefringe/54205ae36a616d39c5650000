@@ -16,7 +16,7 @@
             <input title="NAME" type="text" placeholder="NOM" id="subscribe_last_name">                            
             <input title="EMAIL" type="text" placeholder="COURRIEL" id="subscribe_email_popup">
                 
-            <a href="javascript:subscribe_email_popup();" class="btn"> 
+            <a href="javascript:subscribe_email_popup();" class="btn submit_btn"> 
                 SUBMIT
             </a>
             
