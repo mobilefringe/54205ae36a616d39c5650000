@@ -16,7 +16,7 @@
                 
             <a href="javascript:subscribe_email_popup();" class="btn submit_btn" data-i18n="general.submit"> </a>
             
-            <span id="success_subscribe_popup" style="display: none;" data-i18n="general.popop_thank_you"></span>
+            <span id="success_subscribe_popup" style="display: none;" data-i18n="general.popup_thankyou"></span>
             
             <label style="display: block;padding-right: 0px;padding-top: 10px;">
                 <input title="checkbox " type="checkbox" id="hide_popup">
