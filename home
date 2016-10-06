@@ -1,3 +1,4 @@
+<script src="//s3.amazonaws.com/kodekloud/sites/5447ebb66e6f641987020000/application/x-javascript/1475784672000/js.cookie.js"></script>
 <style>
     .header-area{
         margin-bottom: 0px;
@@ -139,6 +140,7 @@
     
         
     $(document).ready(function() {
+        
         function renderPageData(){
             //console.log('rendering page data');
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),2);
