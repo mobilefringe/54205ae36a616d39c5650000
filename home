@@ -150,6 +150,10 @@
         $('#hide_popup').click(function(){
             Cookies.set('popup', "true", { expires: 1 });
         })
+        
+        $('#popup_form').submit(function(){
+            
+        })
         function renderPageData(){
             //console.log('rendering page data');
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),2);
