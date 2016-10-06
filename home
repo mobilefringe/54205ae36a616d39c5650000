@@ -20,7 +20,7 @@
             
             <label style="display: block;padding-right: 0px;padding-top: 10px;">
                 <input title="checkbox " type="checkbox" id="hide_popup">
-                <span data-i18n="popup_hide"></span>
+                <span data-i18n="general.popup_hide"></span>
             </label>
         </div>        
     </div>
