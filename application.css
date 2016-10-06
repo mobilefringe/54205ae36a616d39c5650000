@@ -85,6 +85,9 @@
 .popup_newsletter #hide_popup, .popup_newsletter #agree_newsletter{
     margin: 0 0 5px;
     width:10px;
+}
+
+.popup_newsletter label span{
     font-size:10px;
 }
 
