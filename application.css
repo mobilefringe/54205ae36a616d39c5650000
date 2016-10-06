@@ -75,11 +75,11 @@
 
 .submit_btn{
     background: #000;
+    margin:10px 0;
 }
 
 .submit_btn:hover{
     color:#fff;
-    margin:10px 0;
 }
 
 .popup_newsletter #hide_popup {
