@@ -12,7 +12,7 @@
         </p>
         
         <div class="subscribe">
-            <input type="text" placeholder="PRÉNOM" id="subscribe_first_name">
+            <input type="text" placeholder="<%=I18n.t('general.popup_field_name')%>" id="subscribe_first_name">
             <input type="text" placeholder="NOM" id="subscribe_last_name">                            
             <input type="text" placeholder="COURRIEL" id="subscribe_email_popup">
                 
