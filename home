@@ -140,7 +140,7 @@
     
         
     $(document).ready(function() {
-        if (Cookies.get('popup') == undefined){
+        if (Cookies.get('popup') != "true"){
             $('.popup_bg').show()
         }
         function renderPageData(){
