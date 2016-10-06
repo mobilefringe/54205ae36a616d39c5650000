@@ -3,7 +3,32 @@
         margin-bottom: 0px;
     }
 </style>
-
+<div class="popup_bg" style="display: block;">    
+    <div class="popup_newsletter" style="padding-bottom: 15px;padding-right: 25px;padding-left: 25px;">
+        <a href="javascript:close_popup();" class="popup_close"><font><font>X</font></font></a>
+        <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
+        <p>
+           Sign up and never miss exclusive offers, promotions, events and other competitions just as exciting!
+        </p>
+        
+        <div class="subscribe">
+            <input title="FIRST NAME" type="text" placeholder="PRÉNOM" id="subscribe_first_name">
+            <input title="NAME" type="text" placeholder="NOM" id="subscribe_last_name">                            
+            <input title="EMAIL" type="text" placeholder="COURRIEL" id="subscribe_email_popup">
+                
+            <a href="javascript:subscribe_email_popup();" class="btn"> 
+                <img alt="popup picture" id="subscribe_letter_btn_img" src="https://www.mallmaverick.com/system/site_images/photos/000/001/876/original/submit.png?1393866496"> 
+            </a>
+            
+            <span id="success_subscribe_popup" style="display: none;"><font><font>Thank you for your registration!</font></font></span>
+            
+            <label style="display: block;padding-right: 0px;padding-top: 10px;">
+                <input title="checkbox " type="checkbox" id="hide_popup">
+                Do not show this message today
+            </label>
+        </div>        
+    </div>
+</div>
 <div class="home">
     <div class="flexslider">
         <ul class="slides" id="home_banner">
