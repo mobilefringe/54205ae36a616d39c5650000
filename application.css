@@ -30,6 +30,15 @@
     left: 0px;
 }
 
+.popup_newsletter .popup_close {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    font-size: 1.5em;
+    font-weight: 100;
+    font-family: Helvetica;
+}
+
 .popup_newsletter {
     padding: 50px;
     width: 320px;
