@@ -130,7 +130,7 @@
             data,
             function (data) {
                 if (data.Status === 400) {
-                    alert("Veuillez essayer de nouveau s’il vous plaît.");
+                    alert("failed");
                 } else {
                     $("#success_subscribe_popup").fadeIn();
                 }
