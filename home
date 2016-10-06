@@ -144,7 +144,7 @@
             $('.popup_bg').show()
         }
         $('#hide_popup').click(function(){
-            Cookies.set('popup', "true") 
+            Cookies.set('popup', "true");
         })
         function renderPageData(){
             //console.log('rendering page data');
