@@ -48,6 +48,13 @@
       "6": "Samedi"
   },
   "general":{
+      "popup_name": "INSCRIVEZ-VOUS À NOTRE INFOLETTRE",
+      "popup_desc": "Inscrivez-vous pour ne rien manquer des offres exclusives, promotions, événements et autres concours tout aussi excitants!",
+      "popup_field_name": "NOM",
+      "popup_field_email": "COURRIEL",
+      "popup_field_postal": "CODE POSTAL",
+      "popup_agree": "Je consens à recevoir des courriels de Place Vertu.",
+      "popup_hide": "Ne plus afficher ce message aujourd'hui",
       "enter_email":"entrez votre courriel",
       "to": "au",
       "hours": "Heures",
