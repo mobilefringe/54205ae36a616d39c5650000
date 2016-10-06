@@ -73,6 +73,10 @@
     margin:0;
 }
 
+.popup_newsletter .subscribe p #hide_popup {
+    margin: 0 0 5px;
+}
+
 .popup_newsletter {
     padding: 50px;
     width: 320px;
