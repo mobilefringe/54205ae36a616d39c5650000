@@ -16,11 +16,11 @@
                 
             <a href="javascript:subscribe_email_popup();" class="btn submit_btn" data-i18n="general.submit"> </a>
             
-            <span id="success_subscribe_popup" style="display: none;"><font><font>Thank you for your registration!</font></font></span>
+            <span id="success_subscribe_popup" style="display: none;">Thank you for your registration!</span>
             
             <label style="display: block;padding-right: 0px;padding-top: 10px;">
                 <input title="checkbox " type="checkbox" id="hide_popup">
-                Do not show this message today
+                <span data-i18n="popup_hide"></span>
             </label>
         </div>        
     </div>
