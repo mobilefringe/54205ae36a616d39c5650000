@@ -76,6 +76,7 @@
 .submit_btn{
     background: #000;
     margin:10px 0;
+    color:#fff;
 }
 
 .submit_btn:hover{
@@ -86,6 +87,7 @@
     margin: 0 0 5px;
     width:10px;
 }
+
 
 .popup_newsletter label span{
     font-size:11px;
