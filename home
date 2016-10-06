@@ -120,7 +120,7 @@
     }
     
     function subscribe_email_popup(){ 
-        var action="http://mobilefringe.createsend.com/t/d/s/ykblt/"
+        var action="http://mobilefringe.createsend.com/t/d/s/tydkit/"
         var data = {}
         data["cm-tydkit-tydkit"] = $("#subscribe_email").val();
         data["cm-name"] = $("#subscribe_name").val();
