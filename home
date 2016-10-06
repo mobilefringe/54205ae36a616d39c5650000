@@ -115,7 +115,9 @@
 <script>
 
 
-    
+    function close_popup(){
+        $(".popup_bg").fadeOut();
+    }
     
         
     $(document).ready(function() {
