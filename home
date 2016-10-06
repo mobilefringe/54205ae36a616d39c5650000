@@ -16,8 +16,8 @@
             <input type="text" placeholder="" id="subscribe_email">                            
             <input type="text" placeholder="" id="subscribe_postal_code">
                 
-            <a href="javascript:subscribe_email_popup();" class="btn submit_btn"> 
-                SUBMIT
+            <a href="javascript:subscribe_email_popup();" class="btn submit_btn" data-i18n="general.submit"> 
+                
             </a>
             
             <span id="success_subscribe_popup" style="display: none;"><font><font>Thank you for your registration!</font></font></span>
