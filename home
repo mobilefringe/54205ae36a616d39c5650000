@@ -135,7 +135,7 @@
             data,
             function (data) {
                 if (data.Status === 400) {
-                    alert("failed");
+                    alert("error");
                 } else {
                     $("#success_subscribe_popup").fadeIn();
                 }
