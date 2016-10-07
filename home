@@ -149,6 +149,7 @@
         }
         $('#hide_popup').click(function(){
             Cookies.set('popup', "true", { expires: 1 });
+            close_popup()
         })
         
         $('#popup_form').submit(function(e){
