@@ -193,6 +193,7 @@
             }
             else{
                 $('#fieldEmail').attr('placeholder', 'enter email'); 
+                $('#fieldEmail2').attr('placeholder', 'enter email'); 
                 $('#subscribe_name').attr('placeholder', 'NAME'); 
                 $('#subscribe_email').attr('placeholder', 'EMAIL'); 
                 $('#subscribe_postal_code').attr('placeholder', 'POSTAL CODE'); 
