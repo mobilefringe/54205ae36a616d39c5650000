@@ -185,7 +185,6 @@
             });
             if (sessionStorage.current_locale == "fr-CA"){
                 $('#fieldEmail').attr('placeholder', 'entrez votre courriel'); 
-                $('#fieldEmail2').attr('placeholder', 'entrez votre courriel'); 
                 $('#subscribe_name').attr('placeholder', 'NOM'); 
                 $('#subscribe_email').attr('placeholder', 'COURRIEL'); 
                 $('#subscribe_postal_code').attr('placeholder', 'CODE POSTAL'); 
@@ -193,7 +192,6 @@
             }
             else{
                 $('#fieldEmail').attr('placeholder', 'enter email'); 
-                $('#fieldEmail2').attr('placeholder', 'enter email'); 
                 $('#subscribe_name').attr('placeholder', 'NAME'); 
                 $('#subscribe_email').attr('placeholder', 'EMAIL'); 
                 $('#subscribe_postal_code').attr('placeholder', 'POSTAL CODE'); 
