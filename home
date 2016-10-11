@@ -185,7 +185,6 @@
             });
             if (sessionStorage.current_locale == "fr-CA"){
                 $('#fieldEmail').attr('placeholder', 'entrez votre courriel'); 
-                $('#fieldEmail').attr('placeholder', 'enter email'); 
                 $('#subscribe_name').attr('placeholder', 'NOM'); 
                 $('#subscribe_email').attr('placeholder', 'COURRIEL'); 
                 $('#subscribe_postal_code').attr('placeholder', 'CODE POSTAL'); 
