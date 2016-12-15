@@ -47,9 +47,11 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
-        load_json(prefix+"/pages/placevertu-how-to-get-here.json", "#how_to_get_here");
-        load_json(prefix+"/pages/placevertu-parking-information.json", "#parking_information");
-        load_json(prefix+"/pages/placevertu-contact.json", "#administration_hours");
+        load_json(prefix+"/pages/placevertu-place-vertu.json", "#place_vertu");
+        load_json(prefix+"/pages/placevertu-leasing-information.json", "#leasing_information");
+        load_json(prefix+"/pages/placevertu-charities.json", "#charities");
+        load_json(prefix+"/pages/placevertu-green-initiatives.json", "#green_initiatives");
+        load_json(prefix+"/pages/placevertu-building-conduct-policy.json", "#contract_policy");
         
         $('#loading').hide();
         $('#page_content').fadeIn();
