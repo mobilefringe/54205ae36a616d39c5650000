@@ -15,7 +15,7 @@
             
             <a class="anchor" name="place_vertu"></a>
             <h2 data-i18n="nav.subnav.place_vertu"><!--GIFT CARDS-->&nbsp;</h2>
-            <div id="how_to_get_here"></div>
+            <div id="place_vertu"></div>
             
             <a class="anchor" name="parking_information"></a>
             <h2 data-i18n="nav.subnav.parking_information"><!--GIFT CARDS-->&nbsp;</h2>
