@@ -25,9 +25,10 @@
             <h2 data-i18n="nav.subnav.charities"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="charities"></div>
             
-            <a class="anchor" name="administration_hours"></a>
-            <h2 data-i18n="nav.subnav.administration_hours"><!--GIFT CARDS-->&nbsp;</h2>
-            <div id="administration_hours"></div>
+            <a class="anchor" name="green_initiatives"></a>
+            <h2 data-i18n="nav.subnav.green_initiatives"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="green_initiatives"></div>
+            
             <!--CENTRE HOURS-->
             <a class="anchor" name="open_hours" id="open_hours"></a>
             <%=/centre_hours%>
