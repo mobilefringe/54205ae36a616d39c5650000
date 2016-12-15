@@ -17,9 +17,9 @@
             <h2 data-i18n="nav.subnav.place_vertu"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="place_vertu"></div>
             
-            <a class="anchor" name="parking_information"></a>
-            <h2 data-i18n="nav.subnav.parking_information"><!--GIFT CARDS-->&nbsp;</h2>
-            <div id="parking_information"></div>
+            <a class="anchor" name="charities"></a>
+            <h2 data-i18n="nav.subnav.charities"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="charities"></div>
             
             <a class="anchor" name="administration_hours"></a>
             <h2 data-i18n="nav.subnav.administration_hours"><!--GIFT CARDS-->&nbsp;</h2>
