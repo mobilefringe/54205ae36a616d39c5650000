@@ -12,7 +12,7 @@
             </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-9"  id="right-content">
-            <h1 class="visible-xs" data-i18n="nav.contact"><!--CONTACT--></h1>
+            <h1 class="visible-xs" data-i18n="nav.about"><!--CONTACT--></h1>
             
             <!--DIRECTIONS-->
             <a class="anchor" name="directions"></a>
