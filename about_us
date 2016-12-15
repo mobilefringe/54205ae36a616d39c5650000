@@ -12,17 +12,9 @@
             </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-9"  id="right-content">
-            <h1 class="visible-xs" data-i18n="nav.about"><!--CONTACT--></h1>
             
-            <!--DIRECTIONS-->
-            <a class="anchor" name="directions"></a>
-            <h2 data-i18n="nav.subnav.directions">&nbsp;</h2>
-            <div style="min-height:350px">
-                <%=/centre_address_map%>
-            </div>
-            
-            <a class="anchor" name="how_to_get_here"></a>
-            <h2 data-i18n="nav.subnav.how_to_get_here"><!--GIFT CARDS-->&nbsp;</h2>
+            <a class="anchor" name="place_vertu"></a>
+            <h2 data-i18n="nav.subnav.place_vertu"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="how_to_get_here"></div>
             
             <a class="anchor" name="parking_information"></a>
