@@ -29,9 +29,9 @@
             <h2 data-i18n="nav.subnav.green_initiatives"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="green_initiatives"></div>
             
-            <!--CENTRE HOURS-->
-            <a class="anchor" name="open_hours" id="open_hours"></a>
-            <%=/centre_hours%>
+            <a class="anchor" name="contract_policy"></a>
+            <h2 data-i18n="nav.subnav.contract_policy"><!--GIFT CARDS-->&nbsp;</h2>
+            <div id="contract_policy"></div>
            
         </div>
         
