@@ -183,6 +183,15 @@
     opacity:0.8;
 }
 
+.tooltip_name{
+   color:#FFF;
+   padding:0px;
+   padding-left:15px;
+   padding-right:15px;
+   margin-top:6px;
+   font-size:20px;
+   opacity:1.0;
+}
 #success_subscribe{display:none;}
 
 .zoom-out{
