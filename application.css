@@ -183,7 +183,7 @@
     /*display:none;*/
     opacity:0.8;
     border: none !important;
-    border-radius: none !important;
+    border-radius: 0px !important;
 }
 
 .tooltip_name{
