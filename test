@@ -1,0 +1,241 @@
+<style>
+    .map-mouse-over{
+        fill: #66FFFF !important;
+    }
+</style>
+<div id="pop-over">
+    <span class="pull-left">
+        <div id="pop-over-map-name">Default Name</div>
+        <div id="pop-over-map-phone">Phone Number</div>
+    </span>
+    <span class="pullright"><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"></span>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3 store-details" id="store_details1">
+            <!-- START MUSTACHE TEMPLATE FOR STORE DETAILS-->
+            <script id="store_details_template1" type="x-tmpl-mustache">
+                <h1>{{name}}</h1>
+                <img src="{{store_front_image_url}}">
+                <ul>
+                    <li style="text-align:center"><h1>{{phone}}</h1></li>
+                    <li>
+                        <button id="store-hours-btn" class="btn btn-default ">{{hours_header}}</button>
+                        <div class="store-hours">{{{hours_text}}}</div>
+                    </li>
+                    <li><a style="width:100%; padding-top:11px;" href="http://{{website}}" target="_blank" class="btn btn-default">{{visit_website}}</a></li>
+                </ul>
+            </script>
+            <!-- END MUSTACHE TEMPLATE FOR STORE DETAILS-->
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <div style="overflow:hidden" class="map-border">
+            <div id="zControls">
+                <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
+                <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
+                
+            </div>
+            <div id="map" class="panzoom-elements" style=""></div>
+            </div>
+            <div id="store_details2">
+                <!-- START MUSTACHE TEMPLATE FOR STORE DETAILS-->
+                <script id="store_details_template2" type="x-tmpl-mustache">
+                    <p>{{{description}}}</p>
+                </script>
+            </div>
+            <!-- END MUSTACHE TEMPLATE FOR STORE DETAILS-->
+             <ul class="promotion-list" id="promotions_not_empty_section" style="display:none">
+                <li>
+                    <h2 class="promo_title">Promotions</h2>
+                </li>
+                <div id="promotion_list">
+                <!-- START MUSTACHE TEMPLATE FOR STORE PROMOTIONS-->
+                <script id="promotion_item_template" type="x-tmpl-mustache">
+                    <li class="promotion-list-item row">
+                        <div class="promo-image col-md-2 col-xs-4">
+                            <a href="../promotions/{{ slug }}">
+                                <img src="{{promo_image_url}}">
+                            </a>
+                        </div>
+                        <div class="promo-details col-md-10 col-xs-8">
+                            <div class="name">
+                                <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                            </div>
+                            <div class="promo-store-name">
+                                <h4><a href="{{ promo_store_url }}">{{ promo_store_name }}</a></h4>
+                            </div>
+                            <div class="promo-dates">
+                                {{ start_date }} to {{ end_date }}
+                            </div>
+                            <div class="description">
+                                <p>{{{ description }}}</p>
+                            </div>
+                            <div class="social-links">
+                                <span><a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.kodekloud.io/promotions/{{slug}}" target="_blank"><img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png"></a></span>
+                                <span><a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.kodekloud.io/promotions/{{slug}}" target="_blank">
+                                       <img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png">
+                                       </a></span>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+                <script id="promotion_item_template_no_image" type="x-tmpl-mustache">
+                <li class="promotion-list-item row">
+                    <a name="{{promotionable_name}}"></a>
+                    <div class="promo-details col-xs-12">
+                        <div class="name">
+                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                        </div>
+                        <div class="store-name">
+                            <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                        </div>
+                        <div class="dates">
+                            {{ start_date }} to {{ end_date }}
+                        </div>
+                        <div class="description">
+                            <p>{{{ description }}}</p>
+                        </div>
+                        <div class="social-links">
+                            <span><a class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://placevertu.kodekloud.io/promotions/{{slug}}" target="_blank"><img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png"></a></span>
+                            <span><a class="twitter-share" href="http://twitter.com/?status={{name}}%20%20http://placevertu.kodekloud.io/promotions/{{slug}}" target="_blank">
+                                   <img src="http://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png">
+                           </a></span>
+                        </div>
+                    </div>
+                </li>
+            </script>
+                <!-- END MUSTACHE TEMPLATE FOR STORE PROMOTIONS-->
+                </div>
+            </ul>
+            <div id="promotions_empty_section"></div>
+            <div id="jobs_not_empty_section" class="jobs" style="display:none">
+                <h2 class="job_title">Jobs</h2>
+                <div class="panel-group" id="accordion">
+                    <div id="jobs_list">
+                        <!-- START MUSTACHE TEMPLATE FOR JOB ITEM-->
+                        <script id="job_item_template" type="x-tmpl-mustache">
+                          <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{id}}">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                  {{store_name}}
+                              </h3>
+                              <h4>
+                                {{name}}&nbsp;<small>{{job_type}}</small>
+                              </h4>
+                            </div>
+                            </a>
+                            <div id="collapse{{id}}" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                {{{description}}}
+                                <div style="display:{{has_contact_info_css}}">
+                                    <h5>Contact Info</h5>
+                                    <div>{{contact_name}}</div>
+                                    <div><a href="mailto:{{contact_email}}">{{contact_email}}</a></div>
+                                    <div>{{contact_phone}}</div>
+                                    <div><a href="{{contact_website}}" target="_blank">{{contact_website}}</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </script>
+                        <!-- END MUSTACHE TEMPLATE FOR JOB ITEM-->
+                    </div>
+                </div>
+            </div>
+            <div id="jobs_empty_section"></div>
+        </div>
+    </div>
+</div>
+
+<!--For more information please see http://learnjs.io/blog/2013/11/30/snapsvg-resources/-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+<script src="http://kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/e1fb5e17ab727d248230fbcb51da868f/jquery.panzoom.min.js"></script>
+ 
+<script>
+
+    $(document).ready(function() {
+        var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) );
+        $("#pop-over").hide();
+        var didPanZoom = false;
+        
+    
+        
+        
+        function renderPageData(){
+            //renders the store list by referencing the template id and the html id
+            //for where to place the rendered content. See mallmaverick.js for implementation
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var store_details = getStoreDetailsBySlug(slug);
+            console.log(store_details);
+            checkErrorPage(store_details);
+            var hours = getHoursForIds(store_details.store_hours);
+            var hours_text = '';
+            
+            if (hours.length > 0){
+                $.each( hours, function( key, value ) { 
+                    var day = getStoreDay(value.day_of_week);
+                    setLocaleDateFormats(value);
+                    if(sessionStorage.current_locale == sessionStorage.primary_locale){
+                        if (value.is_closed == true){
+                            var day_text = '<p>'+ day + ': Fermé</p>'
+                        }
+                        else{
+                            var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
+                        }
+                    } else{
+                        if (value.is_closed == true){
+                            var day_text = '<p>'+ day + ': Closed</p>'
+                        }else{
+                            var day_text = '<p>'+ day + ': ' + value.open_time_localized + ' - ' + value.close_time_localized +'</p>';    
+                        }
+                        
+                    }
+                    hours_text += day_text;  
+                });
+            } else {
+                for (var i=0 ; i < 7 ; i++){
+                    var day_hours = getRegHoursForDayIndex(i);
+                    var day = getStoreDay(i);
+                    setLocaleDateFormats(day_hours);
+                    if(sessionStorage.current_locale == sessionStorage.primary_locale){
+                        var day_text = '<p>'+ day + ': ' + day_hours.open_time_localized_fr + ' à ' + day_hours.close_time_localized_fr +'</p>'; 
+                    } else{
+                        var day_text = '<p>'+ day + ': ' + day_hours.open_time_localized + ' - ' + day_hours.close_time_localized +'</p>';
+                    }
+                    hours_text += day_text; 
+                }
+            }
+            store_details.hours_text = hours_text;
+            if(sessionStorage.current_locale == sessionStorage.primary_locale){
+                store_details.hours_header = "HEURES";
+                store_details.visit_website = "VISITEZ LE SITE";
+                $(".job_title").html("EMPLOIS");
+            } else {
+                store_details.hours_header = "HOURS";
+                store_details.visit_website = "VISIT WEBSITE";
+                $(".job_title").html("JOBS");
+            }
+            renderStoreDetailsTemplate('#store_details_template1','#store_details1',store_details);
+            renderStoreDetailsTemplate('#store_details_template2','#store_details2',store_details);
+            
+            var store_promos = getPromotionsForIds(store_details.promotions);
+            renderPromotionsListTemplate('#promotion_item_template','#promotion_item_template_no_image', '#promotion_list','#promotions_not_empty_section','#promotions_empty_section',store_promos);
+            
+            var jobs = getJobsForIds(store_details.jobs);
+            renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',jobs);
+            $('#loading').hide();
+            $('#page_content').fadeIn();
+            renderSVGMap(store_details);
+            
+            $('#store-hours-btn').click(function () {
+                $('.store-hours').slideToggle();
+            });
+            
+            
+            
+        }
+        loadMallDataCached(renderPageData);
+    });
+</script>
