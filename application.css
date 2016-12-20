@@ -192,6 +192,14 @@
    font-size:20px;
    opacity:1.0;
 }
+.tooltip_phone {
+    color:#FFF;
+   padding:0px;
+   padding-left:15px;
+   padding-right:15px;
+   font-size:12px;
+   opacity:1.0;
+}
 #success_subscribe{display:none;}
 
 .zoom-out{
