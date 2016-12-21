@@ -147,11 +147,11 @@
                     obj = {};
                     obj["tooltip"] = "<div class='tooltip_div'><span class='pull-left'><div class='tooltip_name'>" + val.name + "</div><div class='tooltip_phone'>" + val.phone + "</div></span><span class='pullright'><img class='tooltip_img' src='https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png'></span></div>"
                     obj["attr"] = {}
-                    obj["attr"]["href"] = "/stores/"+val.slug
+                    obj["attr"]["href"] = "/stores/" + val.slug
                     regions[val.svgmap_region] = obj
                 }
             });
-            load_map(regions, store_details);
+            load_map(regions, stores);
             
             //$(document).i18n();
             
