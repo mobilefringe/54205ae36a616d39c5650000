@@ -205,6 +205,10 @@
     height:20px;
     margin:20px;    
 }
+
+img#btnZoomIn, img#btnZoomOut {
+    width: 21px;
+}
 #success_subscribe{display:none;}
 
 .zoom-out{
