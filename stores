@@ -1,10 +1,10 @@
-<div id="pop-over">
-    <span class="pull-left">
-        <div id="pop-over-map-name">Default Name</div>
-        <div id="pop-over-map-phone">Phone Number</div>
-    </span>
-    <span class="pullright"><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"></span>
-</div>
+<!--<div id="pop-over">-->
+<!--    <span class="pull-left">-->
+<!--        <div id="pop-over-map-name">Default Name</div>-->
+<!--        <div id="pop-over-map-phone">Phone Number</div>-->
+<!--    </span>-->
+<!--    <span class="pullright"><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"></span>-->
+<!--</div>-->
 <div class="container store-list">
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-3">
@@ -74,12 +74,13 @@
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
 
             <div style="overflow:hidden" class="map-border">
-            <div id="zControls">
-                <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
-                <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
-                
-            </div>
-            <div id="map" class="panzoom-elements" style=""></div>
+                <div id="mapsvg_store_detail"></div>
+                <!--<div id="zControls">-->
+                <!--    <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>-->
+                <!--    <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>-->
+                    
+                <!--</div>-->
+                <!--<div id="map" class="panzoom-elements" style=""></div>-->
             </div>
             
             <div class="list-group" id="store_list">
@@ -137,7 +138,7 @@
             $('#by_categories').click(function(){
                 renderStoresByCategoriesListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
             });
-            renderSVGMap();
+            // renderSVGMap();
             
             regions = {};
             var stores = getStoresList();
