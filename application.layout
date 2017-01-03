@@ -110,9 +110,9 @@
         sessionStorage.setItem('primary_locale', 'fr-CA');
         sessionStorage.setItem('secondary_locale', 'en-CA');
         
-        if(getRequestParam('lang') == 'fr'){
+        if(getRequestParam('locale') == 'fr'){
             sessionStorage.setItem('current_locale',sessionStorage.secondary_locale);
-        }else if(getRequestParam('lang') == 'en'){
+        }else if(getRequestParam('locale') == 'en'){
             sessionStorage.setItem('current_locale',sessionStorage.primary_locale);
         }
   
