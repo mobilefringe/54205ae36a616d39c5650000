@@ -12,32 +12,32 @@
     "jobs": "Careers",
     "about": "About Us",
     "contact": "Contact Us",
-    "subnav" :{
-        "directions":"Directions",
-        "opening_hours":"Opening Hours",
-        "how_to_get_here":"How To Get Here",
-        "parking_information":"Parking Information",
-        "administration_hours":"Contact",
-        "accessibility":"Accessibility",
-        "place_vertu":"Place Vertu",
-        "leasing_information":"Leasing Information",
-        "charities":"Charities",
-        "green_initiatives":"Green Initiatives",
-        "contract_policy":"Building Conduct Policy",
-        "gift_cards":"Gift Cards",
-        "customer_services":"Customer Services",
-        "fitness_walking_club":"Fitness Walking Club",
-        "welcome_to_families": "Welcome To Families",
-        "wifi":"Wifi",
-        "security":"Security",
-        "stores_a-z":"Stores A-Z",
-        "categories":"Categories"
+        "subnav" :{
+            "directions":"Directions",
+            "opening_hours":"Opening Hours",
+            "how_to_get_here":"How To Get Here",
+            "parking_information":"Parking Information",
+            "administration_hours":"Contact",
+            "accessibility":"Accessibility",
+            "place_vertu":"Place Vertu",
+            "leasing_information":"Leasing Information",
+            "charities":"Charities",
+            "green_initiatives":"Green Initiatives",
+            "contract_policy":"Building Conduct Policy",
+            "gift_cards":"Gift Cards",
+            "customer_services":"Customer Services",
+            "fitness_walking_club":"Fitness Walking Club",
+            "welcome_to_families": "Welcome To Families",
+            "wifi":"Wifi",
+            "security":"Security",
+            "stores_a-z":"Stores A-Z",
+            "categories":"Categories"
+        },
+        "locale":{
+            "english":"English",
+            "french":"Français"
+        }
     },
-    "locale":{
-        "english":"English",
-        "french":"Français"
-    }
-  },
   "days_of_week":{
       "0": "Sunday",
       "1": "Monday",
