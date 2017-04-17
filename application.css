@@ -388,7 +388,9 @@ img{
 .social-link .fa-facebook-official, .social-link .fa-instagram {
     color:#000;
 }
-
+.social_mobile {
+    width: 30px;
+}
 .btn-default:hover {
     background-color: #F2F2F2;
 }
