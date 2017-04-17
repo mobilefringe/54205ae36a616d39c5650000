@@ -364,6 +364,9 @@ img{
     margin-top:18px;
     margin-left:20px;
 }
+.social-link a {
+    text-decoration: none;
+}
 .facebook {
     background: url(//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492438268000/facebook.png);
 }
