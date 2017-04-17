@@ -364,7 +364,12 @@ img{
     margin-top:15px;
     margin-left:20px;
 }
-
+.facebook {
+    background: url(//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492438268000/facebook.png);
+}
+.instagram {
+    background: url(//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492438256000/insta.png);
+}
 .social-link i{
     font-size:2.5em;
     /*font-size: 30px;*/
