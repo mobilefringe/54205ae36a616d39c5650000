@@ -371,7 +371,11 @@ img{
     background: url(//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492438256000/insta.png);
 }
 .facebook, .instagram {
-    
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-image: 
 }
 .social-link i{
     font-size:2.5em;
