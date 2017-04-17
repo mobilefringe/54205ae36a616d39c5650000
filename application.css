@@ -361,7 +361,7 @@ img{
 .social-link{
     /*width:35px;*/
     float:left;
-    margin-top:15px;
+    margin-top:18px;
     margin-left:20px;
 }
 .facebook {
@@ -375,8 +375,8 @@ img{
     width: 30px;
     height: 30px;
     background-size: cover;
-    background-image: 
 }
+
 .social-link i{
     font-size:2.5em;
     /*font-size: 30px;*/
