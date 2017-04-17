@@ -431,10 +431,10 @@
                         <a href="https://www.facebook.com/placevertu" target="_blank"><img class="image" style="width:40px" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/social_fb.png" ></a>
                         
                         <a href="https://www.facebook.com/placevertu" target="_blank">
-                           <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459249000/facebook_white.png" class="" alt="">
+                           <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459249000/facebook_white.png" class="social_mobile" alt="Facebook Logo">
                         </a>
                         <a href="https://www.instagram.com/placevertu" target="_blank">
-                           <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459282000/insta_white.png" class="" alt="">
+                           <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459282000/insta_white.png" class="social_mobile" alt="Instagram Logo">
                         </a>
                     </li>
                 </ul>
