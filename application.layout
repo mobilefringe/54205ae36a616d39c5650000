@@ -33,7 +33,7 @@
 
     
     <!-- Custom Fonts -->
-    <link href="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/368584aaeda8ec2d1f80a5f777235d72/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
