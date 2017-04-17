@@ -359,18 +359,19 @@ img{
 }
 
 .social-link{
-    width:35px;
+    /*width:35px;*/
     float:left;
     margin-top:15px;
     margin-left:20px;
 }
 
 .social-link i{
-    font-size:2.5em;
+    /*font-size:2.5em;*/
+    font-size: 30px;
 }
 
-.social-link .fa-facebook-official{
-    color:#355F9F;
+.social-link .fa-facebook-official, .social-link .fa-instagram {
+    color:#000;
 }
 
 .btn-default:hover {
