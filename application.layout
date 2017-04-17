@@ -153,11 +153,6 @@
                                <i class="fa fa-facebook-official"></i>                                
                             </a>
                         </div>
-                        <div class="social-link" style="">
-                            <a href="https://www.instagram.com/placevertu" target="_blank">
-                               <i class="fa fa-facebook-official"></i>                                
-                            </a>
-                        </div>
                         <div class="search" style="" >
                             <p class="title" style="" data-i18n="general.search">&nbsp;</p>
                             <input type="text" id="search_input" placeholder="">
