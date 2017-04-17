@@ -388,9 +388,12 @@ img{
 .social-link .fa-facebook-official, .social-link .fa-instagram {
     color:#000;
 }
-
+.mobile_social_icons {
+    padding: 15px 9px;
+}
 .navbar-default .navbar-nav > li.mobile_social_icons > a {
     padding: 0;
+    display: inline;
 }
 .social_mobile {
     width: 30px;
