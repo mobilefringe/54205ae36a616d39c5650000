@@ -359,7 +359,9 @@ img{
 }
 
 .social_icons {
-    margin: 0 -7.5px;
+    float:left;
+    margin-top:18px;
+    margin-left:20px;
 }
 .social_icons span{
     display:inline-block;
