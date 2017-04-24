@@ -358,6 +358,30 @@ img{
     padding-bottom:10px;
 }
 
+.social_icons {
+    margin: 0 -7.5px;
+}
+.social_icons span{
+    display:inline-block;
+    width:35px;
+    margin:0 7.5px;
+    float:left;
+    height:35px;
+    background-size: cover;
+}
+.social_icons #social_fb {
+    background-image:url(//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1455899536000/icon_facebook.png);
+}
+.social_icons #social_fb:hover {
+    background-image:url(//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461853162000/icon_facebook_hover.png);    
+}
+.social_icons #social_insta{
+    background-image:url(//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1464795128000/icon_insta.png);
+}
+.social_icons #social_insta:hover{
+    background-image:url(//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1464795122000/icon_insta_hover.png);    
+}
+
 .social-link{
     /*width:35px;*/
     float:left;
