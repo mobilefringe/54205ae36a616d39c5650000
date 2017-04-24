@@ -364,11 +364,11 @@ img{
     margin-left:20px;
 }
 .social_icons span{
-    display:inline-block;
-    width:35px;
-    margin:0 7.5px;
+    margin: 0 7.5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
     float:left;
-    height:35px;
     background-size: cover;
 }
 .social_icons #social_fb {
@@ -408,7 +408,7 @@ img{
 
 .social-link i{
     font-size:2.5em;
-    /*font-size: 30px;*/
+    font-size: 30px;
 }
 
 .social-link .fa-facebook-official, .social-link .fa-instagram {
