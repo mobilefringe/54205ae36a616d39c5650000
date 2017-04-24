@@ -158,11 +158,11 @@
                         <!--    </a>-->
                         <!--</div>-->
                         <div class="social_icons">
-                            <a href="https://www.facebook.com/placevertu" target="_blank">
+                            <a href="//www.facebook.com/placevertu" target="_blank">
                                 <span id="social_fb"></span>
                             </a>
                             
-                            <a href="https://www.instagram.com/placevertu/" target="_blank">
+                            <a href="//www.instagram.com/placevertu/" target="_blank">
                                 <span id="social_insta"></span>
                             </a>
                         </div>
@@ -438,12 +438,22 @@
                         <a id="en-CA-mobile" href="#" data-i18n="nav.locale.english"></a>
                     </li>
                     <li class="page-scroll mobile_social_icons" style="">
-                        <a href="https://www.facebook.com/placevertu" target="_blank">
-                           <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459249000/facebook_white.png" class="social_mobile" alt="Facebook Logo">
-                        </a>
-                        <a href="https://www.instagram.com/placevertu" target="_blank">
-                           <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459282000/insta_white.png" class="social_mobile" alt="Instagram Logo">
-                        </a>
+                        <!--<a href="https://www.facebook.com/placevertu" target="_blank">-->
+                        <!--   <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459249000/facebook_white.png" class="social_mobile" alt="Facebook Logo">-->
+                        <!--</a>-->
+                        <!--<a href="https://www.instagram.com/placevertu" target="_blank">-->
+                        <!--   <img src="//codecloud.cdn.speedyrails.net/sites/5447ebb66e6f641987020000/image/png/1492459282000/insta_white.png" class="social_mobile" alt="Instagram Logo">-->
+                        <!--</a>-->
+                        
+                        
+                            <a href="//www.facebook.com/placevertu" target="_blank">
+                                <span id="social_fb"></span>
+                            </a>
+                            
+                            <a href="//www.instagram.com/placevertu/" target="_blank">
+                                <span id="social_insta"></span>
+                            </a>
+                        
                     </li>
                 </ul>
             </div>
