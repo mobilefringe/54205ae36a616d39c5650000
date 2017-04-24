@@ -148,12 +148,22 @@
                                 <a id="fr-CA" href="#" data-i18n="nav.locale.french"></a>
                             </p>
                         </div>
-                        &nbsp;&nbsp;&nbsp;<div class="social-link" style="">
+                        &nbsp;&nbsp;&nbsp;
+                        <!--<div class="social-link" style="">-->
+                        <!--    <a href="https://www.facebook.com/placevertu" target="_blank">-->
+                        <!--       <span class="facebook"></span>-->
+                        <!--    </a>-->
+                        <!--    <a href="https://www.instagram.com/placevertu" target="_blank">-->
+                        <!--       <span class="instagram"></span>-->
+                        <!--    </a>-->
+                        <!--</div>-->
+                        <div class="social_icons">
                             <a href="https://www.facebook.com/placevertu" target="_blank">
-                               <span class="facebook"></span>
+                                <span id="social_fb"></span>
                             </a>
-                            <a href="https://www.instagram.com/placevertu" target="_blank">
-                               <span class="instagram"></span>
+                            
+                            <a href="https://www.instagram.com/placevertu/" target="_blank">
+                                <span id="social_insta"></span>
                             </a>
                         </div>
                         <div class="search" style="" >
