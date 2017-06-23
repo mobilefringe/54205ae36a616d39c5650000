@@ -292,10 +292,10 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.start_date = start.format("YYYY-M-D");
+            val.start_date = start.format("YYYY-MM-D");
         } else {
-            val.start_date = start.format("YYYY-M-D");
-            val.end_date = end.format("YYYY-M-D");
+            val.start_date = start.format("YYYY-MM-D");
+            val.end_date = end.format("YYYY-MM-D");
         }
     });
     if(events.length > 0){
