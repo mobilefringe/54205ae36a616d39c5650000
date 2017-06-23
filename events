@@ -191,7 +191,7 @@
             // var french_start = moment(start).locale('fr-ca');
             // var french_end = moment(end).locale('fr-ca');
             if (start.format("DMY") == end.format("DMY")){
-                console.log("same")
+                console.log(start)
                 // if(Cookies.get('current_locale') == "en-CA"){
                     val.dates = start.format("MMM D");
                 // }
@@ -199,7 +199,7 @@
                 //     val.dates = french_start.format("DD MMM");
                 // }
             } else {
-                console.log("different")
+                console.log(start end)
                 // if(Cookies.get('current_locale') == "en-CA"){
                     val.start_date = start.format("MMM D");
                     val.end_date = end.format("MMM D");
