@@ -343,24 +343,24 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     Mustache.parse(template_html);   // optional, speeds up future uses
    
     if(Cookies.get('current_locale') == "en-CA"){
-        val.event_name = val.name;
+        event_details.event_name = event_details.name;
         
-        if(val.description.length > 300){
-            val.desc_short = val.description.substring(0,300) + "...";
-        }
-        else{
-            val.desc_short = val.description;
-        }
+        // if(val.description.length > 300){
+        //     val.desc_short = val.description.substring(0,300) + "...";
+        // }
+        // else{
+        //     val.desc_short = val.description;
+        // }
     }
     if(Cookies.get('current_locale') == "fr-CA"){
-        val.event_name = val.name_2;
+        event_details.event_name = event_details.name_2;
         
-         if(val.description_2.length > 300){
-            val.desc_short = val.description_2.substring(0,300) + "...";
-        }
-        else{
-            val.desc_short = val.description_2;
-        }
+        //  if(val.description_2.length > 300){
+        //     val.desc_short = val.description_2.substring(0,300) + "...";
+        // }
+        // else{
+        //     val.desc_short = val.description_2;
+        // }
     }
     
     localizeObject(event_details);
