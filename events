@@ -204,14 +204,8 @@
                 // }
             } else {
                 // if(Cookies.get('current_locale') == "en-CA"){
-                    val.start_date = moment(locale_start).locale('fr-ca').format("DD MMM");
+                val.start_date = "START"
                     val.end_date = end.format("MMM D");
-                // }
-                
-                
-                // if(Cookies.get('current_locale') == "fr-CA"){
-                    // val.dates = french_start.format("DD MMM") + " - " + french_end.format("DD MMM");
-                // }
             }
         });
         if(events.length > 0){
