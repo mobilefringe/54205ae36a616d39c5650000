@@ -268,6 +268,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
         console.log(events);
         if(Cookies.get('current_locale') == "en-CA"){
             val.event_name = val.name;
+            
             if(val.description.length > 300){
                 val.description_short = val.description.substring(0,300) + "...";
             }
