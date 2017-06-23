@@ -206,9 +206,7 @@
                     val.end_date = end.format("MMM D");
                 // }
                 
-                var start = moment(val.start_date).tz(getPropertyTimeZone());
-                var locale_start = start.locale('fr');
-                val.start_date = moment(locale_start).locale('fr-ca').format("DD MMM");
+                
                 // if(Cookies.get('current_locale') == "fr-CA"){
                     // val.dates = french_start.format("DD MMM") + " - " + french_end.format("DD MMM");
                 // }
