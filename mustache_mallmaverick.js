@@ -260,12 +260,9 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
     var item_list = [];
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    
     var template_html_no_image = $(template_id_no_image).html();
     Mustache.parse(template_html_no_image);
-    
     $.each( events , function( key, val ) {
-        console.log(events);
         if(Cookies.get('current_locale') == "en-CA"){
             val.event_name = val.name;
             
@@ -342,12 +339,32 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
 }
 
 function renderEventDetailsTemplate(template_id,html_id,event_details){
-    //console.log(store_slug);
     var template_html = $(template_id).html();
-    //console.log(template_html);
     Mustache.parse(template_html);   // optional, speeds up future uses
-    //console.log(store_details);
+   
+    if(Cookies.get('current_locale') == "en-CA"){
+        val.event_name = val.name;
+        
+        if(val.description.length > 300){
+            val.desc_short = val.description.substring(0,300) + "...";
+        }
+        else{
+            val.desc_short = val.description;
+        }
+    }
+    if(Cookies.get('current_locale') == "fr-CA"){
+        val.event_name = val.name_2;
+        
+         if(val.description_2.length > 300){
+            val.desc_short = val.description_2.substring(0,300) + "...";
+        }
+        else{
+            val.desc_short = val.description_2;
+        }
+    }
+    
     localizeObject(event_details);
+    
     event_details.event_image_url = getImageURL(event_details.event_image_url);
     event_details.event_image_url_abs = getAbsoluteImageURL(event_details.event_image_url_abs);
     if(event_details.eventable_type == 'Store'){
