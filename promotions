@@ -41,7 +41,7 @@
                     </div>
                     <div class="promo-details col-xs-9">
                         <div class="name">
-                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                            <h3><a href="../promotions/{{ slug }}">{{ promo_name }}</a></h3>
                         </div>
                         <div class="store-name">
                             <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
@@ -50,7 +50,7 @@
                             {{ start_date }}  <span data-i18n="general.to"></span> {{ end_date }}
                         </div>
                         <div class="description">
-                            <p>{{{ description_short }}}</p>
+                            <p>{{{ desc_short }}}</p>
                         </div>
                         <div class="social-links">
                             <span>
@@ -72,7 +72,7 @@
                     <a name="{{promotionable_name}}"></a>
                     <div class="promo-details col-xs-12">
                         <div class="name">
-                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                            <h3><a href="../promotions/{{ slug }}">{{ promo_name }}</a></h3>
                         </div>
                         <div class="store-name">
                             <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
@@ -81,7 +81,7 @@
                             {{ start_date }}  <span data-i18n="general.to"></span> {{ end_date }}
                         </div>
                         <div class="description">
-                            <p> {{{ description_short }}} </p>
+                            <p> {{{ desc_short }}} </p>
                         </div>
                         <div class="social-links">
                             <span><a class="facebook-share" href="https://www.facebook.com/sharer.php?u=https://placevertu.com/promotions/{{slug}}" target="_blank"><img src="https://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png"></a></span>
