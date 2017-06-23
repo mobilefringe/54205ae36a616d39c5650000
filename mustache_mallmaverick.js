@@ -101,10 +101,8 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
     var item_list = [];
     var template_html = $(template_id).html();
     Mustache.parse(template_html);
-    
     var template_html_no_image = $(template_id_no_image).html();
     Mustache.parse(template_html_no_image);
-    
     $.each( promotions , function( key, val ) {
         today = new Date();
          webDate = new Date(val.show_on_web_date)
@@ -121,6 +119,16 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
             else{
                 val.description_short_2 = val.description_2;
             }
+            
+            var start = moment(event_details.start_date).tz(getPropertyTimeZone());
+            var end = moment(event_details.end_date).tz(getPropertyTimeZone());
+            if (start.format("DMY") == end.format("DMY")){
+                event_details.start_date = start.format("YYYY-MM-D");
+            } else {
+                event_details.start_date = start.format("YYYY-MM-D");
+                event_details.end_date = end.format("YYYY-MM-D");
+            }
+    
             localizeObject(val);
             
             var promotionable_name = "";
