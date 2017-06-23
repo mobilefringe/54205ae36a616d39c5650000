@@ -268,23 +268,26 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
         console.log(events);
         if(Cookies.get('current_locale') == "en-CA"){
             val.event_name = val.name;
+            if(val.description.length > 300){
+                val.description_short = val.description.substring(0,300) + "...";
+            }
+            else{
+                val.description_short = val.description;
+            }
         }
         if(Cookies.get('current_locale') == "fr-CA"){
             val.event_name = val.name_2;
+            
+             if(val.description_2.length > 300){
+                val.description_short_2 = val.description_2.substring(0,300) + "...";
+            }
+            else{
+                val.description_short_2 = val.description_2;
+            }
         }
             
-        if(val.description.length > 300){
-            val.description_short = val.description.substring(0,300) + "...";
-        }
-        else{
-            val.description_short = val.description;
-        }
-        if(val.description_2.length > 300){
-            val.description_short_2 = val.description_2.substring(0,300) + "...";
-        }
-        else{
-            val.description_short_2 = val.description_2;
-        }
+        
+       
         localizeObject(val);
         if(hasImage(val.event_image_url)){
             val.event_image_url = getImageURL(val.event_image_url);
