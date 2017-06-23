@@ -296,7 +296,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
             val.start_date = start.format("MMM D");
             val.s_date = start.format("MMM D");
         } else {
-            val.s_date = start.format("YYYY-M-D");
+            val.start_date = start.format("YYYY-M-D");
             val.e_date = end.format("YYYY-M-D");
         }
     });
