@@ -108,7 +108,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
         webDate = moment(val.show_on_web_date)
         if (today >= webDate) {
             if(Cookies.get('current_locale') == "en-CA"){
-                val.event_name = val.name;
+                val.promo_name = val.name;
                 
                 if(val.description.length > 300){
                     val.desc_short = val.description.substring(0,300) + "...";
@@ -118,7 +118,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 }
             }
             if(Cookies.get('current_locale') == "fr-CA"){
-                val.event_name = val.name_2;
+                val.promo_name = val.name_2;
                 
                  if(val.description_2.length > 300){
                     val.desc_short = val.description_2.substring(0,300) + "...";
