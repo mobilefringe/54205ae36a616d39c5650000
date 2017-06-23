@@ -103,6 +103,7 @@
             var event_list = getEventsList();
             
             var all_events = getEventsList();
+            console.log(all_events)
             all_events = all_events.reverse();
             events_array = []
             $.each( all_events , function( key, val ){
