@@ -107,12 +107,7 @@
 </div>
 
 <script>
-
-    
-    
-        
     $(document).ready(function() {
-        
         function renderPageData(){
             var promotion_list = getPromotionsListByStoreName();
             all_promos = getPromotionsList();
@@ -147,14 +142,12 @@
                     $(this).attr("src","https://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_twit.png");
             });
         }
-        
         loadMallDataCached(renderPageData);
     });
+    
      function sortByStartDate(a, b){
         var aId = a.start_date;
         var bId = b.start_date;
-        
         return ((aId > bId ) ? -1 : ((aId < bId) ? 1 : 0));
     }
-    
 </script>
