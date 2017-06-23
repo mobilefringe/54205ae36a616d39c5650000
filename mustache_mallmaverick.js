@@ -292,9 +292,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D")
-            val.start_date = start.format("MMM D");
-            val.s_date = start.format("MMM D");
+            val.start_date = start.format("YYYY-M-D");
         } else {
             val.start_date = start.format("YYYY-M-D");
             val.end_date = end.format("YYYY-M-D");
