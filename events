@@ -196,6 +196,7 @@
             
             var show_date = moment(val.show_on_web_date);
             var start = moment(val.start_date).tz(getPropertyTimeZone());
+            console.log(start)
             var end = moment(val.end_date).tz(getPropertyTimeZone());
             var french_start = moment(start).locale('fr-ca');
             var french_end = moment(end).locale('fr-ca');
