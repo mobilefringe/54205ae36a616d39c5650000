@@ -104,21 +104,44 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
     var template_html_no_image = $(template_id_no_image).html();
     Mustache.parse(template_html_no_image);
     $.each( promotions , function( key, val ) {
-        today = new Date();
-         webDate = new Date(val.show_on_web_date)
-         if (today >= webDate) {
-            if(val.description.length > 300){
-                val.description_short = val.description.substring(0,300) + "...";
+        today = moment();
+        webDate = moment(val.show_on_web_date)
+        if (today >= webDate) {
+            if(Cookies.get('current_locale') == "en-CA"){
+                val.event_name = val.name;
+                
+                if(val.description.length > 300){
+                    val.desc_short = val.description.substring(0,300) + "...";
+                }
+                else{
+                    val.desc_short = val.description;
+                }
             }
-            else{
-                val.description_short = val.description;
+            if(Cookies.get('current_locale') == "fr-CA"){
+                val.event_name = val.name_2;
+                
+                 if(val.description_2.length > 300){
+                    val.desc_short = val.description_2.substring(0,300) + "...";
+                }
+                else{
+                    val.desc_short = val.description_2;
+                }
             }
-            if(val.description_2.length > 300){
-                val.description_short_2 = val.description_2.substring(0,300) + "...";
-            }
-            else{
-                val.description_short_2 = val.description_2;
-            }
+            
+            
+            
+            // if(val.description.length > 300){
+            //     val.description_short = val.description.substring(0,300) + "...";
+            // }
+            // else{
+            //     val.description_short = val.description;
+            // }
+            // if(val.description_2.length > 300){
+            //     val.description_short_2 = val.description_2.substring(0,300) + "...";
+            // }
+            // else{
+            //     val.description_short_2 = val.description_2;
+            // }
             
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             var end = moment(val.end_date).tz(getPropertyTimeZone());
