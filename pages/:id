@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row" id="mm_page_content">
+         SOME CONTENT
+    
+    
+    </div>
+</div>
+<script>
+    
+    $(document).ready(function() {
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        var pages_json = "https://sq1.mallmaverick.com/pages/" + slug + ".json"
+       // alert(pages_json);
+        
+        $.getJSON(pages_json).done(function(data) {
+            //var pages_data = JSON.parse(data);
+            //console.log(data.body);
+            document.title = data.title;
+            $('#mm_page_content').html(data.body);
+            $('#loading').hide();
+            $( "#page_content" ).fadeIn( "fast");
+        });
+		
+    });
+    
+    
+    
+</script>
