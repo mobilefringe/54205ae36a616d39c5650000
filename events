@@ -132,7 +132,8 @@
            // $('.clndr-previous-button').html("<");
             // $('.clndr-next-button').html(">");
             $('.clndr-previous-button').html('<i class="fa fa-angle-left fa-2x"></i>');
-            $('.clndr-next-button').html('<i class="fa fa-angle-right fa-2x"></i>');   $('#loading').hide();
+            $('.clndr-next-button').html('<i class="fa fa-angle-right fa-2x"></i>');   
+            $('#loading').hide();
             $('#page_content').fadeIn('fast');
                 
             $(".facebook-share img").hover(
@@ -192,6 +193,7 @@
             var french_start = moment(start).locale('fr-ca');
             var french_end = moment(end).locale('fr-ca');
             if (start.format("DMY") == end.format("DMY")){
+                console.log(same)
                 // if(Cookies.get('current_locale') == "en-CA"){
                     val.dates = start.format("MMM D");
                 // }
@@ -199,7 +201,8 @@
                 //     val.dates = french_start.format("DD MMM");
                 // }
             }
-            else{
+            else {
+                console.log(different)
                 // if(Cookies.get('current_locale') == "en-CA"){
                     val.dates = start.format("MMM D") + " - " + end.format("MMM D");
                 // }
