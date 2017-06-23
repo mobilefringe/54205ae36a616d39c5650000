@@ -202,7 +202,7 @@
                 console.log("different")
                 // if(Cookies.get('current_locale') == "en-CA"){
                     val.start_date = start.format("MMM D");
-                    val.end_start = end.format("MMM D");
+                    val.end_date = end.format("MMM D");
                 // }
                 // if(Cookies.get('current_locale') == "fr-CA"){
                     // val.dates = french_start.format("DD MMM") + " - " + french_end.format("DD MMM");
