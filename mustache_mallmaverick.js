@@ -346,26 +346,22 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
         event_details.event_name = event_details.name;
         
         event_details.rich_desc = event_details.rich_description;
-        
-        // if(val.description.length > 300){
-        //     val.desc_short = val.description.substring(0,300) + "...";
-        // }
-        // else{
-        //     val.desc_short = val.description;
-        // }
     }
     if(Cookies.get('current_locale') == "fr-CA"){
         event_details.event_name = event_details.name_2;
         
         event_details.rich_desc = event_details.rich_description_2;
-        //  if(val.description_2.length > 300){
-        //     val.desc_short = val.description_2.substring(0,300) + "...";
-        // }
-        // else{
-        //     val.desc_short = val.description_2;
-        // }
     }
     
+    var start = moment(val.start_date).tz(getPropertyTimeZone());
+    var end = moment(val.end_date).tz(getPropertyTimeZone());
+    if (start.format("DMY") == end.format("DMY")){
+        val.startDate = start.format("YYYY-MM-D");
+    } else {
+        val.startDate = start.format("YYYY-MM-D");
+        val.endDate = end.format("YYYY-MM-D");
+    }
+        
     localizeObject(event_details);
     
     event_details.event_image_url = getImageURL(event_details.event_image_url);
