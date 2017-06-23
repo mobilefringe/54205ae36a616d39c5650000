@@ -265,6 +265,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
     Mustache.parse(template_html_no_image);
     
     $.each( events , function( key, val ) {
+        console.log(events);
         if(val.description.length > 300){
             val.description_short = val.description.substring(0,300) + "...";
         }
