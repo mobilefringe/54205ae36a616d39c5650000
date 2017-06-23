@@ -26,7 +26,7 @@
                             </div>
                             <div class="promo-details col-xs-9">
                                 <div class="name">
-                                    <h3><a href="../events/{{ slug }}">{{ name }}</a></h3>
+                                    <h3><a href="../events/{{ slug }}">{{ event_name }}</a></h3>
                                 </div>
                                 <div class="dates">
                                     {{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}
