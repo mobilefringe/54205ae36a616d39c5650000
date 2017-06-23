@@ -106,8 +106,8 @@
             all_events = all_events.reverse();
             events_array = []
             $.each( all_events , function( key, val ){
-                today = new Date();
-                webDate = new Date(val.show_on_web_date)
+                today = moment();
+                webDate = moment(val.show_on_web_date)
                 if (today >= webDate) {
                     events_array.push(val)
                 } 
