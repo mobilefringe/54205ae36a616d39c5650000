@@ -294,6 +294,8 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
         if (start.format("DMY") == end.format("DMY")){
             val.dates = start.format("MMM D")
             val.start_date = start.format("MMM D");
+            val.s_date = start.format("MMM D");
+            val.e_date = end.format("MMM D");
         } else {
             val.s_date = start.format("MMM D");
             val.e_date = end.format("MMM D");
