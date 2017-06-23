@@ -289,7 +289,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
             
         
        
-        localizeObject(val);
+        // localizeObject(val);
         if(hasImage(val.event_image_url)){
             val.event_image_url = getImageURL(val.event_image_url);
             val.event_image_url_abs = getAbsoluteImageURL(val.event_image_url_abs);
