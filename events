@@ -29,7 +29,7 @@
                                     <h3><a href="../events/{{ slug }}">{{ name }}</a></h3>
                                 </div>
                                 <div class="dates">
-                                    {{ start_date }} <span data-i18n="general.to"></span> {{ end_date }}
+                                    {{ s_date }} <span data-i18n="general.to"></span> {{ e_date }}
                                 </div>
                                 <div class="description">
                                     <p>{{ description_short }} </p>
