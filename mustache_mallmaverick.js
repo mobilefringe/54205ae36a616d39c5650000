@@ -120,13 +120,13 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 val.description_short_2 = val.description_2;
             }
             
-            var start = moment(event_details.start_date).tz(getPropertyTimeZone());
-            var end = moment(event_details.end_date).tz(getPropertyTimeZone());
+            var start = moment(val.start_date).tz(getPropertyTimeZone());
+            var end = moment(val.end_date).tz(getPropertyTimeZone());
             if (start.format("DMY") == end.format("DMY")){
-                event_details.start_date = start.format("YYYY-MM-D");
+                val.start_date = start.format("YYYY-MM-D");
             } else {
-                event_details.start_date = start.format("YYYY-MM-D");
-                event_details.end_date = end.format("YYYY-MM-D");
+                val.start_date = start.format("YYYY-MM-D");
+                val.end_date = end.format("YYYY-MM-D");
             }
     
             localizeObject(val);
