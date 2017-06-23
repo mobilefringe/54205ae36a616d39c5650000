@@ -128,21 +128,6 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 }
             }
             
-            
-            
-            // if(val.description.length > 300){
-            //     val.description_short = val.description.substring(0,300) + "...";
-            // }
-            // else{
-            //     val.description_short = val.description;
-            // }
-            // if(val.description_2.length > 300){
-            //     val.description_short_2 = val.description_2.substring(0,300) + "...";
-            // }
-            // else{
-            //     val.description_short_2 = val.description_2;
-            // }
-            
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             var end = moment(val.end_date).tz(getPropertyTimeZone());
             if (start.format("DMY") == end.format("DMY")){
@@ -165,8 +150,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                     val.promotionable_url = "../stores/" + store_details.slug;
                 }
             }
-            
-    
+
             if(hasImage(val.promo_image_url)){
                 val.promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
                 val.promo_image_url_abs = getAbsoluteImageURL(val.promo_image_url_abs);
@@ -177,8 +161,6 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 item_list.push(rendered_no_image);
             }
          } 
-        
-
     });
     if(promotions.length > 0){
         $(not_empty_section_id).show();
@@ -189,8 +171,6 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
         $(empty_section_id).show();
     }
 }
-
-
 
 function renderStoresWithPromotionsTemplate(template_id,html_id){
     var html_item_list = [];
