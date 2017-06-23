@@ -305,8 +305,6 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
             var rendered_no_image = Mustache.render(template_html_no_image,val);
             item_list.push(rendered_no_image);
         }
-        
-        
     });
     if(events.length > 0){
         $(not_empty_section_id).show();
