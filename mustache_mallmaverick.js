@@ -358,8 +358,8 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     if (start.format("DMY") == end.format("DMY")){
         event_details.startDate = start.format("YYYY-MM-D");
     } else {
-        event_details.startDate = start.format("YYYY-MM-D");
-        event_details.endDate = end.format("YYYY-MM-D");
+        event_details.start_date = start.format("YYYY-MM-D");
+        event_details.end_date = end.format("YYYY-MM-D");
     }
         
     localizeObject(event_details);
