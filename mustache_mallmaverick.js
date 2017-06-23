@@ -356,7 +356,7 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     var start = moment(event_details.start_date).tz(getPropertyTimeZone());
     var end = moment(event_details.end_date).tz(getPropertyTimeZone());
     if (start.format("DMY") == end.format("DMY")){
-        event_details.startDate = start.format("YYYY-MM-D");
+        event_details.start_date = start.format("YYYY-MM-D");
     } else {
         event_details.start_date = start.format("YYYY-MM-D");
         event_details.end_date = end.format("YYYY-MM-D");
