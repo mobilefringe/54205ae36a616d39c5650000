@@ -112,8 +112,8 @@
                 showAdjacentMonths: false,
                 events:getEventsList(),
                 multiDayEvents: {
-                    startDate: 's_date',
-                    endDate: 'e_date'
+                    startDate: 'start_date',
+                    endDate: 'end_date'
                 },
                 clickEvents: {
                     click: function(target) {
