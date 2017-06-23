@@ -353,13 +353,13 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
         event_details.rich_desc = event_details.rich_description_2;
     }
     
-    var start = moment(val.start_date).tz(getPropertyTimeZone());
-    var end = moment(val.end_date).tz(getPropertyTimeZone());
+    var start = moment(event_details.start_date).tz(getPropertyTimeZone());
+    var end = moment(event_details.end_date).tz(getPropertyTimeZone());
     if (start.format("DMY") == end.format("DMY")){
-        val.startDate = start.format("YYYY-MM-D");
+        event_details.startDate = start.format("YYYY-MM-D");
     } else {
-        val.startDate = start.format("YYYY-MM-D");
-        val.endDate = end.format("YYYY-MM-D");
+        event_details.startDate = start.format("YYYY-MM-D");
+        event_details.endDate = end.format("YYYY-MM-D");
     }
         
     localizeObject(event_details);
