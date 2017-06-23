@@ -2,7 +2,7 @@
     <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-3"  id="">
            <h1 class="hidden-xs sidebar-title" data-i18n="nav.contact"><strong><!--Contact Us--></strong></h1>
-            <img src="http://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
+            <img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
             <ul class="button-panel">
                 <li><a href="#directions" class="btn btn-default"><span data-i18n="nav.subnav.directions"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--DIRECTIONS--></a></li>
                 <li><a href="#how_to_get_here" class="btn btn-default" ><span data-i18n="nav.subnav.how_to_get_here"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--HOW TO GET HERE--></a></li>
