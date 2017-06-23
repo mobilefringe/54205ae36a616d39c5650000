@@ -189,7 +189,7 @@
             // var start = moment(val.start_date).tz(getPropertyTimeZone());
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             console.log(start);
-            var locale_start = start.locale('fr');
+            var locale_start = start.locale('fr-ca');
             console.log(locale_start)
             var end = moment(val.end_date).tz(getPropertyTimeZone());
             // var french_start = moment(start).locale('fr-ca');
