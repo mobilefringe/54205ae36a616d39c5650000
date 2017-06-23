@@ -58,9 +58,7 @@
                         <li class="promotion-list-item row">
                             <div class="promo-details col-xs-12">
                                 <div class="name">
-                                    <h3>
-                                        <a href="../events/{{ slug }}">{{ name }}</a>
-                                    </h3>
+                                    <h3><a href="../events/{{ slug }}">{{ name }}</a></h3>
                                 </div>
                                 <div class="dates">
                                     {{ start_date }} <span data-i18n="general.to"></span> {{ end_date }}
@@ -120,11 +118,11 @@
             $('#clndr').clndr({
                 showAdjacentMonths: false,
                 events:getEventsList(),
-                  multiDayEvents: {
+                multiDayEvents: {
                     startDate: 'start_date',
                     endDate: 'end_date'
-                  },
-                  clickEvents: {
+                },
+                clickEvents: {
                     click: function(target) {
                       
                     },
@@ -132,10 +130,10 @@
                         $('.clndr-previous-button').html('<i class="fa fa-angle-left fa-2x"></i>');
                         $('.clndr-next-button').html('<i class="fa fa-angle-right fa-2x"></i>');
                     }
-                  },
-                  doneRendering: function() {
+                },
+                doneRendering: function() {
                     
-                  }
+                }
             });
             
            // $('.clndr-previous-button').html("<");
@@ -201,22 +199,21 @@
             var french_start = moment(start).locale('fr-ca');
             var french_end = moment(end).locale('fr-ca');
             if (start.format("DMY") == end.format("DMY")){
-                if(Cookies.get('current_locale') == "en-CA"){
+                // if(Cookies.get('current_locale') == "en-CA"){
                     val.dates = start.format("MMM D");
-                }
-                if(Cookies.get('current_locale') == "fr-CA"){
-                    val.dates = french_start.format("DD MMM");
-                }
+                // }
+                // if(Cookies.get('current_locale') == "fr-CA"){
+                //     val.dates = french_start.format("DD MMM");
+                // }
             }
             else{
-                if(Cookies.get('current_locale') == "en-CA"){
+                // if(Cookies.get('current_locale') == "en-CA"){
                     val.dates = start.format("MMM D") + " - " + end.format("MMM D");
-                }
-                if(Cookies.get('current_locale') == "fr-CA"){
-                    val.dates = french_start.format("DD MMM") + " - " + french_end.format("DD MMM");
-                }
+                // }
+                // if(Cookies.get('current_locale') == "fr-CA"){
+                    // val.dates = french_start.format("DD MMM") + " - " + french_end.format("DD MMM");
+                // }
             }
-            
         });
         if(events.length > 0){
             $(not_empty_section_id).show();
@@ -231,69 +228,68 @@
     function sortByStartDate(a, b){
         var aId = a.start_date;
         var bId = b.start_date;
-        
         return ((aId > bId ) ? -1 : ((aId < bId) ? 1 : 0));
     }
     
     if(sessionStorage.current_locale == "fr-CA"){
         moment.locale('fr', {
-    months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
-    monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
-    weekdays : "dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi".split("_"),
-    weekdaysShort : "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
-    weekdaysMin : "Di_Lu_Ma_Me_Je_Ve_Sa".split("_"),
-    longDateFormat : {
-        LT : "HH:mm",
-        LTS : "HH:mm:ss",
-        L : "DD/MM/YYYY",
-        LL : "D MMMM YYYY",
-        LLL : "D MMMM YYYY LT",
-        LLLL : "dddd D MMMM YYYY LT"
-    },
-    calendar : {
-        sameDay: "[Aujourd'hui à] LT",
-        nextDay: '[Demain à] LT',
-        nextWeek: 'dddd [à] LT',
-        lastDay: '[Hier à] LT',
-        lastWeek: 'dddd [dernier à] LT',
-        sameElse: 'L'
-    },
-    relativeTime : {
-        future : "dans %s",
-        past : "il y a %s",
-        s : "quelques secondes",
-        m : "une minute",
-        mm : "%d minutes",
-        h : "une heure",
-        hh : "%d heures",
-        d : "un jour",
-        dd : "%d jours",
-        M : "un mois",
-        MM : "%d mois",
-        y : "une année",
-        yy : "%d années"
-    },
-    ordinalParse : /\d{1,2}(er|ème)/,
-    ordinal : function (number) {
-        return number + (number === 1 ? 'er' : 'ème');
-    },
-    meridiemParse: /PD|MD/,
-    isPM: function (input) {
-        return input.charAt(0) === 'M';
-    },
-    // in case the meridiem units are not separated around 12, then implement
-    // this function (look at locale/id.js for an example)
-    // meridiemHour : function (hour, meridiem) {
-    //     return /* 0-23 hour, given meridiem token and hour 1-12 */
-    // },
-    meridiem : function (hours, minutes, isLower) {
-        return hours < 12 ? 'PD' : 'MD';
-    },
-    week : {
-        dow : 1, // Monday is the first day of the week.
-        doy : 4  // The week that contains Jan 4th is the first week of the year.
-    }
-});
+        months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
+        monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
+        weekdays : "dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi".split("_"),
+        weekdaysShort : "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
+        weekdaysMin : "Di_Lu_Ma_Me_Je_Ve_Sa".split("_"),
+        longDateFormat : {
+            LT : "HH:mm",
+            LTS : "HH:mm:ss",
+            L : "DD/MM/YYYY",
+            LL : "D MMMM YYYY",
+            LLL : "D MMMM YYYY LT",
+            LLLL : "dddd D MMMM YYYY LT"
+        },
+        calendar : {
+            sameDay: "[Aujourd'hui à] LT",
+            nextDay: '[Demain à] LT',
+            nextWeek: 'dddd [à] LT',
+            lastDay: '[Hier à] LT',
+            lastWeek: 'dddd [dernier à] LT',
+            sameElse: 'L'
+        },
+        relativeTime : {
+            future : "dans %s",
+            past : "il y a %s",
+            s : "quelques secondes",
+            m : "une minute",
+            mm : "%d minutes",
+            h : "une heure",
+            hh : "%d heures",
+            d : "un jour",
+            dd : "%d jours",
+            M : "un mois",
+            MM : "%d mois",
+            y : "une année",
+            yy : "%d années"
+        },
+        ordinalParse : /\d{1,2}(er|ème)/,
+        ordinal : function (number) {
+            return number + (number === 1 ? 'er' : 'ème');
+        },
+        meridiemParse: /PD|MD/,
+        isPM: function (input) {
+            return input.charAt(0) === 'M';
+        },
+        // in case the meridiem units are not separated around 12, then implement
+        // this function (look at locale/id.js for an example)
+        // meridiemHour : function (hour, meridiem) {
+        //     return /* 0-23 hour, given meridiem token and hour 1-12 */
+        // },
+        meridiem : function (hours, minutes, isLower) {
+            return hours < 12 ? 'PD' : 'MD';
+        },
+        week : {
+            dow : 1, // Monday is the first day of the week.
+            doy : 4  // The week that contains Jan 4th is the first week of the year.
+        }
+    });
         moment.locale('fr');
     }
 
