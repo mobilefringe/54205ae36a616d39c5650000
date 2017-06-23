@@ -186,7 +186,9 @@
                 item_list.push(rendered_no_image);
             }
             
+            // var start = moment(val.start_date).tz(getPropertyTimeZone());
             var start = moment(val.start_date).tz(getPropertyTimeZone());
+            var locale_start = start.locale('fr');
             var end = moment(val.end_date).tz(getPropertyTimeZone());
             // var french_start = moment(start).locale('fr-ca');
             // var french_end = moment(end).locale('fr-ca');
@@ -199,12 +201,14 @@
                 //     val.dates = french_start.format("DD MMM");
                 // }
             } else {
-                console.log(start)
-                console.log(end)
                 // if(Cookies.get('current_locale') == "en-CA"){
-                    val.start_date = start.format("MMM D");
+                    val.start_date = moment(locale_start).locale('fr-ca').format("DD MMM");
                     val.end_date = end.format("MMM D");
                 // }
+                
+                var start = moment(val.start_date).tz(getPropertyTimeZone());
+                var locale_start = start.locale('fr');
+                val.start_date = moment(locale_start).locale('fr-ca').format("DD MMM");
                 // if(Cookies.get('current_locale') == "fr-CA"){
                     // val.dates = french_start.format("DD MMM") + " - " + french_end.format("DD MMM");
                 // }
