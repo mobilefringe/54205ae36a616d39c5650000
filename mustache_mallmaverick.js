@@ -367,13 +367,11 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     event_details.event_image_url = getImageURL(event_details.event_image_url);
     event_details.event_image_url_abs = getAbsoluteImageURL(event_details.event_image_url_abs);
     if(event_details.eventable_type == 'Store'){
-            var store_details = getStoreDetailsByID(event_details.eventable_id);
-            promotion_details.store_details = store_details;
+        var store_details = getStoreDetailsByID(event_details.eventable_id);
+        promotion_details.store_details = store_details;
     }
-        
-        
+
     var rendered = Mustache.to_html(template_html,event_details);
-    //console.log(rendered);
     $(html_id).html(rendered);
 }
 
