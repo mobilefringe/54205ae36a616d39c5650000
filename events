@@ -32,7 +32,7 @@
                                     {{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}
                                 </div>
                                 <div class="description">
-                                    <p>{{ description_short }} </p>
+                                    <p>{{ desc_short }} </p>
                                 </div>
                                 <div class="social-links">
                                     <span>
