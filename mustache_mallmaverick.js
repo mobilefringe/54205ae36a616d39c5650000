@@ -266,6 +266,13 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
     
     $.each( events , function( key, val ) {
         console.log(events);
+        if(Cookies.get('current_locale') == "en-CA"){
+            val.event_name = val.name;
+        }
+        if(Cookies.get('current_locale') == "fr-CA"){
+            val.event_name = val.name_2;
+        }
+            
         if(val.description.length > 300){
             val.description_short = val.description.substring(0,300) + "...";
         }
