@@ -67,7 +67,7 @@
     <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.1.js"></script>
     <!--<script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>-->
     
-    <script src="http://preview-mallmaverick.codecloudapp.com/mustache_mallmaverick.js"></script>
+    <script src="/mustache_mallmaverick.js"></script>
     <script>
         $(document).ready(function() {
              $.reject({  
