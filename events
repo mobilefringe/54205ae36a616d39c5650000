@@ -14,7 +14,6 @@
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9">
             <div id="events_not_empty_section">
-                
                 <ul class="promotion-list" id="events_list">
                     <h2 data-i18n="general.loading_events"></h2>
                     <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
@@ -27,9 +26,7 @@
                             </div>
                             <div class="promo-details col-xs-9">
                                 <div class="name">
-                                    <h3>
-                                        <a href="../events/{{ slug }}">{{ name }}</a>
-                                    </h3>
+                                    <h3><a href="../events/{{ slug }}">{{ name }}</a></h3>
                                 </div>
                                 <div class="dates">
                                     {{ start_date }} <span data-i18n="general.to"></span> {{ end_date }}
@@ -37,7 +34,7 @@
                                 <div class="description">
                                     <p>{{ description_short }} </p>
                                 </div>
-                                 <div class="social-links">
+                                <div class="social-links">
                                     <span>
                                         <a class="facebook-share" href="https://www.facebook.com/sharer.php?u=https://placevertu.com/events/{{slug}}" target="_blank">
                                             <img src="https://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/b0569e51e18927ad105550396bfc8f3f/share_fb.png">
@@ -52,7 +49,6 @@
                             </div>
                         </li>
                     </script>
-                    
                     <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITHOUT AN IMAGE-->
                     <script id="event_item_template_no_image" type="x-tmpl-mustache">
                         <li class="promotion-list-item row">
@@ -66,7 +62,7 @@
                                 <div class="description">
                                     <p>{{ description_short }}</p>
                                 </div>
-                            <div class="social-links">
+                                <div class="social-links">
                                     <span>
                                         <a class="facebook-share" href="https://www.facebook.com/sharer.php?u=https://placevertu.com/events/{{slug}}" target="_blank">
                                             <i class="fa fa-facebook-official"></i>
@@ -88,18 +84,15 @@
                 <h2 data-i18n="general.no_events"></h2>
             </div>
         </div>
- 
     </div>
 </div>
 
 <script>
     $(document).ready(function() {
-        
         function renderPageData(){
             //renders the events list by referencing the template id and the html id
             //for where to place the rendered content. See mallmaverick.js for implementation
             var event_list = getEventsList();
-            
             var all_events = getEventsList();
             console.log(all_events)
             all_events = all_events.reverse();
