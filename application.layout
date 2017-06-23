@@ -717,7 +717,6 @@
         //     stickySidebar();
         // }
         
-        
         function setPrimaryLanguage(){
             i18n.setLng(Cookies.get('primary_locale'), function(t) {
                 $(document).i18n();
