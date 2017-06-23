@@ -345,6 +345,8 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     if(Cookies.get('current_locale') == "en-CA"){
         event_details.event_name = event_details.name;
         
+        event_details.rich_desc = event_details.rich_description;
+        
         // if(val.description.length > 300){
         //     val.desc_short = val.description.substring(0,300) + "...";
         // }
@@ -355,6 +357,7 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     if(Cookies.get('current_locale') == "fr-CA"){
         event_details.event_name = event_details.name_2;
         
+        event_details.rich_desc = event_details.rich_description_2;
         //  if(val.description_2.length > 300){
         //     val.desc_short = val.description_2.substring(0,300) + "...";
         // }
