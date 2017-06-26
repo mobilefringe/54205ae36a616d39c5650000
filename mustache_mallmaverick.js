@@ -345,6 +345,14 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
 function renderStoreDetailsTemplate(template_id,html_id,store_details){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
+    
+    // if(Cookies.get('current_locale') == "en-CA"){
+    //     store_details.store_desc = store_details.   
+    // }
+    // if(Cookies.get('current_locale') == "fr-CA"){
+        
+    // }
+    
     localizeObject(store_details);
     store_details.store_front_image_url = getImageURL(store_details.store_front_image_url);
     store_details.store_front_image_url_abs = getAbsoluteImageURL(store_details.store_front_image_url_abs);
