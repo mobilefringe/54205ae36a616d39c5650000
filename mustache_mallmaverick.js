@@ -243,13 +243,13 @@ function renderJobsListTemplate(template_id,html_id,not_empty_section_id,empty_s
         if(Cookies.get('current_locale') == "fr-CA"){
             val.job_name = val.name_2
             if(val.job_type == "Part Time") {
-                val.job_type = "Temps partiel"
+                val.type = "Temps partiel"
             }
             if(val.job_type == "Part Time/Full Time") {
-                val.job_type = "Temps partiel/Temps Plein"
+                val.type = "Temps partiel/Temps Plein"
             }
             if(val.job_type == "Full Time") {
-                val.job_type = "Temps Plein"
+                val.type = "Temps Plein"
             }
         }
         localizeObject(val);
