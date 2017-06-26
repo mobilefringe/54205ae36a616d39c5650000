@@ -201,6 +201,8 @@
             if (hours.length > 0){
                 $.each( hours, function( key, value ) { 
                     var day = getStoreDay(value.day_of_week);
+                    var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
+                    var close_time = moment(value.close_time).tz(getPropertyTimeZone()); 
                     setLocaleDateFormats(value);
                     if(Cookies.get('current_locale') == Cookies.get('primary_locale')){
                         if (value.is_closed == true){
