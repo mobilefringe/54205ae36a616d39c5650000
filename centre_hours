@@ -194,26 +194,26 @@
         var template_html = $(template_id).html();
         Mustache.parse(template_html);
         var count = 0;
-        
         $.each( store , function( key, val ) {
             localizeObject(val);
             var hours = getHoursForIds(val.store_hours);
             var hours_text = '';
-            
             if (hours.length > 0){
                 $.each( hours, function( key, value ) { 
                     var day = getStoreDay(value.day_of_week);
                     setLocaleDateFormats(value);
-                    if(sessionStorage.current_locale == sessionStorage.primary_locale){
+                    if(Cookies.get('current_locale') == Cookies.get('primary_locale')){
                         if (value.is_closed == true){
                             
                             var day_text = '<p>'+ day + ': Fermé</p>'
-                        }
-                        else{
+                        } else {
                             if(value.open_time_localized_fr == "0h"){
                                value.open_time_localized_fr = "12h" 
                             }
-                            var day_text = '<p>'+ day + ': ' + value.open_time_localized_fr + ' à ' + value.close_time_localized_fr +'</p>'; 
+                            var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+                            var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+    
+                            var day_text = '<p>'+ day + ': ' + open_time.format("H") + "h  à " + close_time.format("H") +'h </p>'; 
                         }
                     } else{
                         if (value.is_closed == true){
