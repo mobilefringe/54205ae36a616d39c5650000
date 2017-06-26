@@ -157,7 +157,7 @@
 <script>
     $(document).ready(function() {
         function renderPageData(){
-             //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
+            //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
             renderRegularDayHours('#regular_hours_template','#reg_hours_sun',0);
             renderRegularDayHours('#regular_hours_template','#reg_hours_mon',1);
             renderRegularDayHours('#regular_hours_template','#reg_hours_tue',2);
@@ -204,7 +204,6 @@
                     setLocaleDateFormats(value);
                     if(Cookies.get('current_locale') == Cookies.get('primary_locale')){
                         if (value.is_closed == true){
-                            
                             var day_text = '<p>'+ day + ': Fermé</p>'
                         } else {
                             // if(value.open_time_localized_fr == "0h"){
@@ -212,16 +211,14 @@
                             // }
                             var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
                             var close_time = moment(value.close_time).tz(getPropertyTimeZone()); 
-    
                             var day_text = '<p>' + day + ': ' + open_time.format("H") + "h" + open_time.format("mm") + " à " + close_time.format("H") +'h </p>'; 
                         }
                     } else{
                         if (value.is_closed == true){
-                            var day_text = '<p>'+ day + ': Closed</p>'
+                            var day_text = '<p>'+ day + ': Closed </p>'
                         }else{
-                            var day_text = '<p>'+ day + ': ' + open_time.format("h:mm A") + " à " + close_time.format("h:mm A") + '</p>';    
+                            var day_text = '<p>' + day + ': ' + open_time.format("h:mm A") + " à " + close_time.format("h:mm A") + '</p>';    
                         }
-                        
                     }
                     hours_text += day_text;  
                 });
@@ -230,12 +227,8 @@
                 var blog_rendered = Mustache.render(template_html,val);
                 item_rendered.push(blog_rendered);
             }
-            
-             
         });
-        
         $(html_id).html(item_rendered.join(''));
-        
     }
     
     function getStoreDay(day_week){
@@ -292,4 +285,3 @@
         return day;
     }
 </script>
-
