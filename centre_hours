@@ -216,7 +216,7 @@
                     } else{
                         if (value.is_closed == true){
                             var day_text = '<p>'+ day + ': Closed </p>'
-                        }else{
+                        } else {
                             var day_text = '<p>' + day + ': ' + open_time.format("h:mm A") + " à " + close_time.format("h:mm A") + '</p>';    
                         }
                     }
