@@ -160,7 +160,6 @@
         return ((aId > bId ) ? -1 : ((aId < bId) ? 1 : 0));
     }
     
-    // if(sessionStorage.current_locale == "fr-CA"){
     if(Cookies.get('current_locale' == 'primary_locale')){    
         moment.locale('fr', {
         months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
@@ -222,7 +221,6 @@
     });
         moment.locale('fr');
     }
-
 
     if(Cookies.get('current_locale' == 'primary_locale')){
         $("#title_text").css({ "font-size": "16px"}); 
