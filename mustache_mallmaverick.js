@@ -417,15 +417,18 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
     //console.log(store_details);
     var day_hours = getRegHoursForDayIndex(day_of_week);
     console.log(day_hours);
-    // if (day_hours.open_time && day_hours.close_time && day_hours.is_closed == false){
+    
         var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
-            
         var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
-        day_hours.open_time = open_time.format("h:mm A");
-        day_hours.close_time = close_time.format("h:mm A");
-    // } else {
-    //     "Closed";
-    // }
+        if(Cookies.get('current_locale') == "fr-CA"){
+            day_hours.open_time = open_time.format("h") + "h";
+            day_hours.close_time = close_time.format("h:mm A");
+        }
+        if(Cookies.get('current_locale') == "en-CA"){
+            day_hours.open_time = open_time.format("h:mm A");
+            day_hours.close_time = close_time.format("h:mm A");
+        }
+
                 
     if(day_hours.is_closed){
         day_hours.is_open_css = "display:none";
