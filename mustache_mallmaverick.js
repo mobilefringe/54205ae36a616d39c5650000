@@ -237,6 +237,12 @@ function renderJobsListTemplate(template_id,html_id,not_empty_section_id,empty_s
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( jobs , function( key, val ) {
+        if(Cookies.get('current_locale') == "en-CA"){
+            val.job_name = val.name
+        }
+        if(Cookies.get('current_locale') == "fr-CA"){
+            val.job_name = val.name_2
+        }
         localizeObject(val);
         if(val['jobable_type'] == 'Store'){
             var store_details = getStoreDetailsByID(val.jobable_id);
@@ -344,7 +350,7 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
         promotion_details.start_date = start.format("YYYY-MM-D");
     } else {
         promotion_details.start_date = start.format("YYYY-MM-D");
-        promotion_details.end_date = end.format("YYYY-MM-D");
+        val.end_date = end.format("YYYY-MM-D");
     }
             
     localizeObject(promotion_details);
