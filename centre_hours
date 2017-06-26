@@ -203,7 +203,7 @@
                     var day = getStoreDay(value.day_of_week);
                     var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
                     var close_time = moment(value.close_time).tz(getPropertyTimeZone()); 
-                    setLocaleDateFormats(value);
+                    // setLocaleDateFormats(value);
                     if(Cookies.get('current_locale') == Cookies.get('primary_locale')){
                         if (value.is_closed == true){
                             var day_text = '<p>'+ day + ': Fermé</p>'
@@ -211,8 +211,6 @@
                             // if(value.open_time_localized_fr == "0h"){
                             //   value.open_time_localized_fr = "12h" 
                             // }
-                            var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
-                            var close_time = moment(value.close_time).tz(getPropertyTimeZone()); 
                             var day_text = '<p>' + day + ': ' + open_time.format("H") + "h" + open_time.format("mm") + " à " + close_time.format("H") +'h </p>'; 
                         }
                     } else{
