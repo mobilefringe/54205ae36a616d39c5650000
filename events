@@ -159,7 +159,7 @@
         return ((aId > bId ) ? -1 : ((aId < bId) ? 1 : 0));
     }
     
-    if(Cookies.get('current_locale' == 'primary_locale')){    
+    if(Cookies.get('current_locale') == Cookies.get('primary_locale')){    
         moment.locale('fr', {
         months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
         monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
