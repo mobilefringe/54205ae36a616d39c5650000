@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3"  id="">
-           <h1 class="hidden-xs sidebar-title" data-i18n="nav.about"><strong><!--Contact Us--></strong></h1>
+        <div class="col-xs-12 col-sm-4 col-md-3"  id="">
+            <h1 class="hidden-xs sidebar-title" data-i18n="nav.about"><strong><!--Contact Us--></strong></h1>
             <img src="https://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_aboutus.jpg" class="hidden-xs" alt="">
             <ul class="button-panel">
                 <li><a href="#place_vertu" class="btn btn-default" ><span data-i18n="nav.subnav.place_vertu"></span> <i class="pull-right fa fa-angle-right fa-lg"></i><!--PLACE VERTU--></a></li>
@@ -12,7 +12,6 @@
             </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-9"  id="right-content">
-            
             <a class="anchor" name="place_vertu"></a>
             <h2 data-i18n="nav.subnav.place_vertu"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="place_vertu"></div>
@@ -32,10 +31,7 @@
             <a class="anchor" name="contract_policy"></a>
             <h2 data-i18n="nav.subnav.contract_policy"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="contract_policy"></div>
-           
         </div>
-        
-        
     </div>
 </div>
 <script>
