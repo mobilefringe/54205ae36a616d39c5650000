@@ -239,6 +239,7 @@ function renderJobsListTemplate(template_id,html_id,not_empty_section_id,empty_s
     $.each( jobs , function( key, val ) {
         if(Cookies.get('current_locale') == "en-CA"){
             val.job_name = val.name
+            val.jobtype = val.job_type
         }
         if(Cookies.get('current_locale') == "fr-CA"){
             val.job_name = val.name_2
