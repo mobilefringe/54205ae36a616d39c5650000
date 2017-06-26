@@ -219,7 +219,7 @@
                         if (value.is_closed == true){
                             var day_text = '<p>'+ day + ': Closed </p>'
                         } else {
-                            var day_text = '<p>' + day + ': ' + open_time.format("h:mm A") + " à " + close_time.format("h:mm A") + '</p>';    
+                            var day_text = '<p>' + day + ': ' + open_time.format("h:mm A") + " - " + close_time.format("h:mm A") + '</p>';    
                         }
                     }
                     hours_text += day_text;  
