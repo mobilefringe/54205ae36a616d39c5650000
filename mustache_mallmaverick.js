@@ -427,7 +427,6 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
         day_hours.close_time = close_time.format("h:mm A");
     }
 
-                
     if(day_hours.is_closed){
         day_hours.is_open_css = "display:none";
         day_hours.is_closed_css = "display:inline";
@@ -446,6 +445,18 @@ function renderTodaysHours(template_id,html_id){
     Mustache.parse(template_html);   // optional, speeds up future uses
     //console.log(store_details);
     var day_hours = getTodaysHours();
+    
+    var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+    var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+    if(Cookies.get('current_locale') == "fr-CA"){
+        day_hours.open_time = open_time.format("H") + "h";
+        day_hours.close_time = close_time.format("H") + "h";
+    }
+    if(Cookies.get('current_locale') == "en-CA"){
+        day_hours.open_time = open_time.format("h:mm A");
+        day_hours.close_time = close_time.format("h:mm A");
+    }
+    
     localizeObject(day_hours);
     if(day_hours.is_closed){
         day_hours.is_open_css = "display:none";
