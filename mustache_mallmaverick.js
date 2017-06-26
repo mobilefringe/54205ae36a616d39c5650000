@@ -421,8 +421,8 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
         var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
             
         var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
-        day_hours.open_time_localized = open_time.format("h:mm A");
-        day_hours.close_time_localized = close_time.format("h:mm A");
+        day_hours.open_time = open_time.format("h:mm A");
+        day_hours.close_time = close_time.format("h:mm A");
     // } else {
     //     "Closed";
     // }
