@@ -82,7 +82,7 @@
                 <script id="todays_hours_template_fr" type="x-tmpl-mustache">
                     <span data-i18n="general.todays_hours"><!--Today's Hours--></span>
                     <span style="{{is_open_css}};">
-                        {{open_time_localized_fr}} à {{close_time_localized_fr}}
+                        {{open_time}} à {{close_time}}
                     </span>
                     <span style="{{is_closed_css}};" data-i18n="general.closed">
                         <!--Closed-->
