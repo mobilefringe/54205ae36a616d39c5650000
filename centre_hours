@@ -207,11 +207,11 @@
                             
                             var day_text = '<p>'+ day + ': Fermé</p>'
                         } else {
-                            if(value.open_time_localized_fr == "0h"){
-                               value.open_time_localized_fr = "12h" 
-                            }
-                            var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
-                            var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+                            // if(value.open_time_localized_fr == "0h"){
+                            //   value.open_time_localized_fr = "12h" 
+                            // }
+                            var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
+                            var close_time = moment(value.close_time).tz(getPropertyTimeZone()); 
     
                             var day_text = '<p>'+ day + ': ' + open_time.format("H") + "h  à " + close_time.format("H") +'h </p>'; 
                         }
