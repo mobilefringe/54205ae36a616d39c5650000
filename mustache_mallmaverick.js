@@ -338,13 +338,13 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     
-    var start = moment(val.start_date).tz(getPropertyTimeZone());
-    var end = moment(val.end_date).tz(getPropertyTimeZone());
+    var start = moment(promotion_details.start_date).tz(getPropertyTimeZone());
+    var end = moment(promotion_details.end_date).tz(getPropertyTimeZone());
     if (start.format("DMY") == end.format("DMY")){
-        val.start_date = start.format("YYYY-MM-D");
+        promotion_details.start_date = start.format("YYYY-MM-D");
     } else {
-        val.start_date = start.format("YYYY-MM-D");
-        val.end_date = end.format("YYYY-MM-D");
+        promotion_details.start_date = start.format("YYYY-MM-D");
+        promotion_details.end_date = end.format("YYYY-MM-D");
     }
             
     localizeObject(promotion_details);
