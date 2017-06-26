@@ -422,7 +422,7 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
         var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
         if(Cookies.get('current_locale') == "fr-CA"){
             day_hours.open_time = open_time.format("h") + "h";
-            day_hours.close_time = close_time.format("h:mm A");
+            day_hours.close_time = close_time.format("h") + "h";
         }
         if(Cookies.get('current_locale') == "en-CA"){
             day_hours.open_time = open_time.format("h:mm A");
