@@ -412,12 +412,11 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
 }
 
 function renderRegularDayHours(template_id,html_id,day_of_week){
-    
     var template_html = $(template_id).html();
-    //console.log(template_html);
     Mustache.parse(template_html);   // optional, speeds up future uses
     //console.log(store_details);
     var day_hours = getRegHoursForDayIndex(day_of_week);
+    console.log(day_hours);
     if(day_hours.is_closed){
         day_hours.is_open_css = "display:none";
         day_hours.is_closed_css = "display:inline";
@@ -427,7 +426,6 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
     }
     setLocaleDateFormats(day_hours);
     var rendered = Mustache.to_html(template_html,day_hours);
-    //console.log(rendered);
     $(html_id).html(rendered);
 }
 
