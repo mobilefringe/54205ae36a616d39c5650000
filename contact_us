@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-    <div class="col-xs-12 col-sm-4 col-md-3"  id="">
-           <h1 class="hidden-xs sidebar-title" data-i18n="nav.contact"><strong><!--Contact Us--></strong></h1>
+        <div class="col-xs-12 col-sm-4 col-md-3"  id="">
+            <h1 class="hidden-xs sidebar-title" data-i18n="nav.contact"><strong><!--Contact Us--></strong></h1>
             <img src="https://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
             <ul class="button-panel">
                 <li><a href="#directions" class="btn btn-default"><span data-i18n="nav.subnav.directions"></span><i class="pull-right fa fa-angle-right fa-lg"></i><!--DIRECTIONS--></a></li>
@@ -50,9 +50,9 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
-        load_json(prefix+"/pages/placevertu-how-to-get-here.json", "#how_to_get_here");
-        load_json(prefix+"/pages/placevertu-parking-information.json", "#parking_information");
-        load_json(prefix+"/pages/placevertu-contact.json", "#administration_hours");
+        load_json(prefix + "/pages/placevertu-how-to-get-here.json", "#how_to_get_here");
+        load_json(prefix + "/pages/placevertu-parking-information.json", "#parking_information");
+        load_json(prefix + "/pages/placevertu-contact.json", "#administration_hours");
         
         $('#loading').hide();
         $('#page_content').fadeIn();
