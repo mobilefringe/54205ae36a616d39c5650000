@@ -249,6 +249,9 @@ function renderJobsListTemplate(template_id,html_id,not_empty_section_id,empty_s
             if(val.job_type == "Part Time/Full Time") {
                 val.job_type = "Temps partiel/Temps Plein"
             }
+            if(val.job_type == "Full Time") {
+                val.job_type = "Temps Plein"
+            }
         }
         localizeObject(val);
         if(val['jobable_type'] == 'Store'){
