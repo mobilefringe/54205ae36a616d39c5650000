@@ -417,11 +417,11 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
     //console.log(store_details);
     var day_hours = getRegHoursForDayIndex(day_of_week);
     console.log(day_hours);
-    if (val.open_time && val.close_time && val.is_closed == false){
-        var open_time = in_my_time_zone(moment(val.open_time), "h:mm A");
-        var close_time = in_my_time_zone(moment(val.close_time), "h:mm A");
-        val.open_time_localized = open_time;
-        val.close_time_localized = close_time;
+    if (day_hours.open_time && day_hours.close_time && day_hours.is_closed == false){
+        var open_time = in_my_time_zone(moment(day_hours.open_time), "h:mm A");
+        var close_time = in_my_time_zone(moment(day_hours.close_time), "h:mm A");
+        day_hours.open_time_localized = open_time;
+        day_hours.close_time_localized = close_time;
     } else {
         "Closed";
     }
