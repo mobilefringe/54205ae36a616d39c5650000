@@ -238,8 +238,9 @@ function renderJobsListTemplate(template_id,html_id,not_empty_section_id,empty_s
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( jobs , function( key, val ) {
         if(Cookies.get('current_locale') == "en-CA"){
-            val.job_name = val.name
-            val.jobtype = val.job_type
+            val.job_name = val.name;
+            val.jobtype = val.job_type;
+            val.rich_desc = val.rich_description
         }
         if(Cookies.get('current_locale') == "fr-CA"){
             val.job_name = val.name_2
@@ -252,6 +253,7 @@ function renderJobsListTemplate(template_id,html_id,not_empty_section_id,empty_s
             if(val.job_type == "Full Time") {
                 val.jobtype = "Temps Plein"
             }
+            val.rich_desc = val.rich_description_2
         }
         localizeObject(val);
         if(val['jobable_type'] == 'Store'){
