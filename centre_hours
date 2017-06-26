@@ -166,11 +166,10 @@
             renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
             renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
           
-            
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
             renderTodaysHours('#todays_hours_template','#todays-hours');
-            var store_list = getStoresList();
             
+            var store_list = getStoresList();
             renderStoreHours('#store_hours_template','#store_hours_not_empty_section_id', store_list);
             
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun_fr',0);
@@ -183,10 +182,10 @@
           
             renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyHours(),100);
             renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
+            
             var store_list = getStoresList();
             renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
         }
-        
         loadMallDataCached(renderPageData);
     });
     
