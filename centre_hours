@@ -213,7 +213,7 @@
                             var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
                             var close_time = moment(value.close_time).tz(getPropertyTimeZone()); 
     
-                            var day_text = '<p>' + day + ': ' + open_time.format("H") + "h" + open_time.format("mm") +  "à " + close_time.format("H") +'h </p>'; 
+                            var day_text = '<p>' + day + ': ' + open_time.format("H") + "h" + open_time.format("mm") +  " à " + close_time.format("H") +'h </p>'; 
                         }
                     } else{
                         if (value.is_closed == true){
