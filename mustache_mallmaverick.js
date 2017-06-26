@@ -347,7 +347,7 @@ function renderStoreDetailsTemplate(template_id,html_id,store_details){
     Mustache.parse(template_html);   // optional, speeds up future uses
     
     if(Cookies.get('current_locale') == "en-CA"){
-        store_details.store_desc = store_details.description;  
+        store_details.store_desc = store_details.rich_description;  
     }
     if(Cookies.get('current_locale') == "fr-CA"){
         store_details.store_desc = store_details.description_2;  
