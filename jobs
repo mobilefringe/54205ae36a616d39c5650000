@@ -20,7 +20,7 @@
                               {{store_name}}
                           </div>
                           <div class="job_position">
-                            {{job_name}}&nbsp;<span class="job_time">{{job_type}}</span>
+                            {{job_name}}&nbsp;<span class="job_time">{{jobtype}}</span>
                           </div>
                         </div>
                         </a>
