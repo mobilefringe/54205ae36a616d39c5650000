@@ -57,6 +57,8 @@
         function renderPageData(){
             //renders the jobs list by referencing the template id and the html id
             //for where to place the rendered content. See mallmaverick.js for implementation
+            var job_list = getJobsList();
+            console.log(job_list)
             renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',getJobsList());
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
