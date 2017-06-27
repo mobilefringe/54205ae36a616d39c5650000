@@ -505,6 +505,8 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.is_open_css = "display:inline";
                 val.is_closed_css = "display:none";
                 
+                var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+                var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
                 if(Cookies.get('current_locale') == "fr-CA"){
                     val.open_time = open_time.format("H") + "h";
                     val.close_time = close_time.format("H") + "h";
