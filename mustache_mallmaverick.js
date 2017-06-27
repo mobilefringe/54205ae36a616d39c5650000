@@ -499,10 +499,10 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
 
         if(val.is_holiday && count < num_to_show){
             if(Cookies.get('current_locale') == "fr-CA"){
-                val.holiday_name = val.holiady_name_2
+                val.hol_name = val.holiady_name_2
             } 
             if(Cookies.get('current_locale') == "en-CA"){
-                val.holiday_name = val.holiady_name
+                val.hol_name = val.holiady_name
             }
             if(val.is_closed){
                 val.is_open_css = "display:none";
