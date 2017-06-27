@@ -380,7 +380,7 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
         promotion_details.end_date = end.format("YYYY-MM-D");
     }
             
-    localizeObject(promotion_details);
+    // localizeObject(promotion_details);
     promotion_details.promo_image_url = getCloudinaryImageUrl(promotion_details.promo_image_url);
     promotion_details.promo_image_url_abs = getAbsoluteImageURL(promotion_details.promo_image_url_abs);
     if(promotion_details.promotionable_type == 'Store'){
