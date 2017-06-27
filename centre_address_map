@@ -1,6 +1,8 @@
 <!-- START MUSTACHE TEMPLATE FOR Address & Directions-->
 <div id="address_directions_id">
-    <script id="address_directions_template" type="x-tmpl-mustache">
+    
+</div>
+<script id="address_directions_template" type="x-tmpl-mustache">
     <div class="address">
         <div class="address1">
             {{ address1 }}
@@ -20,8 +22,6 @@
     </div>
 </script>
 <!-- END MUSTACHE TEMPLATE FOR EVENT ITEM-->
-</div>
-
 
 
 <script>
