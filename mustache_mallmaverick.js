@@ -507,7 +507,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
             }
             if(Cookies.get('current_locale') == "en-CA"){
                 val.holiday_name = val.holiady_name;
-                val.holiday_date = moment(val.holiday_date).format("ddd, MMM d, YYYY");
+                val.holiday_date = moment(val.holiday_date).format("ddd, MMM D, YYYY");
                 
                 val.open_time = open_time.format("h:mm A");
                 val.close_time = close_time.format("h:mm A");
