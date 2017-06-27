@@ -18,9 +18,8 @@
             <a class="anchor" name="directions"></a>
             <h2 data-i18n="nav.subnav.directions">&nbsp;</h2>
             <div style="min-height:350px">
-                
+                <%=/centre_address_map%>
             </div>
-            <%=/centre_address_map%>
             
             <a class="anchor" name="how_to_get_here"></a>
             <h2 data-i18n="nav.subnav.how_to_get_here"><!--GIFT CARDS-->&nbsp;</h2>
