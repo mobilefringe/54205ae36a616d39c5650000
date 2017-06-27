@@ -364,12 +364,12 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     console.log(promotion_details)
-    if(Cookies.get('current_locale') == "en-CA"){
-        store_details.store_desc = store_details.rich_description;  
-    }
-    if(Cookies.get('current_locale') == "fr-CA"){
-        store_details.store_desc = store_details.description_2;  
-    }
+    // if(Cookies.get('current_locale') == "en-CA"){
+    //     store_details.store_desc = store_details.rich_description;  
+    // }
+    // if(Cookies.get('current_locale') == "fr-CA"){
+    //     store_details.store_desc = store_details.description_2;  
+    // }
     
     var start = moment(promotion_details.start_date).tz(getPropertyTimeZone());
     var end = moment(promotion_details.end_date).tz(getPropertyTimeZone());
