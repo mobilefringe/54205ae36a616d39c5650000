@@ -500,11 +500,15 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
             var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
             if(Cookies.get('current_locale') == "fr-CA"){
                 val.holiday_name = val.holiady_name_2
+                val.holiday_date =
                 
                 val.open_time = open_time.format("H") + "h" + open_time.format("mm");
                 val.close_time = close_time.format("H") + "h" + close_time.format("mm");
             }
             if(Cookies.get('current_locale') == "en-CA"){
+                val.holiday_name = val.holiady_name
+                val.holiday_date =
+                
                 val.open_time = open_time.format("h:mm A");
                 val.close_time = close_time.format("h:mm A");
             }
