@@ -495,8 +495,6 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var count = 0;
            console.log(hours)
     $.each( hours , function( key, val ) {
-        
-
         if(val.is_holiday && count < num_to_show){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
             var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
@@ -536,7 +534,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
         $(not_empty_section_id).show();
         $(empty_section_id).hide();
         $(html_id).html(item_list.join(''));
-    }else{
+    } else {
         $(not_empty_section_id).hide();
         $(empty_section_id).show();
     }
@@ -549,8 +547,6 @@ function renderClosedHoliday(template_id,html_id,not_empty_section_id,empty_sect
     var count = 0;
     $.each( hours , function( key, val ) {
         if(val.is_holiday && val.is_closed &&count < num_to_show){
-            
-            
             val.is_open_css = "display:none";
             val.is_closed_css = "display:inline";
           
@@ -564,7 +560,7 @@ function renderClosedHoliday(template_id,html_id,not_empty_section_id,empty_sect
         $(not_empty_section_id).show();
         $(empty_section_id).hide();
         $(html_id).html(item_list.join(''));
-    }else{
+    } else {
         $(not_empty_section_id).hide();
         $(empty_section_id).show();
     }
