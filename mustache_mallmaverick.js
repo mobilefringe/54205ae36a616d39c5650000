@@ -505,7 +505,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.is_open_css = "display:inline";
                 val.is_closed_css = "display:none";
             }
-            // setLocaleDateFormats(val);
+            setLocaleDateFormats(val);
             var rendered = Mustache.render(template_html,val);
             item_list.push(rendered);
             count++;
