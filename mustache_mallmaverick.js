@@ -499,9 +499,9 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
             var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
             if(Cookies.get('current_locale') == "fr-CA"){
                 val.holiday_name = val.holiady_name_2;
-                var french_holiday = moment(val.holiday_date).format("ddd, MMM D, YYYY"); 
+                var french_holiday = moment().locale("fr-ca"); 
                 console.log(french_holiday)
-                val.holiday_date = french_holiday.locale("fr-ca");
+                val.holiday_date = moment(val.holiday_date).format("");
                 
                 val.open_time = open_time.format("H") + "h" + open_time.format("mm");
                 val.close_time = close_time.format("H") + "h" + close_time.format("mm");
