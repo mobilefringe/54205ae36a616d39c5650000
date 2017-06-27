@@ -45,7 +45,7 @@
                     </span>
                     <span class="pull-right">
                         <span style="{{is_open_css}};">
-                            {{open_time_localized}} - {{close_time_localized}}
+                            {{open_time}} - {{close_time}}
                         </span>
                         <span style="{{is_closed_css}};">
                             Closed
