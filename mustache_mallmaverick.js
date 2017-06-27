@@ -364,12 +364,12 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     console.log(promotion_details)
-    // if(Cookies.get('current_locale') == "en-CA"){
-    //     store_details.store_desc = store_details.rich_description;  
-    // }
-    // if(Cookies.get('current_locale') == "fr-CA"){
-    //     store_details.store_desc = store_details.description_2;  
-    // }
+    if(Cookies.get('current_locale') == "en-CA"){
+        promotion_details.promo_name = promotion_details.name;  
+    }
+    if(Cookies.get('current_locale') == "fr-CA"){
+        promotion_details.promo_name = promotion_details.name_2;  
+    }
     
     var start = moment(promotion_details.start_date).tz(getPropertyTimeZone());
     var end = moment(promotion_details.end_date).tz(getPropertyTimeZone());
@@ -384,9 +384,8 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
     promotion_details.promo_image_url = getCloudinaryImageUrl(promotion_details.promo_image_url);
     promotion_details.promo_image_url_abs = getAbsoluteImageURL(promotion_details.promo_image_url_abs);
     if(promotion_details.promotionable_type == 'Store'){
-            var store_details = getStoreDetailsByID(promotion_details.promotionable_id);
-            promotion_details.store_details = store_details;
-            
+        var store_details = getStoreDetailsByID(promotion_details.promotionable_id);
+        promotion_details.store_details = store_details;
     } 
     var rendered = Mustache.to_html(template_html,promotion_details);
     $(html_id).html(rendered);
