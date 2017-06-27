@@ -493,10 +493,10 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var template_html = $(template_id).html();
     Mustache.parse(template_html);
     var count = 0;
-   
+           console.log(hours)
     $.each( hours , function( key, val ) {
         // localizeObject(val);
-        console.log(hours)
+
         if(val.is_holiday && count < num_to_show){
             
             if(val.is_closed){
