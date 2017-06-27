@@ -370,7 +370,7 @@ function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
         promotion_details.start_date = start.format("YYYY-MM-D");
     } else {
         promotion_details.start_date = start.format("YYYY-MM-D");
-        val.end_date = end.format("YYYY-MM-D");
+        promotion_details.end_date = end.format("YYYY-MM-D");
     }
             
     localizeObject(promotion_details);
