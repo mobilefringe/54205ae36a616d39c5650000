@@ -495,7 +495,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var count = 0;
     console.log(hours)
     $.each( hours , function( key, val ) {
-        localizeObject(val);
+        
         if(val.is_holiday && count < num_to_show){
             val.holiday_date = moment(val.holiday_date).format("YYYY-MM-D");
             
@@ -511,7 +511,9 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.open_time = open_time.format("h:mm A");
                 val.close_time = close_time.format("h:mm A");
             }
-
+            
+            localizeObject(val);
+            
             if(val.is_closed){
                 val.is_open_css = "display:none";
                 val.is_closed_css = "display:inline";
