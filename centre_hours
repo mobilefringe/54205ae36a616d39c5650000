@@ -122,7 +122,7 @@
                     </span>
                     <span class="pull-right">
                         <span style="{{is_open_css}};">
-                            {{open_time_localized_fr}} à {{close_time_localized_fr}}
+                            {{open_time}} à {{close_time}}
                         </span>
                         <span style="{{is_closed_css}};">
                             Closed
