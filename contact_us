@@ -32,10 +32,10 @@
             <a class="anchor" name="administration_hours"></a>
             <h2 data-i18n="nav.subnav.administration_hours"><!--GIFT CARDS-->&nbsp;</h2>
             <div id="administration_hours"></div>
+            
             <!--CENTRE HOURS-->
             <a class="anchor" name="open_hours" id="open_hours"></a>
             <%=/centre_hours%>
-           
         </div>
     </div>
 </div>
