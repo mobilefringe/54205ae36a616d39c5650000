@@ -47,8 +47,8 @@
                         <span style="{{is_open_css}};">
                             {{open_time}} - {{close_time}}
                         </span>
-                        <span style="{{is_closed_css}};">
-                            Closed
+                        <span style="{{is_closed_css}};" data-i18n="general.closed">
+                            <!--Closed-->
                         </span>
                     </span>
                 </li>
@@ -124,8 +124,8 @@
                         <span style="{{is_open_css}};">
                             {{open_time}} à {{close_time}}
                         </span>
-                        <span style="{{is_closed_css}};">
-                            Closed
+                        <span style="{{is_closed_css}};" data-i18n="general.closed">
+                            <!--Closed-->
                         </span>
                     </span>
                 </li>
