@@ -493,16 +493,15 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var template_html = $(template_id).html();
     Mustache.parse(template_html);
     var count = 0;
-           console.log(hours)
     $.each( hours , function( key, val ) {
         if(val.is_holiday && count < num_to_show){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
             var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
             if(Cookies.get('current_locale') == "fr-CA"){
                 val.holiday_name = val.holiady_name_2;
-                var french_holiday = moment(val.holiday_date).locale("fr-ca"); 
+                var french_holiday = moment(val.holiday_date).format("ddd, MMM D, YYYY"); 
                 console.log(french_holiday)
-                val.holiday_date = moment(val.holiday_date).format("");
+                val.holiday_date = french_holiday.locale("fr-ca");
                 
                 val.open_time = open_time.format("H") + "h" + open_time.format("mm");
                 val.close_time = close_time.format("H") + "h" + close_time.format("mm");
@@ -514,14 +513,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.open_time = open_time.format("h:mm A");
                 val.close_time = close_time.format("h:mm A");
             }
-                
-            // if(Cookies.get('current_locale') == "fr-CA"){
-            //     val.hol_name = val.holiady_name_2
-            // } 
-            // if(Cookies.get('current_locale') == "en-CA"){
-            //     val.hol_name = val.holiady_name
-            // }
-            
+
             if(val.is_closed){
                 val.is_open_css = "display:none";
                 val.is_closed_css = "display:inline";
