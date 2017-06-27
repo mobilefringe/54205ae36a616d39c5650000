@@ -211,7 +211,7 @@
                             // if(value.open_time_localized_fr == "0h"){
                             //   value.open_time_localized_fr = "12h" 
                             // }
-                            var day_text = '<p>' + day + ': ' + open_time.format("H") + "h" + open_time.format("mm") + " à " + close_time.format("H") +'h </p>'; 
+                            var day_text = '<p>' + day + ': ' + open_time.format('H') + 'h' + open_time.format('mm') + ' à ' + close_time.format('H') + 'h' + close_time.format('mm') + '</p>'; 
                         }
                     } else{
                         if (value.is_closed == true){
