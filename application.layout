@@ -761,7 +761,6 @@
             }else{
                 var search_results = getSearchResults($('#search_input_mobile').val(),10,100);
                 $('.search-results-count').html(search_results.summary.count);
-                console.log('--------');
                 renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
                 $(document).i18n();
             }
