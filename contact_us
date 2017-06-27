@@ -52,8 +52,8 @@
         load_json(prefix + "/pages/placevertu-parking-information.json", "#parking_information");
         load_json(prefix + "/pages/placevertu-contact.json", "#administration_hours");
         
-        // $('#loading').hide();
-        // $('#page_content').fadeIn();
+        $('#loading').hide();
+        $('#page_content').fadeIn();
     }
 
     function load_json(json, container){
