@@ -568,28 +568,20 @@ function renderOpenHoliday(template_id,html_id,not_empty_section_id,empty_sectio
         $(empty_section_id).show();
     }
 }
+
 function renderSearchResultsTemplate(template_id,html_id,search_results){
-    
     var template_html = $(template_id).html();
-    //console.log(template_html);
     Mustache.parse(template_html);   // optional, speeds up future uses
-    //console.log(search_results);
     var rendered = Mustache.to_html(template_html,search_results);
-    //console.log(search_results);
     $(html_id).html(rendered);
 }
-
 
 function renderAddressDirectionsTemplate(template_id,html_id,property_details){
-    //console.log(store_slug);
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    //console.log(store_details);
     var rendered = Mustache.to_html(template_html,property_details);
-    //console.log(rendered);
     $(html_id).html(rendered);
 }
-
 
 function renderPopup(popup_template, popup_form, popup){
     var item_list = [];
