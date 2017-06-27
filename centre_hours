@@ -233,7 +233,7 @@
     
     function getStoreDay(day_week){
         var day;
-        if(Cookies.get('current_locale') == Cookies.get('primary_locale'){
+        if(Cookies.get('current_locale') == Cookies.get('primary_locale')){
             switch (day_week){
                 case 0:
                     day = "Dimanche";
