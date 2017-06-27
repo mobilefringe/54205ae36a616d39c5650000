@@ -503,7 +503,6 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
             var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
             if(Cookies.get('current_locale') == "fr-CA"){
                 localizeObject(val);
-                // val.holiday_name = val.holiady_name_2;
                 val.open_time = open_time.format("H") + "h" + open_time.format("mm");
                 val.close_time = close_time.format("H") + "h" + close_time.format("mm");
             }
@@ -512,8 +511,6 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.open_time = open_time.format("h:mm A");
                 val.close_time = close_time.format("h:mm A");
             }
-            
-            // localizeObject(val);
             
             if(val.is_closed){
                 val.is_open_css = "display:none";
