@@ -501,7 +501,8 @@ img{
 .store-hours{
     margin-top:10px;
     padding:5px;
-    display:none;
+    display: none;
+    font-size: 13.5px;
 }
 
 .anchor {
