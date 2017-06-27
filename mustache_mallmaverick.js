@@ -495,13 +495,14 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var count = 0;
    
     $.each( hours , function( key, val ) {
-        localizeObject(val);
+        // localizeObject(val);
+        
         if(val.is_holiday && count < num_to_show){
             
             if(val.is_closed){
                 val.is_open_css = "display:none";
                 val.is_closed_css = "display:inline";
-            }else{
+            } else {
                 val.is_open_css = "display:inline";
                 val.is_closed_css = "display:none";
                 
