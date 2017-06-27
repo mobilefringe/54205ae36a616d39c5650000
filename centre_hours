@@ -117,7 +117,7 @@
                 {{meta_keywords}}
                 <li class="list-group-item clearfix">
                     <spanclass="pull-left">
-                        {{name}}</br>
+                        {{holiday_name}}</br>
                         {{holiday_date}}
                     </span>
                     <span class="pull-right">
