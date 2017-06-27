@@ -1,6 +1,27 @@
+hello!
+
 <!-- START MUSTACHE TEMPLATE FOR Address & Directions-->
 <div id="address_directions_id">
-    
+    <script id="address_directions_template" type="x-tmpl-mustache">
+        <div class="address">
+            <div class="address1">
+                {{ address1 }}
+            </div>
+            <div class="address2">
+                {{ address2 }}
+            </div>
+            <span class="city">
+                {{ city }}, {{ province_state }}
+            </span>
+            <div class="postal_code">
+                {{ postal_code }}, {{ country }}
+            </div>
+            <div class="map" style="height:300px">
+                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11186.254802699266!2d-73.706503!3d45.49873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48fb6ad8638ae947!2sPLACE+VERTU!5e0!3m2!1sen!2sca!4v1433778568261"></iframe>
+            </div>
+        </div>
+    </script>
+    <!-- END MUSTACHE TEMPLATE FOR EVENT ITEM-->
 </div>
 <script id="address_directions_template" type="x-tmpl-mustache">
     <div class="address">
