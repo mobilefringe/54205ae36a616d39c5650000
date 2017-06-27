@@ -495,7 +495,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var count = 0;
            console.log(hours)
     $.each( hours , function( key, val ) {
-        localizeObject(val);
+        
 
         if(val.is_holiday && count < num_to_show){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
@@ -525,6 +525,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.is_open_css = "display:inline";
                 val.is_closed_css = "display:none";
             }
+            localizeObject(val);
             // setLocaleDateFormats(val);
             var rendered = Mustache.render(template_html,val);
             item_list.push(rendered);
