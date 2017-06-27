@@ -495,7 +495,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var count = 0;
            console.log(hours)
     $.each( hours , function( key, val ) {
-        // localizeObject(val);
+        localizeObject(val);
 
         if(val.is_holiday && count < num_to_show){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
