@@ -452,9 +452,7 @@ function renderRegularDayHours(template_id,html_id,day_of_week){
 
 function renderTodaysHours(template_id,html_id){
     var template_html = $(template_id).html();
-    //console.log(template_html);
     Mustache.parse(template_html);   // optional, speeds up future uses
-    //console.log(store_details);
     var day_hours = getTodaysHours();
     
     var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
@@ -480,9 +478,7 @@ function renderTodaysHours(template_id,html_id){
     var day = now.getDayName();
     day_hours.day_name = day;
     setLocaleDateFormats(day_hours);
-    // console.log(day_hours)
     var rendered = Mustache.to_html(template_html,day_hours);
-    //console.log(rendered);
     $(html_id).html(rendered);
 }
 
