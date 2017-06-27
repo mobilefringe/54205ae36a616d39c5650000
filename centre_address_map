@@ -23,14 +23,18 @@
 </script>
 <!-- END MUSTACHE TEMPLATE FOR EVENT ITEM-->
 
+
 <script>
     $(document).ready(function() {
+        
         function renderPageData(){
-            renderAddressDirectionsTemplate('#address_directions_template','#address_directions_id', getPropertyDetails());
+            renderAddressDirectionsTemplate('#address_directions_template','#address_directions_id',getPropertyDetails());
             
             $('#loading').hide();
             $('#page_content').fadeIn();
         }
+        
         loadMallDataCached(renderPageData);
     });
+
 </script>
