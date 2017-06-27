@@ -512,7 +512,7 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
                 val.close_time = close_time.format("h:mm A");
             }
             
-            localizeObject(val);
+            // localizeObject(val);
             
             if(val.is_closed){
                 val.is_open_css = "display:none";
