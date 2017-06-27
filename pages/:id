@@ -15,7 +15,6 @@
         
         $.getJSON(pages_json).done(function(data) {
             //var pages_data = JSON.parse(data);
-            //console.log(data.body);
             document.title = data.title;
             $('#mm_page_content').html(data.body);
             $('#loading').hide();
