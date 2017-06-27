@@ -498,29 +498,30 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
         // localizeObject(val);
 
         if(val.is_holiday && count < num_to_show){
+            var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
+            var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
+            if(Cookies.get('current_locale') == "fr-CA"){
+                val.open_time = open_time.format("H") + "h" + open_time.format("mm");
+                val.close_time = close_time.format("H") + "h" + close_time.format("mm");
+            }
+            if(Cookies.get('current_locale') == "en-CA"){
+                val.open_time = open_time.format("h:mm A");
+                val.close_time = close_time.format("h:mm A");
+            }
+                
             if(Cookies.get('current_locale') == "fr-CA"){
                 val.hol_name = val.holiady_name_2
             } 
             if(Cookies.get('current_locale') == "en-CA"){
                 val.hol_name = val.holiady_name
             }
+            
             if(val.is_closed){
                 val.is_open_css = "display:none";
                 val.is_closed_css = "display:inline";
             } else {
                 val.is_open_css = "display:inline";
                 val.is_closed_css = "display:none";
-                
-                var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
-                var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
-                if(Cookies.get('current_locale') == "fr-CA"){
-                    val.open_time = open_time.format("H") + "h" + open_time.format("mm");
-                    val.close_time = close_time.format("H") + "h" + close_time.format("mm");
-                }
-                if(Cookies.get('current_locale') == "en-CA"){
-                    val.open_time = open_time.format("h:mm A");
-                    val.close_time = close_time.format("h:mm A");
-                }
             }
             setLocaleDateFormats(val);
             var rendered = Mustache.render(template_html,val);
