@@ -26,7 +26,6 @@
 
 <script>
     $(document).ready(function() {
-        
         function renderPageData(){
             renderAddressDirectionsTemplate('#address_directions_template','#address_directions_id',getPropertyDetails());
             
@@ -36,5 +35,4 @@
         
         loadMallDataCached(renderPageData);
     });
-
 </script>
