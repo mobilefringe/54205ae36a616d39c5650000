@@ -504,6 +504,15 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
             }else{
                 val.is_open_css = "display:inline";
                 val.is_closed_css = "display:none";
+                
+                if(Cookies.get('current_locale') == "fr-CA"){
+                    val.open_time = open_time.format("H") + "h";
+                    val.close_time = close_time.format("H") + "h";
+                }
+                if(Cookies.get('current_locale') == "en-CA"){
+                    val.open_time = open_time.format("h:mm A");
+                    val.close_time = close_time.format("h:mm A");
+                }
             }
             setLocaleDateFormats(val);
             var rendered = Mustache.render(template_html,val);
