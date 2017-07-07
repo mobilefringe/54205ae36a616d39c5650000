@@ -353,7 +353,7 @@ function renderStoreDetailsTemplate(template_id,html_id,store_details){
         store_details.store_desc = store_details.rich_description_2;  
     }
     
-    localizeObject(store_details);
+    // localizeObject(store_details);
     store_details.store_front_image_url = getImageURL(store_details.store_front_image_url);
     store_details.store_front_image_url_abs = getAbsoluteImageURL(store_details.store_front_image_url_abs);
     var rendered = Mustache.to_html(template_html,store_details);
