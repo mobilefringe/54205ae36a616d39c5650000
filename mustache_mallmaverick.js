@@ -350,7 +350,7 @@ function renderStoreDetailsTemplate(template_id,html_id,store_details){
         store_details.store_desc = store_details.rich_description;  
     }
     if(Cookies.get('current_locale') == "fr-CA"){
-        store_details.store_desc = store_details.description_2;  
+        store_details.store_desc = store_details.rich_description_2;  
     }
     
     localizeObject(store_details);
