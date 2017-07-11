@@ -301,6 +301,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
             else{
                 val.desc_short = val.description;
             }
+            val.event_img = getImageURL(val.event_image_url)
         }
         if(Cookies.get('current_locale') == "fr-CA"){
             val.event_name = val.name_2;
@@ -311,6 +312,8 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
             else{
                 val.desc_short = val.description_2;
             }
+            
+            val.event_img = getImageURL(val.event2_image_url)
         }
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
