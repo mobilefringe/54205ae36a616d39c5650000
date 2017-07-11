@@ -313,7 +313,7 @@ function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_e
                 val.desc_short = val.description_2;
             }
             
-            val.event_img = getImageURL(val.event2_image_url)
+            val.event_img = getImageURL(val.event_image2_url)
         }
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
