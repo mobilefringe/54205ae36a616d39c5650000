@@ -21,7 +21,7 @@
                         <li class="promotion-list-item row">
                             <div class="promo-image col-xs-3">
                                 <a href="../events/{{ slug }}">
-                                    <img src="{{event_image_url_abs}}" style="width:100%">
+                                    <img src="{{event_img}}" style="width:100%">
                                 </a>
                             </div>
                             <div class="promo-details col-xs-9">
