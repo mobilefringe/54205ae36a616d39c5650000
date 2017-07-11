@@ -400,12 +400,12 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
    
     if(Cookies.get('current_locale') == "en-CA"){
         event_details.event_name = event_details.name;
-        val.event_img = getImageURL(val.event_image_url)
+        
         event_details.rich_desc = event_details.rich_description;
     }
     if(Cookies.get('current_locale') == "fr-CA"){
         event_details.event_name = event_details.name_2;
-        val.event_img = getImageURL(val.event_image2_url)
+        
         event_details.rich_desc = event_details.rich_description_2;
     }
     
