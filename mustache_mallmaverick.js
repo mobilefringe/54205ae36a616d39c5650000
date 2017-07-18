@@ -366,7 +366,6 @@ function renderStoreDetailsTemplate(template_id,html_id,store_details){
 function renderPromotionDetailsTemplate(template_id,html_id,promotion_details){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    console.log(promotion_details)
     if(Cookies.get('current_locale') == "en-CA"){
         promotion_details.promo_name = promotion_details.name;  
     }
@@ -496,7 +495,6 @@ function renderHolidayHours(template_id,html_id,not_empty_section_id,empty_secti
     var template_html = $(template_id).html();
     Mustache.parse(template_html);
     var count = 0;
-    console.log(hours)
     $.each( hours , function( key, val ) {
         
         if(val.is_holiday && count < num_to_show){
