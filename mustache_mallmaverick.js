@@ -486,7 +486,7 @@ function renderRegularDayHours(template_id, html_id, hours){
         setLocaleDateFormats(hours);
     });
     
-    var rendered = Mustache.to_html(template_html,day_hours);
+    var rendered = Mustache.to_html(template_html, hours);
     $(html_id).html(rendered);
 }
 
