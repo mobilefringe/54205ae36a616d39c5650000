@@ -185,7 +185,7 @@
             
             var store_list = getStoresList();
             console.log(store_list)
-            renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
+            // renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
         }
         loadMallDataCached(renderPageData);
     });
