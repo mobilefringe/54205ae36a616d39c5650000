@@ -29,8 +29,14 @@ function renderStoresListTemplate(header_template_id,item_template_id,html_id,no
         }
         first_letter = val['name'].charAt(0);
         val.header = first_letter.toUpperCase();
-        applyPromoJobsStyle(val);
-    
+        // applyPromoJobsStyle(val);
+        if(val.total_published_jobs !=null){
+            val.has_jobs_css = "block"
+        }
+        if(val.total_published_promos != null){
+            val.has_promotions_css = "block"
+        }
+        
         var item_rendered = Mustache.render(item_template_html,val);
         item_list.push(item_rendered);
     });
