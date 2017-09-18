@@ -434,10 +434,11 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
     var day_hours = day_of_week;
     
     var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
-    console.log(open_time)
     var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
     if(Cookies.get('current_locale') == "fr-CA"){
-        setLocaleDateFormats(day_hours);
+        var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+        var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+
         day_hours.open_time = open_time.format("H") + "h";
         console.log(day_hours.open_time)
         day_hours.close_time = close_time.format("H") + "h";
