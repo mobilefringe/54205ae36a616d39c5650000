@@ -437,6 +437,7 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
     var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
     if(Cookies.get('current_locale') == "fr-CA"){
         day_hours.open_time = open_time.format("H") + "h";
+        console.log(day_hours.open_time);
         day_hours.close_time = close_time.format("H") + "h";
     }
     if(Cookies.get('current_locale') == "en-CA"){
@@ -455,40 +456,6 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
     var rendered = Mustache.to_html(template_html,day_hours);
     $(html_id).html(rendered);
 }
-
-// function renderRegularDayHours(template_id, html_id, hours){
-//     var item_list = [];
-//     var template_html = $(template_id).html();
-//     Mustache.parse(template_html);   // optional, speeds up future uses
-//     $.each( hours , function( key, val ) {
-        
-//         // var day_hours = getRegHoursForDayIndex(day_of_week);
-        
-//         var open_time = moment(val.open_time).tz(getPropertyTimeZone()); 
-//         var close_time = moment(val.close_time).tz(getPropertyTimeZone()); 
-//         if(Cookies.get('current_locale') == "fr-CA"){
-//             val.open_time = open_time.format("H") + "h";
-//             val.close_time = close_time.format("H") + "h";
-//         }
-//         if(Cookies.get('current_locale') == "en-CA"){
-//             val.open_time = open_time.format("h:mm A");
-//             val.close_time = close_time.format("h:mm A");
-//         }
-    
-//         // if(day_hours.is_closed){
-//         //     day_hours.is_open_css = "display:none";
-//         //     day_hours.is_closed_css = "display:inline";
-//         // }else{
-//         //     day_hours.is_open_css = "display:inline";
-//         //     day_hours.is_closed_css = "display:none";
-//         // }
-       
-//         setLocaleDateFormats(hours);
-//     });
-    
-//     var rendered = Mustache.to_html(template_html, hours);
-//     $(html_id).html(rendered);
-// }
 
 function renderTodaysHours(template_id,html_id){
     var template_html = $(template_id).html();
