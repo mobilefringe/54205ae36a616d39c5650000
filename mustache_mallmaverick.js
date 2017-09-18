@@ -437,6 +437,7 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
     console.log(open_time)
     var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
     if(Cookies.get('current_locale') == "fr-CA"){
+        setLocaleDateFormats(day_hours);
         day_hours.open_time = open_time.format("H") + "h";
         console.log(day_hours.open_time)
         day_hours.close_time = close_time.format("H") + "h";
@@ -454,7 +455,7 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
         day_hours.is_open_css = "display:inline";
         day_hours.is_closed_css = "display:none";
     }
-    setLocaleDateFormats(day_hours);
+    // setLocaleDateFormats(day_hours);
     var rendered = Mustache.to_html(template_html,day_hours);
     $(html_id).html(rendered);
 }
