@@ -451,7 +451,7 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
         day_hours.is_open_css = "display:inline";
         day_hours.is_closed_css = "display:none";
     }
-    setLocaleDateFormats(day_hours);
+    // setLocaleDateFormats(day_hours);
     var rendered = Mustache.to_html(template_html,day_hours);
     $(html_id).html(rendered);
 }
