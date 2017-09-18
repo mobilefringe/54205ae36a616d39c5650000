@@ -31,12 +31,12 @@ function renderStoresListTemplate(header_template_id,item_template_id,html_id,no
         val.header = first_letter.toUpperCase();
         // applyPromoJobsStyle(val);
         if(val.total_published_jobs !=null){
-            val.has_jobs_css = "inline-block"
+            val.has_jobs_css = "inline"
         } else {
             val.has_jobs_css = "none"
         }
         if(val.total_published_promos != null){
-            val.has_promotions_css = "inline-block"
+            val.has_promotions_css = "inline"
         } else {
             val.has_promotions_css = "none"
         }
