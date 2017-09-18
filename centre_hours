@@ -166,7 +166,7 @@
             renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
             renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
           
-            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHolidayHours(),100);
+            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
             renderTodaysHours('#todays_hours_template','#todays-hours');
             
             var store_list = getStoresList();
@@ -180,7 +180,7 @@
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_fri_fr',5);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sat_fr',6);
           
-            renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyRegularHours(),100);
+            renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyHours(),100);
             renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
             
             var store_list = getStoresList();
@@ -196,8 +196,7 @@
         var count = 0;
         $.each( store , function( key, val ) {
             localizeObject(val);
-            // var hours = getHoursForIds(val.store_hours);
-            var hours = getHoursForStoreSlug(val.slug);
+            var hours = getHoursForIds(val.store_hours);
             var hours_text = '';
             if (hours.length > 0){
                 $.each( hours, function( key, value ) { 
