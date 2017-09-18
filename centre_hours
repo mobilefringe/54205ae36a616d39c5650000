@@ -27,7 +27,7 @@
         <h3 data-i18n="general.regular_hours"><!--Regular Hours--></h3>
         <ul class="list-group">
             <li class="list-group-item" id="reg_hours_container"><!--this content to be rendered by renderRegularDayHours(..) --></li>
-            <li class="list-group-item" id="reg_hours_sun"><!--this content to be rendered by renderRegularDayHours(..) --></li>
+            <li class="list-group-item" id="reg_hours_container"><!--this content to be rendered by renderRegularDayHours(..) --></li>
             <li class="list-group-item" id="reg_hours_mon"><!--this content to be rendered by renderRegularDayHours(..) --></li>
             <li class="list-group-item" id="reg_hours_tue"><!--this content to be rendered by renderRegularDayHours(..) --></li>
             <li class="list-group-item" id="reg_hours_wed"><!--this content to be rendered by renderRegularDayHours(..) --></li>
