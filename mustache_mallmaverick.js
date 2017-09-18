@@ -35,6 +35,7 @@ function renderStoresListTemplate(header_template_id,item_template_id,html_id,no
         item_list.push(item_rendered);
     });
     if(stores.length > 0){
+    if(stores != null){
         $(not_empty_section_id).show();
         $(empty_section_id).hide();
         $(html_id).html(item_list.join(''));
