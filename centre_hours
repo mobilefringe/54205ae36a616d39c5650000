@@ -159,7 +159,7 @@
     $(document).ready(function() {
         function renderPageData(){
             var property_hours = getPropertyRegularHours();
-            $.each( property_hours , function( key, val ) {
+            for (var i = 0; i < property_hours; i++) {
                 var day_of_week = val.day_of_week;
                 console.log(day_of_week)
                
