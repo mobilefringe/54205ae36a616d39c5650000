@@ -63,8 +63,8 @@
     <script src="//cdn.jsdelivr.net/jquery.jreject/1.0.2/js/jquery.reject.js"></script>
     <link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet" type="text/css">
 
-    <!--MallMaverick v=0.3-->
-    <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.1.js"></script>
+    <!-- MallMaverick -->
+    <script src="//mallmaverick.codecloudapp.com/mallmaverick_v4.js"></script>
     <script src="/mustache_mallmaverick.js"></script>
     
     <script>
@@ -107,7 +107,7 @@
             });
         });
 
-        setEndPoint('//placevertu.mallmaverick.com/api/v3/placevertu/all.json');
+        setEndPoint('//placevertu.mallmaverick.com/api/v4/placevertu/all.json');
 
         Cookies.set('primary_locale', 'fr-CA');
         Cookies.set('secondary_locale', 'en-CA');
