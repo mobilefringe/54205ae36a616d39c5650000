@@ -161,6 +161,7 @@
             var property_hours = getPropertyRegularHours();
             $.each( property_hours , function( key, val ) {
                 var day_of_week = val.day_of_week;
+                console.log(day_of_week)
                
                 renderRegularDayHours('#regular_hours_template','#reg_hours_container', day_of_week);
             });
