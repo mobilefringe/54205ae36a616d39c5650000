@@ -197,7 +197,7 @@
         $.each( store , function( key, val ) {
             localizeObject(val);
             // var hours = getHoursForIds(val.store_hours);
-            var hours = getHoursForStoreSlug(val.slug).sortBy(function(o){ return o.day_of_week });
+            var hours = getHoursForStoreSlug(val.slug);
             var hours_text = '';
             if (hours.length > 0){
                 $.each( hours, function( key, value ) { 
