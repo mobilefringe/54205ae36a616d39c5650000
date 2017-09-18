@@ -204,7 +204,7 @@
             localizeObject(val);
             // var hours = getHoursForIds(val.store_hours);
             if(val.store_hours != null){
-                var hours = getHoursForStoreSlug(val.slug);
+                var hours = getHoursForStoreSlug(val.slug).sortBy(function(o){ return o.day_of_week });
             }
             var hours_text = '';
             // if (hours.length > 0){
