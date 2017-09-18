@@ -158,11 +158,12 @@
 <script>
     $(document).ready(function() {
         function renderPageData(){
-            var regular_hours = getPropertyRegularHours();
-
+            var property_hours = getPropertyRegularHours();
+            $.each( property_hours , function( key, val ) {
+                var day_of_week = val.day_of_week;
                
-            renderRegularDayHours('#regular_hours_template','#reg_hours_container', regular_hours);
-   
+                renderRegularDayHours('#regular_hours_template','#reg_hours_container', day_of_week);
+            });
             //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
             // renderRegularDayHours('#regular_hours_template','#reg_hours_sun',0);
             // renderRegularDayHours('#regular_hours_template','#reg_hours_mon',1);
