@@ -38,7 +38,7 @@ function renderStoresListTemplate(header_template_id,item_template_id,html_id,no
         if(val.total_published_promos != null){
             val.has_promotions_css = "block"
         } else {
-            val.haspromotions_css = "none"
+            val.has_promotions_css = "none"
         }
         
         var item_rendered = Mustache.render(item_template_html,val);
