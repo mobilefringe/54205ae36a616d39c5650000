@@ -188,7 +188,7 @@ function renderStoresWithPromotionsTemplate(template_id,html_id){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);
     $.each( getStoresList() , function( key, val ) {
-        if(val['promotions'].length > 0){
+        if(val['promotions'] != null){
             localizeObject(val);
             var rendered = Mustache.render(template_html,val);
             html_item_list.push(rendered);
