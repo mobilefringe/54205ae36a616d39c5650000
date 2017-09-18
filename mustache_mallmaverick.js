@@ -433,17 +433,19 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
     Mustache.parse(template_html);   // optional, speeds up future uses
     var day_hours = day_of_week;
     
-    var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
-    var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+    // var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+    // var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
     if(Cookies.get('current_locale') == "fr-CA"){
-        var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
-        var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+        var open_time_fr = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+        var close_time_fr = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
 
-        day_hours.open_time = open_time.format("H") + "h";
+        day_hours.open_time = open_time_fr.format("H") + "h";
         console.log(day_hours.open_time)
-        day_hours.close_time = close_time.format("H") + "h";
+        day_hours.close_time = close_time_fr.format("H") + "h";
     }
     if(Cookies.get('current_locale') == "en-CA"){
+        var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+        var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
         day_hours.open_time = open_time.format("h:mm A");
         console.log(day_hours.open_time)
         day_hours.close_time = close_time.format("h:mm A");
