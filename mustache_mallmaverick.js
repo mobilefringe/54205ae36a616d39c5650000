@@ -35,6 +35,7 @@ function renderStoresListTemplate(header_template_id,item_template_id,html_id,no
         } else {
             val.has_jobs_css = "none"
         }
+        
         if(val.total_published_promos != null){
             val.has_promotions_css = "inline"
         } else {
