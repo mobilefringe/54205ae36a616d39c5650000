@@ -197,8 +197,10 @@
         var count = 0;
         $.each( store , function( key, val ) {
             localizeObject(val);
-            var hours = getHoursForIds(val.store_hours);
-            // var hours = getHoursForStoreSlug(val.slug)
+            // var hours = getHoursForIds(val.store_hours);
+            if(val.store_hours != null){
+                var hours = getHoursForStoreSlug(val.slug);
+            }
             var hours_text = '';
             if (hours.length > 0){
                 $.each( hours, function( key, value ) { 
