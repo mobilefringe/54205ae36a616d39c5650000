@@ -169,8 +169,8 @@
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
             renderTodaysHours('#todays_hours_template','#todays-hours');
             
-            var store_list = getStoresList();
-            renderStoreHours('#store_hours_template','#store_hours_not_empty_section_id', store_list);
+            // var store_list = getStoresList();
+            // renderStoreHours('#store_hours_template','#store_hours_not_empty_section_id', store_list);
             
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun_fr',0);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_mon_fr',1);
