@@ -160,13 +160,13 @@
         function renderPageData(){
             var property_hours = getPropertyRegularHours().sortBy(function(o){ return o.day_of_week });
             console.log(property_hours)
-            var sun_hours = 
-            var mon_hours =
-            var tues_hours = 
-            var wed_hours = 
-            var thurs_hours = 
-            var fri_hours = 
-            var sat_hours = 
+            // var sun_hours = 
+            // var mon_hours =
+            // var tues_hours = 
+            // var wed_hours = 
+            // var thurs_hours = 
+            // var fri_hours = 
+            // var sat_hours = 
             // for (var i = 0; i < property_hours; i++) {
             //     var day_of_week = property_hours.day_of_week;
             //     console.log(day_of_week)
