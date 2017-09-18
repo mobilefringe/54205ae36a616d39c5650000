@@ -51,7 +51,6 @@ function renderStoresByCategoriesListTemplate(header_template_id,item_template_i
     var item_template_html = $(item_template_id).html();
     Mustache.parse(item_template_html);
     
-    
     var all_categories = getStoreCategories();
     for (i = 0; i < all_categories.length; i++) {
         var add_header = true;
@@ -72,7 +71,6 @@ function renderStoresByCategoriesListTemplate(header_template_id,item_template_i
             }
         }
     }
-    
     
     if(stores.length > 0){
         $(not_empty_section_id).show();
