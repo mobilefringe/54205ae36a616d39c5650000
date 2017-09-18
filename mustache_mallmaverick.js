@@ -428,7 +428,7 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     $(html_id).html(rendered);
 }
 
-function renderRegularDayHours(template_id,html_id,day_of_week){
+function renderRegularDayHours(template_id,html_id, day_of_week){
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     var day_hours = getRegHoursForDayIndex(day_of_week);
