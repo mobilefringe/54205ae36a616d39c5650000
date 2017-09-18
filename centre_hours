@@ -181,7 +181,7 @@
             var store_list = getStoresList();
             renderStoreHours('#store_hours_template','#store_hours_not_empty_section_id', store_list);
             
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun_fr', sun_hours);
+            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun', sun_hours);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_mon_fr', mon_hours);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_tue_fr', tues_hours);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_wed_fr', wed_hours);
