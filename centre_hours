@@ -158,13 +158,13 @@
     $(document).ready(function() {
         function renderPageData(){
             var property_hours = getPropertyRegularHours().sortBy(function(o){ return o.day_of_week });
-            var sun_hours = property_hours[0];
-            var mon_hours = property_hours[1];
-            var tues_hours = property_hours[2];
-            var wed_hours = property_hours[3];
-            var thurs_hours = property_hours[4];
-            var fri_hours = property_hours[5];
-            var sat_hours = property_hours[6];
+            sun_hours = property_hours[0];
+            mon_hours = property_hours[1];
+            tues_hours = property_hours[2];
+            wed_hours = property_hours[3];
+            thurs_hours = property_hours[4];
+            fri_hours = property_hours[5];
+            sat_hours = property_hours[6];
 
             //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
             renderRegularDayHours('#regular_hours_template','#reg_hours_sun', sun_hours);
