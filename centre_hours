@@ -180,7 +180,7 @@
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_fri_fr',5);
             renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sat_fr',6);
           
-            renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyregularHours(),100);
+            renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyRegularHours(),100);
             renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
             
             var store_list = getStoresList();
