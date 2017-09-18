@@ -483,7 +483,7 @@ function renderRegularDayHours(template_id, html_id, hours){
         //     day_hours.is_closed_css = "display:none";
         // }
        
-        setLocaleDateFormats(day_hours);
+        setLocaleDateFormats(hours);
     });
     
     var rendered = Mustache.to_html(template_html,day_hours);
