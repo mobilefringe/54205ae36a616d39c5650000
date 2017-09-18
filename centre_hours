@@ -161,7 +161,7 @@
             var property_hours = getPropertyRegularHours();
             $.each( property_hours , function( key, val ) {
                 var day_of_week = val.day_of_week;
-                console.log(day)
+               
                 renderRegularDayHours('#regular_hours_template','#reg_hours_container', day_of_week);
             });
             //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
