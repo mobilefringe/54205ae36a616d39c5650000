@@ -475,13 +475,13 @@ function renderRegularDayHours(template_id, html_id, hours){
             val.close_time = close_time.format("h:mm A");
         }
     
-        if(day_hours.is_closed){
-            day_hours.is_open_css = "display:none";
-            day_hours.is_closed_css = "display:inline";
-        }else{
-            day_hours.is_open_css = "display:inline";
-            day_hours.is_closed_css = "display:none";
-        }
+        // if(day_hours.is_closed){
+        //     day_hours.is_open_css = "display:none";
+        //     day_hours.is_closed_css = "display:inline";
+        // }else{
+        //     day_hours.is_open_css = "display:inline";
+        //     day_hours.is_closed_css = "display:none";
+        // }
        
         setLocaleDateFormats(day_hours);
     });
