@@ -202,7 +202,8 @@
                 var hours = getHoursForStoreSlug(val.slug);
             }
             var hours_text = '';
-            if (hours.length > 0){
+            // if (hours.length > 0){
+            if (hours != null){
                 $.each( hours, function( key, value ) { 
                     var day = getStoreDay(value.day_of_week);
                     var open_time = moment(value.open_time).tz(getPropertyTimeZone()); 
