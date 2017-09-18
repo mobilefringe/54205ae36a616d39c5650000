@@ -428,30 +428,38 @@ function renderEventDetailsTemplate(template_id,html_id,event_details){
     $(html_id).html(rendered);
 }
 
-function renderRegularDayHours(template_id,html_id,day_of_week){
+function renderRegularDayHours(template_id, html_id, hours){
+    var item_list = [];
     var template_html = $(template_id).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    var day_hours = getRegHoursForDayIndex(day_of_week);
+    $.each( hours , function( key, val ) {
     
-    var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
-    var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
-    if(Cookies.get('current_locale') == "fr-CA"){
-        day_hours.open_time = open_time.format("H") + "h";
-        day_hours.close_time = close_time.format("H") + "h";
-    }
-    if(Cookies.get('current_locale') == "en-CA"){
-        day_hours.open_time = open_time.format("h:mm A");
-        day_hours.close_time = close_time.format("h:mm A");
-    }
-
-    if(day_hours.is_closed){
-        day_hours.is_open_css = "display:none";
-        day_hours.is_closed_css = "display:inline";
-    }else{
-        day_hours.is_open_css = "display:inline";
-        day_hours.is_closed_css = "display:none";
-    }
-    setLocaleDateFormats(day_hours);
+        var template_html = $(template_id).html();
+        Mustache.parse(template_html);   // optional, speeds up future uses
+        var day_hours = getRegHoursForDayIndex(day_of_week);
+        
+        var open_time = moment(day_hours.open_time).tz(getPropertyTimeZone()); 
+        var close_time = moment(day_hours.close_time).tz(getPropertyTimeZone()); 
+        if(Cookies.get('current_locale') == "fr-CA"){
+            day_hours.open_time = open_time.format("H") + "h";
+            day_hours.close_time = close_time.format("H") + "h";
+        }
+        if(Cookies.get('current_locale') == "en-CA"){
+            day_hours.open_time = open_time.format("h:mm A");
+            day_hours.close_time = close_time.format("h:mm A");
+        }
+    
+        if(day_hours.is_closed){
+            day_hours.is_open_css = "display:none";
+            day_hours.is_closed_css = "display:inline";
+        }else{
+            day_hours.is_open_css = "display:inline";
+            day_hours.is_closed_css = "display:none";
+        }
+        
+        setLocaleDateFormats(day_hours);
+    });
+    
     var rendered = Mustache.to_html(template_html,day_hours);
     $(html_id).html(rendered);
 }
