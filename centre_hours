@@ -160,7 +160,7 @@
         function renderPageData(){
             var property_hours = getPropertyRegularHours().sortBy(function(o){ return o.day_of_week });
             console.log(property_hours)
-            var sun_hours = property_hours.day_of_week[0];
+            var sun_hours = property_hours[0];
             console.log(sun_hours)
             // var mon_hours =
             // var tues_hours = 
