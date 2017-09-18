@@ -32,9 +32,13 @@ function renderStoresListTemplate(header_template_id,item_template_id,html_id,no
         // applyPromoJobsStyle(val);
         if(val.total_published_jobs !=null){
             val.has_jobs_css = "block"
+        } else {
+            val.has_jobs_css = "none"
         }
         if(val.total_published_promos != null){
             val.has_promotions_css = "block"
+        } else {
+            val.haspromotions_css = "none"
         }
         
         var item_rendered = Mustache.render(item_template_html,val);
