@@ -157,14 +157,19 @@
 <script>
     $(document).ready(function() {
         function renderPageData(){
+            var property_hours = getPropertyRegularHours();
+            $.each( property_hours , function( key, val ) {
+                var day_of_week = val.day_of_week;
+                renderRegularDayHours('#regular_hours_template','#reg_hours_container', day_of_week);
+            });
             //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
-            renderRegularDayHours('#regular_hours_template','#reg_hours_sun',0);
-            renderRegularDayHours('#regular_hours_template','#reg_hours_mon',1);
-            renderRegularDayHours('#regular_hours_template','#reg_hours_tue',2);
-            renderRegularDayHours('#regular_hours_template','#reg_hours_wed',3);
-            renderRegularDayHours('#regular_hours_template','#reg_hours_thu',4);
-            renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
-            renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_sun',0);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_mon',1);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_tue',2);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_wed',3);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_thu',4);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
+            // renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
           
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id', getPropertyHolidayHours(),100);
             renderTodaysHours('#todays_hours_template','#todays-hours');
