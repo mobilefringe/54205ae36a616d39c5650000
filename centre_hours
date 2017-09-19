@@ -94,7 +94,7 @@
         <script id="regular_hours_template_fr" type="x-tmpl-mustache">
             <span data-i18n="days_of_week.{{day_of_week}}"></span>
             <div class="pull-right" style="{{is_open_css}};">
-                {{open_time}} - {{close_time}}
+                {{open_time}} à {{close_time}}
             </div>
             <div class="pull-right" style="{{is_closed_css}};" data-i18n="general.closed">
                 <!--Closed-->
