@@ -165,32 +165,35 @@
             thurs_hours = property_hours[4];
             fri_hours = property_hours[5];
             sat_hours = property_hours[6];
-
-            //renders the regular store hours for each day of the week, sunday = 0, saturday = 6
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_sun', sun_hours);
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_mon', mon_hours);
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_tue', tues_hours);
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_wed', wed_hours);
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_thu', thurs_hours);
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_fri', fri_hours);
-            // renderRegularDayHours('#regular_hours_template','#reg_hours_sat', sat_hours);
-          
-            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id', getPropertyHolidayHours(),100);
-            renderTodaysHours('#todays_hours_template','#todays-hours');
+            
+            if(Cookies.get('current_locale') == "en-CA"){
+                // renders the regular store hours for each day of the week, sunday = 0, saturday = 6
+                renderRegularDayHours('#regular_hours_template','#reg_hours_sun', sun_hours);
+                renderRegularDayHours('#regular_hours_template','#reg_hours_mon', mon_hours);
+                renderRegularDayHours('#regular_hours_template','#reg_hours_tue', tues_hours);
+                renderRegularDayHours('#regular_hours_template','#reg_hours_wed', wed_hours);
+                renderRegularDayHours('#regular_hours_template','#reg_hours_thu', thurs_hours);
+                renderRegularDayHours('#regular_hours_template','#reg_hours_fri', fri_hours);
+                renderRegularDayHours('#regular_hours_template','#reg_hours_sat', sat_hours);
+            
+                renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id', getPropertyHolidayHours(),100);
+                renderTodaysHours('#todays_hours_template','#todays-hours');
+            }
             
             var store_list = getStoresList();
             renderStoreHours('#store_hours_template','#store_hours_not_empty_section_id', store_list);
-            
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun_fr', sun_hours);
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_mon_fr', mon_hours);
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_tue_fr', tues_hours);
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_wed_fr', wed_hours);
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_thu_fr', thurs_hours);
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_fri_fr', fri_hours);
-            renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sat_fr', sat_hours);
-          
-            renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyHolidayHours(),100);
-            renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
+            if(Cookies.get('current_locale') == "fr-CA"){
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sun_fr', sun_hours);
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_mon_fr', mon_hours);
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_tue_fr', tues_hours);
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_wed_fr', wed_hours);
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_thu_fr', thurs_hours);
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_fri_fr', fri_hours);
+                renderRegularDayHours('#regular_hours_template_fr','#reg_hours_sat_fr', sat_hours);
+              
+                renderHolidayHours('#holiday_hours_template_fr','#holiday-hours_fr','#hours_not_empty_section_id_fr','#hours_empty_section_id_fr',getPropertyHolidayHours(),100);
+                renderTodaysHours('#todays_hours_template_fr','#todays-hours_fr');
+            }
             
             var store_list = getStoresList();
             renderStoreHours('#store_hours_template_fr','#store_hours_not_empty_section_id_fr', store_list);
