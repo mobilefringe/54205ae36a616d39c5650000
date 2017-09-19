@@ -439,6 +439,7 @@ function renderRegularDayHours(template_id,html_id, day_of_week){
         day_hours.open_time = open_time.format("H") + "h";
         day_hours.close_time = close_time.format("H") + "h";
     }
+    
     if(Cookies.get('current_locale') == "en-CA"){
         day_hours.open_time = open_time.format("h:mm A");
         day_hours.close_time = close_time.format("h:mm A");
