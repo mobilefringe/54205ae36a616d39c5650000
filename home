@@ -164,7 +164,7 @@
         })
         
         function renderPageData(){
-            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),2);
+            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHolidayHours(),2);
             renderTodaysHours('#todays_hours_template','#todays-hours');
             var banners = getBanners();
             renderBanner('#banner_template','#home_banner',banners);
