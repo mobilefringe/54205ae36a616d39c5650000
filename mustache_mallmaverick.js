@@ -147,7 +147,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 }
             }
 
-            if(hasImage(val.promo_image_url)){
+            if(hasImage(val.promo_image_url_abs)){
                 val.promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
                 val.promo_image_url_abs = val.promo_image_url_abs;
                 var rendered = Mustache.render(template_html,val);
