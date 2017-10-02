@@ -262,8 +262,18 @@
         });
     
         $.each( item_list , function( key, val ) {
+            if(Cookies.get('current_locale') == "fr-CA") {
+                if(val.locale == "fr"){
+                    var repo_rendered = Mustache.render(banner_template_html,val);
+                }
+            } else if(Cookies.get('current_locale') == "en-CA"){
+                if(val.locale == "en"){
+                    var repo_rendered = Mustache.render(banner_template_html,val);
+                }
+            }
+            
             // if(val.locale == "fr" && Cookies.get('current_locale') == "fr-CA"){
-                var repo_rendered = Mustache.render(banner_template_html,val);
+                // var repo_rendered = Mustache.render(banner_template_html,val);
             // }
             // if(val.locale == "en" && Cookies.get('current_locale') == "en-CA"){
             //     var repo_rendered = Mustache.render(banner_template_html,val);
