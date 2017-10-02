@@ -262,15 +262,15 @@
         });
     
         $.each( item_list , function( key, val ) {
-            // if(Cookies.get('current_locale') == "fr-CA") {
+            if(Cookies.get('current_locale') == "fr-CA") {
                 if(val.locale == "fr"){
                     var repo_rendered = Mustache.render(banner_template_html,val);
                 }
-            // } else if(Cookies.get('current_locale') == "en-CA"){
+            } else {
                 if(val.locale == "en"){
                     var repo_rendered = Mustache.render(banner_template_html,val);
                 }
-            // }
+            }
             
             // if(val.locale == "fr" && Cookies.get('current_locale') == "fr-CA"){
                 // var repo_rendered = Mustache.render(banner_template_html,val);
