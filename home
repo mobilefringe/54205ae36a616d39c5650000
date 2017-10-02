@@ -171,6 +171,7 @@
             renderBanner('#banner_template','#home_banner',banners);
             
             var feature_items = getFeatureList();
+            console.log(feature_items)
             renderFeatureItems('#feature_container','#feature_template', feature_items);
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
