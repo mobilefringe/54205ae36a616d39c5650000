@@ -95,22 +95,22 @@
             </div>
             
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
-               <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
-               <span data-i18n="general.join_txt" style="font-size:14px"></span>
-               <div class="newsletter-sign-up" style="margin-top:15px">
+                <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
+                <span data-i18n="general.join_txt" style="font-size:14px"></span>
+                <div class="newsletter-sign-up" style="margin-top:15px">
                     <form action="https://mobilefringe.createsend.com/t/d/s/tydkit/" method="post" id="subForm">
-                       <label for="subscribe_email" style="display:none"> subscribe email </label>
-                            <input id="fieldEmail" name="cm-tydkit-tydkit" type="email" required placeholder="entrez votre courriel" /> 
-                       <div class="checkbox">
-                        <span style="font-size:11px">
-                          <input type="checkbox" class="info_check" id="agree_terms" style="width:15px"/>
-                          <span data-i18n="general.agree_newsletter"></span>
-                        </span>
-                      </div>
+                        <label for="subscribe_email" style="display:none"> subscribe email </label>
+                        <input id="fieldEmail" name="cm-tydkit-tydkit" type="email" required placeholder="entrez votre courriel" /> 
+                        <div class="checkbox">
+                            <span style="font-size:11px">
+                                <input type="checkbox" class="info_check" id="agree_terms" style="width:15px"/>
+                                <span data-i18n="general.agree_newsletter"></span>
+                            </span>
+                        </div>
                         <button class="btn btn-default"  data-i18n="general.submit"></button>
-                       <br />
-                       <span id="success_subscribe" style="font-size:20px;padding:10px">Thank You!</span>
-                   </form>
+                        <br />
+                        <span id="success_subscribe" style="font-size:20px;padding:10px">Thank You!</span>
+                    </form>
                 </div>
             </div>
         </div>
