@@ -110,18 +110,16 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 
                 if(val.description.length > 300){
                     val.desc_short = val.description.substring(0,300) + "...";
-                }
-                else{
+                } else {
                     val.desc_short = val.description;
                 }
             }
             if(Cookies.get('current_locale') == "fr-CA"){
                 val.promo_name = val.name_2;
                 
-                 if(val.description_2.length > 300){
+                if(val.description_2.length > 300){
                     val.desc_short = val.description_2.substring(0,300) + "...";
-                }
-                else{
+                } else {
                     val.desc_short = val.description_2;
                 }
             }
@@ -151,7 +149,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
 
             if(hasImage(val.promo_image_url)){
                 val.promo_image_url = getCloudinaryImageUrl(val.promo_image_url);
-                val.promo_image_url_abs = getAbsoluteImageURL(val.promo_image_url_abs);
+                val.promo_image_url_abs = val.promo_image_url_abs;
                 var rendered = Mustache.render(template_html,val);
                 item_list.push(rendered);
             }else{
