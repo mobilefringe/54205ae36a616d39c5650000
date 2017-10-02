@@ -103,6 +103,7 @@
             var promotion_list = getPromotionsListByStoreName();
             all_promos = getPromotionsList();
             all_promos = all_promos.reverse();
+            console.log(all_promos)
             promo_array = []
             $.each( all_promos , function( key, val ){
                 today = moment();
