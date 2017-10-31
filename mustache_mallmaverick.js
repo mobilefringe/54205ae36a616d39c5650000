@@ -105,7 +105,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
         today = moment();
         webDate = moment(val.show_on_web_date)
         if (today >= webDate) {
-            if(Cookies.get('current_locale') == "en-CA"){
+            // if(Cookies.get('current_locale') == "en-CA"){
                 val.promo_name = val.name;
                 
                 if(val.description.length > 300){
@@ -113,16 +113,16 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 } else {
                     val.desc_short = val.description;
                 }
-            }
-            if(Cookies.get('current_locale') == "fr-CA"){
-                val.promo_name = val.name_2;
+            // }
+            // if(Cookies.get('current_locale') == "fr-CA"){
+            //     val.promo_name = val.name_2;
                 
-                if(val.description_2.length > 300){
-                    val.desc_short = val.description_2.substring(0,300) + "...";
-                } else {
-                    val.desc_short = val.description_2;
-                }
-            }
+            //     if(val.description_2.length > 300){
+            //         val.desc_short = val.description_2.substring(0,300) + "...";
+            //     } else {
+            //         val.desc_short = val.description_2;
+            //     }
+            // }
             
             var start = moment(val.start_date).tz(getPropertyTimeZone());
             var end = moment(val.end_date).tz(getPropertyTimeZone());
@@ -133,7 +133,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 val.end_date = end.format("YYYY-MM-D");
             }
     
-            // localizeObject(val);
+            localizeObject(val);
             
             var promotionable_name = "";
             var promotionable_url = "";
