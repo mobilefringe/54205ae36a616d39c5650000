@@ -1102,6 +1102,7 @@ footer .nav>li>a{
 
 .footer-signature .property-logo{
     margin-top:-4px;
+    display: none;
 }
 
 
