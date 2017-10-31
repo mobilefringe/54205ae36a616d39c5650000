@@ -114,10 +114,10 @@
         Cookies.set('primary_locale', 'fr-CA');
         Cookies.set('secondary_locale', 'en-CA');
 
-        if(getRequestParam('locale') == 'en'){
-            setCurrentLocale(Cookies.get('secondary_locale'));
-        } else if(getRequestParam('locale') == 'fr'){
+        if(getRequestParam('locale') == 'fr'){
             setCurrentLocale(Cookies.get('primary_locale'));
+        } else if(getRequestParam('locale') == 'en'){
+            setCurrentLocale(Cookies.get('secondary_locale'));
         }
     </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
