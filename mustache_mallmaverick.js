@@ -133,7 +133,7 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 val.end_date = end.format("YYYY-MM-D");
             }
     
-            localizeObject(val);
+            // localizeObject(val);
             
             var promotionable_name = "";
             var promotionable_url = "";
