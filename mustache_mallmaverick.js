@@ -133,14 +133,14 @@ function renderPromotionsListTemplate(template_id,template_id_no_image,html_id,n
                 val.end_date = end.format("YYYY-MM-D");
             }
     
-            // localizeObject(val);
+            localizeObject(val);
             
             var promotionable_name = "";
             var promotionable_url = "";
             if(val['promotionable_type'] == 'Store' && showOnWeb(val)){
                 var store_details = getStoreDetailsByID(val['promotionable_id']);
                 if (store_details){
-                    // localizeObject(store_details);
+                    localizeObject(store_details);
                     val.store = store_details;
                     val.promotionable_name = store_details.name;
                     val.promotionable_url = "../stores/" + store_details.slug;
