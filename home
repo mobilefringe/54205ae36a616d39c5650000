@@ -167,11 +167,9 @@
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHolidayHours(),2);
             renderTodaysHours('#todays_hours_template','#todays-hours');
             var banners = getBanners();
-            console.log(banners)
             renderBanner('#banner_template','#home_banner',banners);
             
             var feature_items = getFeatureList();
-            console.log(feature_items)
             renderFeatureItems('#feature_container','#feature_template', feature_items);
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
