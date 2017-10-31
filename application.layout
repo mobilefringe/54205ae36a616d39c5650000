@@ -695,6 +695,7 @@
         $('#fr-CA').click(function(e){
             e.preventDefault();
             setPrimaryLanguage();
+            console.log("I've been clicked!")
             window.location.reload();
         });
         
