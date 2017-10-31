@@ -60,6 +60,8 @@
     <script src="//cdn.jsdelivr.net/jquery.jreject/1.0.2/js/jquery.reject.js"></script>
     <link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet" type="text/css">
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/i18next/1.6.3/i18next-1.6.3.min.js"></script>
+    
     <!-- MallMaverick -->
     <script src="//mallmaverick.codecloudapp.com/mallmaverick_v4.js"></script>
     <script src="/mustache_mallmaverick.js"></script>
@@ -617,7 +619,7 @@
     </div>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/i18next/1.6.3/i18next-1.6.3.min.js"></script>
+
     
 
 <!-- Bootstrap Core JavaScript -->
