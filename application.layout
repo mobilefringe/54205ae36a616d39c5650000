@@ -109,7 +109,7 @@
             });
         });
 
-        setEndPoint('https://placevertu.mallmaverick.com/api/v4/placevertu/all.json');
+        setEndPoint('//placevertu.mallmaverick.com/api/v4/placevertu/all.json');
 
         Cookies.set('primary_locale', 'fr-CA');
         Cookies.set('secondary_locale', 'en-CA');
