@@ -2,6 +2,12 @@
     .day .past .event{
         color:#ddd;
     }
+    .description p {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 </style>
 
 <div class="container promotions">
