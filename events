@@ -37,8 +37,8 @@
                                 <div class="dates">
                                     {{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}
                                 </div>
-                                <div class="description truncate">
-                                    <p>{{ desc_short }} </p>
+                                <div class="description">
+                                    <p class="truncate">{{ desc_short }} </p>
                                 </div>
                                 <div class="social-links">
                                     <span>
@@ -65,8 +65,8 @@
                                 <div class="dates">
                                     {{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}
                                 </div>
-                                <div class="description truncate">
-                                    <p>{{ description_short }}</p>
+                                <div class="description">
+                                    <p class="truncate">{{ description_short }}</p>
                                 </div>
                                 <div class="social-links">
                                     <span>
