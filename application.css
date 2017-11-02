@@ -994,6 +994,10 @@ footer .nav>li>a{
     font-size: 1.0em;
     color:#000;
 }
+.promo-details .name a:hover {
+    color:;
+    text-decoration: underline;
+}
 
 .promo-details .store-name a{
     color:#5d5d5d;
