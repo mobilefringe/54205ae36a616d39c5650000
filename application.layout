@@ -62,7 +62,7 @@
 
     
     <!-- MallMaverick -->
-    <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
+    <script src="//mallmaverick.codecloudapp.com/mallmaverick.js"></script>
     <script src="/mustache_mallmaverick.js"></script>
     <script>
         $.ajaxSetup
