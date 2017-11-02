@@ -62,7 +62,7 @@
 
     
     <!-- MallMaverick -->
-    <script src="//mallmaverick.codecloudapp.com/mallmaverick.js"></script>
+    <script src="//mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
     <script src="/mustache_mallmaverick.js"></script>
     <script>
         $.ajaxSetup
@@ -76,7 +76,7 @@
                 paragraph1: 'Unfortunately your browser is not officially supported with our site', // Paragraph 1  
                 paragraph2: 'For the best experience please install one of the many optional browsers below to proceed',  
                 closeMessage: 'You may continue using the site however certain features and content may not be accessible. Thank you.',
-                closeCookie: true,
+                closeCookie: false,
                 browserInfo: { // Settings for which browsers to display  
                     chrome: {  
                         // Text below the icon  
