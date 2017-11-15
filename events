@@ -29,7 +29,7 @@
                                     <h3><a href="../events/{{ slug }}">{{ event_name }}</a></h3>
                                 </div>
                                 <div class="dates">
-                                    {{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}
+                                    {{ dates }}
                                 </div>
                                 <div class="description">
                                     <p class="truncate">{{ desc_short }} </p>
@@ -57,7 +57,7 @@
                                     <h3><a href="../events/{{ slug }}">{{ name }}</a></h3>
                                 </div>
                                 <div class="dates">
-                                    {{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}
+                                    {{ dates }}
                                 </div>
                                 <div class="description">
                                     <p class="truncate">{{ description_short }}</p>
@@ -153,6 +153,66 @@
         loadMallDataCached(renderPageData);
     });
     
+    function renderEventsListTemplate(template_id,template_id_no_image,html_id,not_empty_section_id,empty_section_id,events){
+        var item_list = [];
+        var template_html = $(template_id).html();
+        Mustache.parse(template_html);   // optional, speeds up future uses
+        var template_html_no_image = $(template_id_no_image).html();
+        Mustache.parse(template_html_no_image);
+        $.each( events , function( key, val ) {
+            if(Cookies.get('current_locale') == "en-CA"){
+                val.event_name = val.name;
+                
+                if(val.description.length > 300){
+                    val.desc_short = val.description.substring(0,300) + "...";
+                }
+                else{
+                    val.desc_short = val.description;
+                }
+                val.event_img = getImageURL(val.event_image_url)
+            }
+            if(Cookies.get('current_locale') == "fr-CA"){
+                val.event_name = val.name_2;
+                
+                 if(val.description_2.length > 300){
+                    val.desc_short = val.description_2.substring(0,300) + "...";
+                }
+                else{
+                    val.desc_short = val.description_2;
+                }
+                
+                val.event_img = getImageURL(val.event_image2_url)
+            }
+            var start = moment(val.start_date).tz(getPropertyTimeZone());
+            var end = moment(val.end_date).tz(getPropertyTimeZone());
+            if (start.format("DMY") == end.format("DMY")){
+                val.dates = start.format("YYYY-MM-D");
+            } else {
+                val.dates = start.format("YYYY-MM-D") + " - " + end.format("YYYY-MM-D");
+
+            }   
+            
+            // localizeObject(val);
+            if(hasImage(val.event_image_url)){
+                val.event_image_url = getImageURL(val.event_image_url);
+                val.event_image_url_abs = getAbsoluteImageURL(val.event_image_url_abs);
+                var rendered = Mustache.render(template_html,val);
+                item_list.push(rendered);
+            }else{
+                var rendered_no_image = Mustache.render(template_html_no_image,val);
+                item_list.push(rendered_no_image);
+            }
+        });
+        if(events.length > 0){
+            $(not_empty_section_id).show();
+            $(empty_section_id).hide();
+            $(html_id).html(item_list.join(''));
+        }else{
+            $(not_empty_section_id).hide();
+            $(empty_section_id).show();
+        }
+    }
+
     function sortByStartDate(a, b){
         var aId = a.start_date;
         var bId = b.start_date;
@@ -226,3 +286,4 @@
     }
     
 </script>
+<!--{{ startDate }} <span data-i18n="general.to"></span> {{ endDate }}-->
