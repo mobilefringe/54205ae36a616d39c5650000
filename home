@@ -1,15 +1,60 @@
+<!--<script src="https://s3.amazonaws.com/kodekloud/sites/5447ebb66e6f641987020000/application/x-javascript/1475784672000/js.cookie.js"></script>-->
+<style>
+    .header-area{
+        margin-bottom: 0px;
+    }
+</style>
+<div class="popup_bg">    
+    <div class="popup_newsletter" style="padding-bottom: 15px;padding-right: 25px;padding-left: 25px;">
+        <a href="javascript:close_popup();" class="popup_close">X</a>
+        <h1 data-i18n="general.popup_name"></h1>
+        <p data-i18n="general.popup_desc"></p>
+        <form id="popup_form">
+            <div class="subscribe">
+                <input type="text" placeholder="" id="subscribe_name" >
+                <input type="text" placeholder="" id="subscribe_email" required>                            
+                <input type="text" placeholder="" id="subscribe_postal_code" >
+                    <br />
+                <button class="btn submit_btn" data-i18n="general.submit"> </button>
+                <br />
+                <span id="success_subscribe_popup" style="display: none;" data-i18n="general.popup_thankyou"></span>
+                <label style="display: block;">
+                    <input title="checkbox " type="checkbox" id="agree_newsletter" required>
+                    <span data-i18n="general.popup_agree"></span>
+                </label>
+                <label style="display: block;">
+                    <input title="checkbox " type="checkbox" id="hide_popup">
+                    <span data-i18n="general.popup_hide"></span>
+                </label>
+            </div> 
+        </form>
+    </div>
+</div>
 <div class="home">
-    <img class="banner" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/9000b27d8947cd304731715f26abe5d7/img_banner.jpg">
+    <div class="flexslider">
+        <ul class="slides" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li>
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img alt="banner" src="{{image_url}}" />
+                    </a>
+                </li>
+            </script>
+        </ul>
+    </div>
+</div>
+
+<div class="feature-items-section">
     <div class="container">
         <div class="row feature-items">
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-               <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
-               <div id="todays-hours">
-                   <script id="todays_hours_template" type="x-tmpl-mustache">
+                <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
+                <div id="todays-hours">
+                    <script id="todays_hours_template" type="x-tmpl-mustache">
                         <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
                         <div>{{holiday_name}}</div>
-                        <span style="{{is_open_css}};">
-                            {{open_time_localized}} - {{close_time_localized}}
+                        <span style="{{is_open_css}}; font-size:15px;">
+                            {{open_time}} - {{close_time}}
                         </span>
                         <span style="{{is_closed_css}};">
                             Closed
@@ -21,9 +66,9 @@
                     <script id="holiday_hours_template" type="x-tmpl-mustache">
                         
                         <li class="">
-                            <span class="">{{holiday_name}}</span>
-                            <div style="{{is_open_css}};">
-                                {{open_time_localized}} - {{close_time_localized}}
+                            <span class="holiday-name">{{holiday_name}}</span>
+                            <div style="{{is_open_css}}; font-size:15px;">
+                                {{open_time}} - {{close_time}}
                             </div>
                             <div style="{{is_closed_css}};">
                                 Closed
@@ -36,21 +81,36 @@
                     </ul>
                 </div>
                 <div id="hours_empty_section_id"></div>
-                <a href="../contact_us#opening_hours" class="btn btn-default"  data-i18n="general.click_more_button"></a>
+                <a href="../contact_us#open_hours" class="btn btn-default"  style="font-size:14px;" data-i18n="general.click_more_button"></a>
             </div>
-            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-               <div class="header" data-i18n="general.directions"></div>
-               <a href="../contact_us#directions"><img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_direction.jpg" class="" alt="" style="width:100%"></a>
+            <div id="feature_container">
+                <script id="feature_template" type="x-tmpl-mustache/text">
+                    <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+                        <div class="header">{{locale_name}}</div>
+                        <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                            <img src="{{locale_image_url}}" alt="{{name}}" />
+                        </a>
+                    </div>
+                </script>
             </div>
-            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
-                <div class="header" data-i18n="general.gift_card"></div>
-                <a href="../customer_services#gift_cards"><img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_giftcard.jpg" class="" alt="" style="width:100%"></a>
-            </div>
+            
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
-               <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
-               <p data-i18n="general.join_txt"></p>
-               <div class="newsletter-sign-up" style="">
-                    <input style="" class="_input" placeholder="enter email" type="text">
+                <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
+                <span data-i18n="general.join_txt" style="font-size:14px"></span>
+                <div class="newsletter-sign-up" style="margin-top:15px">
+                    <form action="https://mobilefringe.createsend.com/t/d/s/tydkit/" method="post" id="subForm">
+                        <label for="subscribe_email" style="display:none"> subscribe email </label>
+                        <input id="fieldEmail" name="cm-tydkit-tydkit" type="email" required placeholder="entrez votre courriel" /> 
+                        <div class="checkbox">
+                            <span style="font-size:11px">
+                                <input type="checkbox" class="info_check" id="agree_terms" style="width:15px"/>
+                                <span data-i18n="general.agree_newsletter"></span>
+                            </span>
+                        </div>
+                        <button class="btn btn-default"  data-i18n="general.submit"></button>
+                        <br />
+                        <span id="success_subscribe" style="font-size:20px;padding:10px">Thank You!</span>
+                    </form>
                 </div>
             </div>
         </div>
@@ -58,11 +118,213 @@
 </div>
 
 <script>
+    function close_popup(){
+        $(".popup_bg").fadeOut();
+    }
     
-        
+    function subscribe_email_popup(){ 
+        var action="https://mobilefringe.createsend.com/t/d/s/tydkit/"
+        var data = {}
+        data["cm-tydkit-tydkit"] = $("#subscribe_email").val();
+        data["cm-name"] = $("#subscribe_name").val();
+        data["cm-f-hktlld"] = $("#subscribe_postal_code").val();
+        $.getJSON(
+            action + "?callback=?",
+            data,
+            function (data) {
+                if (data.Status === 400) {
+                    alert("error");
+                } else {
+                    $("#success_subscribe_popup").fadeIn();
+                }
+        });    
+    }
+
     $(document).ready(function() {
-        renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),2);
-        renderTodaysHours('#todays_hours_template','#todays-hours');
+        if (Cookies.get('popup') != "true"){
+            $('.popup_bg').show()
+        }
+        $('#hide_popup').click(function(){
+            Cookies.set('popup', "true", { expires: 1 });
+            close_popup()
+        })
         
+        $('#popup_form').submit(function(e){
+            if ($('#agree_newsletter').is(':checked') == false){
+                if (Cookies.get('current_locale') == "fr-CA"){
+                    alert("Veuillez entrez un courriel valide.")
+                } else {
+                    alert("Please enter valid email.")
+                }
+            } else {
+                subscribe_email_popup();    
+            }
+            
+            e.preventDefault()
+        })
+        
+        function renderPageData(){
+            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHolidayHours(),2);
+            renderTodaysHours('#todays_hours_template','#todays-hours');
+            var banners = getBanners();
+            renderBanner('#banner_template','#home_banner',banners);
+            
+            var feature_items = getFeatureList();
+            renderFeatureItems('#feature_container','#feature_template', feature_items);
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+            $('.flexslider').flexslider({
+                animation: "slide",
+            });
+            if (Cookies.get('current_locale') == "fr-CA"){
+                $('#fieldEmail').attr('placeholder', 'entrez votre courriel'); 
+                $('#subscribe_name').attr('placeholder', 'NOM'); 
+                $('#subscribe_email').attr('placeholder', 'COURRIEL'); 
+                $('#subscribe_postal_code').attr('placeholder', 'CODE POSTAL'); 
+                
+            } else {
+                $('#fieldEmail').attr('placeholder', 'enter email'); 
+                $('#subscribe_name').attr('placeholder', 'NAME'); 
+                $('#subscribe_email').attr('placeholder', 'EMAIL'); 
+                $('#subscribe_postal_code').attr('placeholder', 'POSTAL CODE'); 
+            }
+        }
+        loadMallDataCached(renderPageData);
+        
+        $('#subForm').submit(function (e) {
+            if ($("#agree_terms").prop("checked") != true){
+                alert("Please agree to the term and conditions.");
+                $("#agree_terms").focus();
+                return false;
+            }
+            e.preventDefault();
+            $.getJSON(
+                this.action + "?callback=?",
+                $(this).serialize(),
+                function (data) {
+                    if (data.Status === 400) {
+                        alert("Please try again later.");
+                    } else { // 200
+                        $("#success_subscribe").fadeIn();
+                    }
+            });
+        });
     });
+
+    function renderFeatureItems(container, template, collection){
+        var item_list = [];
+        var item_rendered = [];
+        var template_html = $(template).html();
+        Mustache.parse(template_html); 
+        $.each( collection , function( key, val ) {
+            if(val.url == "" || val.url === null){
+               val.css = "style=cursor:default;";
+               val.noLink = "return false";
+            }
+            if(Cookies.get('current_locale') == "fr-CA"){
+                val.locale_name = val.name_2;
+                val.locale_image_url = val.image_url_2;
+            } else if(Cookies.get('current_locale') == "en-CA"){
+                val.locale_name = val.name;
+                val.locale_image_url = val.image_url;
+            }
+            var repo_rendered = Mustache.render(template_html,val);
+            item_rendered.push(repo_rendered);
+        });
+        $(container).html(item_rendered.join(''));
+    }
+    
+    function renderBanner(banner_template,home_banner,banners){
+        var item_list = [];
+        var item_rendered = [];
+        var banner_template_html = $(banner_template).html();
+        Mustache.parse(banner_template_html);   // optional, speeds up future uses
+        $.each( banners , function( key, val ) {
+            today = new Date();
+            start = new Date (val.start_date);
+            start.setDate(start.getDate());
+            if(val.url == "" || val.url === null){
+                val.css = "style=cursor:default;";
+                val.noLink = "return false";
+            }
+            if (start <= today){
+                if (val.end_date){
+                    end = new Date (val.end_date);
+                    end.setDate(end.getDate() + 1);
+                    if (end >= today){
+                        item_list.push(val);  
+                    }
+                } else {
+                    item_list.push(val);
+                }
+            }
+        });
+    
+        $.each( item_list , function( key, val ) {
+            if(Cookies.get('current_locale') == "fr-CA") {
+                if(val.locale == "fr"){
+                    var repo_rendered = Mustache.render(banner_template_html,val);
+                }
+            } else {
+                if(val.locale == "en"){
+                    var repo_rendered = Mustache.render(banner_template_html,val);
+                }
+            }
+            
+            // if(val.locale == "fr" && Cookies.get('current_locale') == "fr-CA"){
+                // var repo_rendered = Mustache.render(banner_template_html,val);
+            // }
+            // if(val.locale == "en" && Cookies.get('current_locale') == "en-CA"){
+            //     var repo_rendered = Mustache.render(banner_template_html,val);
+            // }
+            item_rendered.push(repo_rendered);
+        });
+        
+        $(home_banner).html(item_rendered.join(''));
+    }
+
+    function sortByHolidayDate(a, b){
+        var aDate = a.holiday_date;
+        var bDate = b.holiday_date;
+        return ((aDate < bDate) ? -1 : ((aDate > bDate) ? 1 : 0));  
+    }    
+    
+    function renderIndicator(indicator_template, home_indicator, repo){
+        var item_list = [];
+        var item_rendered = [];
+        var banner_template_html = $(indicator_template).html();
+        Mustache.parse(banner_template_html);   // optional, speeds up future uses
+        var bannerCount = 0;
+        $.each( repo , function( key, val ) {
+            if( val.name == "banner"){
+                $.each( val.images , function( key, val ) {
+                    item_list.push(val);
+                });
+            }
+        });
+        item_list.sort(function(a, b){
+            if(a.name < b.name) return -1;
+            if(a.name > b.name) return 1;
+            return 0;
+        });
+        $.each( item_list , function( key, val ) {
+            if (bannerCount == 0){
+                val.active_carousel = "active";
+            }
+            val.slide_number = bannerCount;
+            
+            var repo_rendered = Mustache.render(banner_template_html,val);
+            item_rendered.push(repo_rendered);
+            bannerCount ++;
+        });
+        
+        if(item_list.length <= 1){
+            $(home_indicator).hide();
+            $('#controls').hide();
+        } else {
+            $(home_indicator).show();
+        }
+        
+        $(home_indicator).html(item_rendered.join(''));
+    }
 </script>
