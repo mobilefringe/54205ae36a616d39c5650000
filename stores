@@ -1,0 +1,177 @@
+<div class="container store-list">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3" id="">
+            <div id="">
+            <h1 data-i18n="nav.stores"></h1>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="by_a_z">
+                              <span data-i18n="nav.subnav.stores_a-z"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png">
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body store-letters">
+                            <a href="#A">A</a>
+                            <a href="#B">B</a>
+                            <a href="#C">C</a>
+                            <a href="#D">D</a>
+                            <a href="#E">E</a>
+                            <a href="#F">F</a>
+                            <a href="#G">G</a>
+                            <a href="#H">H</a>
+                            <a href="#I">I</a>
+                            <a href="#J">J</a>
+                            <a href="#K">K</a>
+                            <a href="#L">L</a>
+                            <a href="#M">M</a>
+                            <a href="#N">N</a>
+                            <a href="#O">O</a>
+                            <a href="#P">P</a>
+                            <a href="#Q">Q</a>
+                            <a href="#R">R</a>
+                            <a href="#S">S</a>
+                            <a href="#T">T</a>
+                            <a href="#U">U</a>
+                            <a href="#V">V</a>
+                            <a href="#W">W</a>
+                            <a href="#X">X</a>
+                            <a href="#Y">Y</a>
+                            <a href="#Z">Z</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default categories">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" id="by_categories">
+                          <span data-i18n="nav.subnav.categories"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png">
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body store-categories list-group" id="store_categories">
+                            <script id="category_item_template" type="x-tmpl-mustache">
+                                <a class="list-group-item" href="#cat_{{id}}">{{name}}</a>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+
+            <div style="overflow:hidden">
+            <div id="zControls">
+                <button class="zoom-in"><span class="glyphicon glyphicon-plus"></span></button>
+                <button class="zoom-out"><span class="glyphicon glyphicon-minus"></span></button>
+                
+            </div>
+            <div id="map" class="panzoom-elements" style="height:400px;margin:15px;"></div>
+            </div>
+            <div class="list-group" id="store_list">
+            </div>
+            <div id="no_stores_list">
+                <h2 data-i18n="general.no_stores"></h2>
+            </div>
+            <script id="store_header_template" type="x-tmpl-mustache">
+                
+                <a class="list-group-item" name="{{header_id}}">
+                    <h2>{{header}}</h2>
+                </a>
+            </script>
+            <script id="store_item_template" type="x-tmpl-mustache">
+                <a class="list-group-item" href="../stores/{{slug}}">
+                    {{name}}
+                    <span class="promotions-flag" style="display:{{has_promotions_css}}" data-i18n="general.promotion"></span>
+                    <span class="jobs-flag" style="display:{{has_jobs_css}}" data-i18n="general.career"></span>
+                    <span class="pull-right">{{phone}}</span>
+                </a>
+            </script>
+        </div>
+    </div>
+</div>
+
+<!--For more information please see http://learnjs.io/blog/2013/11/30/snapsvg-resources/-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+<script src="../mapsvg_mallmaverick.js"></script>
+<script src="//kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/e1fb5e17ab727d248230fbcb51da868f/jquery.panzoom.min.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+        
+        //renders the store list by referencing the template id and the html id
+        //for where to place the rendered content. See mallmaverick.js for implementation
+        renderCategoriesListTemplate('#category_item_template','#store_categories',getStoreCategories());
+        renderStoresListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
+        
+        $('#by_a_z').click(function(){
+            renderStoresListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
+        });
+        
+        $('#by_categories').click(function(){
+            renderStoresByCategoriesListTemplate('#store_header_template','#store_item_template','#store_list','#store_list','#no_stores_list',getStoresList());
+        });
+        
+        /*
+        var map = $('#map').mapSvg({
+            source: '//kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/80734f6f0e7303c0b6e5d7ea9e6096d1/PV_map2.svg',    // Path to SVG map
+            colors: {stroke: '#aaaaaa', selected: -20, hover: "#a6a6a6"},
+            height:696,
+            width:682,
+            tooltipsMode:'custom',
+            zoom: true,
+            pan:true,
+            cursor:'pointer',
+            responsive:true,
+            zoomLimit: [0,10]
+           
+        });*/
+    
+       
+        
+        
+        var s = Snap("#map");
+        Snap.load('//kodekloud.s3.amazonaws.com/sites/5422419e4a616d74d9030000/80734f6f0e7303c0b6e5d7ea9e6096d1/PV_map2.svg', onSVGLoaded ) ;
+        function onSVGLoaded( data ){ 
+            s.append( data );
+        }
+        
+       
+        
+        // Pass options
+        $(".panzoom-elements").panzoom({
+            cursor: "move",
+            increment: 0.1,
+            minScale: 0.43,
+            maxScale: 1,
+            transition: true,
+            duration: 200,
+            easing: "ease-in-out",
+            $zoomIn: $('.zoom-in'),
+            $zoomOut: $('.zoom-out'),
+            $zoomRange: $('.zoom-range'),
+            startTransform: 'scale(0.43)'
+
+        });
+        
+        $(".panzoom-elements").panzoom("pan", -250, -200, { relative: true });
+
+
+    });
+
+    
+</script>
+
+
+
+
+
+
+	
+	
