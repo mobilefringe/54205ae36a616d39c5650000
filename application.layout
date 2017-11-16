@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{meta_description}}">
+    <meta name="keywords" content="{{meta_keywords}}">
+    <meta name="author" content="">
+
+    <title>{{meta_title}}</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/9000b27d8947cd304731715f26abe5d7/jquery.mmenu.css" rel="stylesheet">
+    <link href="/application.css" rel="stylesheet">
+    
+    <!-- jQuery Version 1.11.0 -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+    <script src="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/541aa62f6a616d39c5110000/c9014f95d2fb0b28064bb0c9354d6675/clndr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <script src="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/9000b27d8947cd304731715f26abe5d7/jquery.mmenu.min.all.js"></script>
+    
+
+    <!--MallMaverick v1.0-->
+    <script src="//mallmaverick.codecloudapp.com/mallmaverick.js"></script>
+    <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js"></script>
+    <script>
+        setEndPoint('//placevertu.mallmaverick.com/api/v4/placevertu/all.json');
+        //setEndPoint('../placevertu.json');
+    </script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index" >
+
+    <!-- Navigation -->
+    <div id="body_content">
+    <nav class="navbar navbar-default header-area">
+        <div class="visible-xs" style="position:absolute;right:5px;top:5px">
+                <a href="../home"><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/logo_PV.jpg" alt="site logo"></a>
+        </div>
+        <div class="container " style="">
+            
+            <div class="hidden-xs">
+                <div class="" style="margin-top:70px;">
+                    <a href=".."><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/logo_PV.jpg" alt="site logo"></a>
+                    <div class="pull-right site-controls" style="">
+                        <div class="language" style="">
+                            <p class="text">
+                                <a id="en-CA" href="#">English</a>
+                                <span class="signature-item">|</span>
+                                <a id="fr-CA" href="#">French</a>
+                            </p>
+                        </div>
+                        <div class="social-link" style="">
+                            <a href="https://www.facebook.com/placevertu" target="_blank"><img class="image" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/social_fb.png" ></a>
+                        </div>
+                        <div class="search" style="" >
+                            <p class="title" style="">SEARCH</p>
+                            <input type="text" id="search_input" placeholder=" by keyword">
+                            <div class="search-results" id="search_results">
+                                <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM WITH AN IMAGE-->
+                                <script id="search_results_template" type="x-tmpl-mustache">{% raw %}
+                                    <h4 class="list-group-item header" style="{{stores_header_style}}">Stores</h4>
+                                    {{#stores}}
+                                        <a href="/stores/{{slug}}" class="list-group-item">
+                                            <div class="name">{{name}}</div>
+                                            <div class="description">{{description_trim}}</div>
+                                            <div class="phone">{{phone}}</div>
+                                        </a>
+                                    {{/stores}}
+                                    <h4 class="list-group-item header" style="{{promotions_header_style}}">Promotions</h4>
+                                    {{#promotions}}
+                                        <a href="/promotions/{{slug}}" class="list-group-item">
+                                            <div class="name">{{name}}</div>
+                                            <div class="description">{{description_trim}}</div>
+                                        </a>
+                                    {{/promotions}}
+                                    <h4 class="list-group-item header" style="{{events_header_style}}">Events</h4>
+                                    {{#events}}
+                                        <a href="/events/{{slug}}" class="list-group-item">
+                                            <div class="name">{{name}}</div>
+                                            <div class="description">{{description_trim}}</div>
+                                        </a>
+                                    {{/events}}
+                                    <h4 class="list-group-item header" style="{{jobs_header_style}}">Jobs</h4>
+                                    {{#jobs}}
+                                        <a href="/jobs#{{id}}" class="list-group-item">
+                                            <div class="name">{{name}}</div>
+                                            <div class="description">{{description_trim}}</div>
+                                        </a>
+                                    {{/jobs}}
+                                </script>{% endraw %}
+
+                              <ul class="list-group" >
+                                <a href="#" class="close-search list-group-item" style="width:300px;margin-bottom:-3px;padding-bottom:0px">
+                                    <small>
+                                        <span>&nbsp;</span>
+                                    </small>
+                                    <small class="pull-right">
+                                        X
+                                    </small>
+                                </a>
+                                
+                                <div id="search_results_items" style="width:300px;max-height:400px;overflow-y:scroll;overflow-x:auto;">
+                                    <!--RENDERED BY renderSearchResultsTemplate(..) -->
+                                </div>
+                                
+                                <a href="#" class="close-search list-group-item" style="width:300px;margin-top:-3px">
+                                    <small>
+                                        <span class="search-results-count">{{count}}</span> Results
+                                    </small>
+                                </a>
+                                <a href="#" class="close-search list-group-item" style="width:300px;margin-top:-3px">
+                                    <small>
+                                        <span>Today's Hours </span>
+                                    </small>
+                                    <small class="pull-right" id="todays-hours-search">
+                                        
+                                    </small>
+                                    <script id="todays_hours_search_template" type="x-tmpl-mustache">{% raw %}
+                                        <span style="{{is_open_css}};">
+                                            {{open_time_localized}} - {{close_time_localized}}
+                                        </span>
+                                        <span style="{{is_closed_css}};">
+                                            Closed
+                                        </span>
+                                    </script>{% endraw %}
+                                </a>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container nav-items" id="nav_items_sticky">
+            
+            
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll" style="width:42px;position:absolute;left:50px;float:right">
+                
+                <div id="mobile_menu_button" class="navbar-toggle"  style="border:none;background-color:#FFF;margin-top:0px">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                
+            </div>
+            
+            
+
+            <!--NON-MOBILE_MENU-->
+            <div class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav" style="">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/stores" data-i18n="nav.directory"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/promotions" data-i18n="nav.promotions"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/events" data-i18n="nav.events"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/customer_services" data-i18n="nav.services"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/jobs" data-i18n="nav.jobs"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/about_us" data-i18n="nav.about"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/contact_us" data-i18n="nav.contact"></a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!--MOBILE MENU-->
+            <div class="" id="my-menu" style="">
+
+                <ul class="" style="">
+                    <li>
+                        <span>Search<input type="text" id="search_input_mobile" placeholder="by keyword" style="color:#000;margin-left:10px;width:200px">
+                            <a href="#" class="close-search-mobile" style="">X</a>
+                        </span>
+                    </li>
+                    <div class="search-results-mobile" id="search_results_items_mobile">
+                                    <!--RENDERED BY renderSearchResultsTemplate(..) -->
+                    </div>
+                    <li class="page-scroll" style="">
+                        <a href="/stores" data-i18n="nav.directory"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/promotions" data-i18n="nav.promotions"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/events" data-i18n="nav.events"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/customer_services" data-i18n="nav.services"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/jobs" data-i18n="nav.jobs"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/about_us" data-i18n="nav.about"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/contact_us" data-i18n="nav.contact"></a>
+                    </li>
+                </ul>
+            </div>
+            
+            
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="page_content">
+      {{yield}}
+    </div>
+    <div class="bottom-nav">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="">
+                <ul class="nav navbar-nav" style="">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="../stores" data-i18n="nav.directory"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="../promotions" data-i18n="nav.promotions"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="../events" data-i18n="nav.events"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/customer_services" data-i18n="nav.services"></a>
+                        <ul class="" style="">
+                            <li>
+                                <a href="/customer_services#gift_cards" data-i18n="nav.subnav.gift_cards"></a>
+                            </li>
+                            <li>
+                                <a href="/customer_services#customer_services" data-i18n="nav.subnav.customer_services"></a>
+                            </li>
+                            <li>
+                                <a href="/customer_services#fitness_walking_club" data-i18n="nav.subnav.fitness_walking_club"></a>
+                            </li>
+                            <li>
+                                <a href="/customer_services#welcome_to_families" data-i18n="nav.subnav.welcome_to_families"></a>
+                            </li>
+                            <li>
+                                <a href="/customer_services#wifi" data-i18n="nav.subnav.wifi"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/jobs" data-i18n="nav.jobs"></a>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/about_us" data-i18n="nav.about"></a>
+                        <ul>
+                            <li><a href="/about_us#place_vertu"  ><span data-i18n="nav.subnav.place_vertu"></span></a></li>
+                            <li><a href="/about_us#leasing_information" ><span data-i18n="nav.subnav.leasing_information"></span><!--LEASING INFORMATION--></a></li>
+                            <li><a href="/about_us#charities" ><span data-i18n="nav.subnav.charities"></span><!--CHARITIES & NON-PROFIT --></a></li>
+                            <li><a href="/about_us#green_initiatives" ><span data-i18n="nav.subnav.green_initiatives"></span></a></li>
+                            <li><a href="/about_us#contract_policy"><span data-i18n="nav.subnav.contract_policy"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="page-scroll" style="">
+                        <a href="/contact_us" data-i18n="nav.contact"></a>
+                        <ul class="">
+                            <li><a href="/contact_us#directions" class=""><span data-i18n="nav.subnav.directions"></span><!--DIRECTIONS--></a></li>
+                            <li><a href="/contact_us#how_to_get_here" class="" ><span data-i18n="nav.subnav.how_to_get_here"></span><!--HOW TO GET HERE--></a></li>
+                            <li><a href="/contact_us#parking_information" class=""><span data-i18n="nav.subnav.parking_information"></span><!--PARKINING INFORMATION--></a></li>
+                            <li><a href="/contact_us#opening_hours" class="" ><span data-i18n="nav.subnav.opening_hours"></span><!--OPENING HOURS--></a></li>
+                            <li><a href="/contact_us#administration_hours" class=""><span data-i18n="nav.subnav.administration_hours"></span><!--ADMINISTRATION HOURS--></a></li>
+                            <li><a href="/contact_us#accessibility" class=""><span data-i18n="nav.subnav.accessibility"></span><!--ACCESSIBILITY--></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-signature ">
+        <div class="container">
+            <div class="pull-left">
+                <img class="image" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/icon_wifi.png" >
+            </div>
+            <div class="pull-right">
+                <span class="signature-item">
+                    <p><span id="center_signature"><!--2014 Centre Name--></span> <span data-i18n="general.all_rights_reserved"><!-- All Rights Reserved--></span></p>
+                </span>
+                <span class="signature-imobile stufftem">|</span>
+                <span class="signature-item">
+                    <a href="../privacy_policy" data-i18n="app.privacy_policy"><!--Privacy Policy--></a>
+                </span>
+                <span class="signature-item">|</span>
+                <span class="signature-item">
+                    <a href="http://www.mallmaverick.com" target="_blank" data-i18n="general.powered_by_mall_maverick"><!--Powered by Mall Maverick--></a>
+                </span>
+                <span class="signature-item">|</span>
+                <span class="signature-item">
+                    {{site_version}}
+                </span>
+                <span class="signature-item property-logo">
+                    <a href="http://www.20vic.com" target="_blank"><img class="left" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/icon_20vic.png" ></a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/i18next/1.6.3/i18next-1.6.3.min.js"></script>
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/jquery.sticky.js"></script>
+    
+    <script>
+    
+        
+    
+        $(document).ready(function() {
+            
+            $("#my-menu").mmenu();
+            $("#mobile_menu_button").click(function() {
+                $("#my-menu").trigger("open.mm");
+            });
+            
+            //Using i18n for localization, for more info please visit http://i18next.com/
+            i18n.init({preload: ['en-CA','fr-CA'],resGetPath: '../__lng__.json',fallbackLng: false }, function(t) {
+                //load en-CA by default
+                i18n.setLng('en-CA', function(t) {
+                    $(document).i18n();
+                    $('.en-CA').show(); // Shows
+                    $('.fr-CA').hide();
+                });
+            });
+            
+            $('#en-CA').click(function(){
+                event.preventDefault();
+                i18n.setLng('en-CA', function(t) {
+                    $(document).i18n();
+                });
+                $('.en-CA').show(); // Shows
+                $('.fr-CA').hide();
+            });
+            
+            $('#fr-CA').click(function(){
+                event.preventDefault();
+                i18n.setLng('fr-CA', function(t) {
+                    $(document).i18n();
+                });
+                $('.en-CA').hide(); // Shows
+                $('.fr-CA').show();
+            });
+            
+            var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
+            $('#center_signature').html(centre_signature);
+            
+            renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
+            
+            $("#nav_items_sticky").sticky({topSpacing:0});
+            
+            
+            $('#search_results').hide();
+            $('#search_input').on('input', function() {
+                $('#search_results').show();
+                if($('#search_input').val().length == 0){
+                    $('#search_results').hide();
+                }else{
+                    var search_results = getSearchResults($('#search_input').val(),100,100);
+                    $('.search-results-count').html(search_results.summary.count);
+                    renderSearchResultsTemplate('#search_results_template','#search_results_items',search_results);
+                    
+                    //console.log(getSearchResults($('#search_input').val(),100));
+                }
+            });
+            
+            $('.close-search').click(function(){
+                $('#search_results').hide();
+            });
+            
+            $('#search_results_mobile').hide();
+            $('#search_input_mobile').on('input', function() {
+                $('#search_results_mobile').show();
+                if($('#search_input_mobile').val().length == 0){
+                    var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
+                    renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+                    $('#search_results_mobile').hide();
+                }else{
+                    var search_results = getSearchResults($('#search_input_mobile').val(),100,100);
+                    $('.search-results-count').html(search_results.summary.count);
+                    console.log('--------');
+                    renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+                    //console.log(getSearchResults($('#search_input').val(),100));
+                }
+            });
+            
+            $('.close-search-mobile').click(function(){
+                var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
+                renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+                $('#search_input_mobile').val('')
+            });
+            
+            
+            
+        
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+     
+     
+        
+    </script>
+</body>
+
+</html>
+
+	
+	
+	
+	
