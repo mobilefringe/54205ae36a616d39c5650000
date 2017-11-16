@@ -2,24 +2,38 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+    <meta property="og:image" content="{{meta_img}}">
     <meta name="description" content="{{meta_description}}">
     <meta name="keywords" content="{{meta_keywords}}">
     <meta name="author" content="">
 
     <title>{{meta_title}}</title>
-
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-50587834-11', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.css" rel="stylesheet">
     
     <!-- Custom Fonts -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
     
     <!-- Custom CSS -->
     <link href="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/9000b27d8947cd304731715f26abe5d7/jquery.mmenu.css" rel="stylesheet">
@@ -27,19 +41,78 @@
     
     <!-- jQuery Version 1.11.0 -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.js"></script>
+    
+    <!--Mustache is a client side templating engine https://github.com/janl/mustache.js/ -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    
+    <!--Configurable event calendar-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+    <script src="//codecloud.cdn.speedyrails.net/sites/579231876e6f6467cf000000/application/x-javascript/1468507661000/moment-timezone-with-data.min.js"></script>
     <script src="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/541aa62f6a616d39c5110000/c9014f95d2fb0b28064bb0c9354d6675/clndr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-    <script src="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/9000b27d8947cd304731715f26abe5d7/jquery.mmenu.min.all.js"></script>
     
+    <script src="//codecloud.cdn.speedyrails.net/sites/58fe54076e6f6458dc010000/application/x-javascript/1493132969000/js.cookie.js"></script>
+    
+    <!--jReject is used to warn users certain browsers aren't compatible with this site-->
+    <script src="//cdn.jsdelivr.net/jquery.jreject/1.0.2/js/jquery.reject.js"></script>
+    <link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet" type="text/css">
 
-    <!--MallMaverick v1.0-->
-    <script src="//mallmaverick.codecloudapp.com/mallmaverick.js"></script>
-    <script src="//mallmaverick.codecloudapp.com/mustache_mallmaverick.js"></script>
-    <script>
-        setEndPoint('//placevertu.mallmaverick.com/api/v4/placevertu/all.json');
-        //setEndPoint('../placevertu.json');
+    
+    <!-- MallMaverick -->
+    <script src="//mallmaverick.codecloudapp.com/mallmaverick_v4.js"></script>
+    <script src="/mustache_mallmaverick.js"></script>
+    
+        <script>
+        $(document).ready(function() {
+             $.reject({  
+                reject: { all: false, msie: 9 },  
+                header: 'Thanks for visiting Place Vertu', // Header Text  
+                paragraph1: 'Unfortunately your browser is not officially supported with our site', // Paragraph 1  
+                paragraph2: 'For the best experience please install one of the many optional browsers below to proceed',  
+                closeMessage: 'You may continue using the site however certain features and content may not be accessible. Thank you.',
+                closeCookie: false,
+                browserInfo: { // Settings for which browsers to display  
+                    chrome: {  
+                        // Text below the icon  
+                        text: 'Google Chrome',  
+                        // URL For icon/text link  
+                        url: 'https://www.google.com/chrome/',  
+                        // (Optional) Use "allow" to customized when to show this option  
+                        // Example: to show chrome only for IE users  
+                        // allow: { all: false, msie: true }  
+                    },  
+                    firefox: {  
+                        text: 'Mozilla Firefox',  
+                        url: 'https://www.mozilla.com/firefox/'  
+                    },  
+                    safari: {  
+                        text: 'Safari',  
+                        url: 'https://www.apple.com/safari/download/'  
+                    },  
+                    opera: {  
+                        text: 'Opera',  
+                        url: 'https://www.opera.com/download/'  
+                    },  
+                    msie: {  
+                        text: 'Internet Explorer',  
+                        url: 'https://www.microsoft.com/windows/Internet-explorer/'  
+                    }  
+                },// Message below close window link  
+                imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
+            });
+        });
+
+        setEndPoint('//placevertu.mallmaverick.com/api/v3/placevertu/all.json');
+
+        Cookies.set('primary_locale', 'fr-CA');
+        Cookies.set('secondary_locale', 'en-CA');
+
+        if(getRequestParam('locale') == 'fr'){
+            setCurrentLocale(Cookies.get('primary_locale'));
+        } else if(getRequestParam('locale') == 'en'){
+            setCurrentLocale(Cookies.get('secondary_locale'));
+        }
     </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
