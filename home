@@ -1,0 +1,68 @@
+<div class="home">
+    <img class="banner" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/9000b27d8947cd304731715f26abe5d7/img_banner.jpg">
+    <div class="container">
+        <div class="row feature-items">
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+               <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
+               <div id="todays-hours">
+                   <script id="todays_hours_template" type="x-tmpl-mustache">
+                        <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
+                        <div>{{holiday_name}}</div>
+                        <span style="{{is_open_css}};">
+                            {{open_time_localized}} - {{close_time_localized}}
+                        </span>
+                        <span style="{{is_closed_css}};">
+                            Closed
+                        </span>
+                    </script>
+                </div>
+                <div id="hours_not_empty_section_id">
+                    <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
+                    <script id="holiday_hours_template" type="x-tmpl-mustache">
+                        
+                        <li class="">
+                            <span class="">{{holiday_name}}</span>
+                            <div style="{{is_open_css}};">
+                                {{open_time_localized}} - {{close_time_localized}}
+                            </div>
+                            <div style="{{is_closed_css}};">
+                                Closed
+                            </div>
+                        </li>
+                        
+                    </script>
+                    <ul class="holiday-hours" id="holiday-hours">
+                        <!--this content to be rendered by renderHolidayHours(..) -->
+                    </ul>
+                </div>
+                <div id="hours_empty_section_id"></div>
+                <a href="../contact_us#opening_hours" class="btn btn-default"  data-i18n="general.click_more_button"></a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+               <div class="header" data-i18n="general.directions"></div>
+               <a href="../contact_us#directions"><img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_direction.jpg" class="" alt="" style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+                <div class="header" data-i18n="general.gift_card"></div>
+                <a href="../customer_services#gift_cards"><img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/371121d8645ab3d0ec49e9b031d8285d/img_giftcard.jpg" class="" alt="" style="width:100%"></a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
+               <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
+               <p data-i18n="general.join_txt"></p>
+               <div class="newsletter-sign-up" style="">
+                    <input style="" class="_input" placeholder="enter email" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+        
+    $(document).ready(function() {
+        renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),2);
+        renderTodaysHours('#todays_hours_template','#todays-hours');
+        
+    });
+</script>
