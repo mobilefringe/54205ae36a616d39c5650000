@@ -410,118 +410,193 @@
         </div>
     </div>
 </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/i18next/1.6.3/i18next-1.6.3.min.js"></script>
-    
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/jquery.sticky.js"></script>
-    
-    <script>
-    
+<!-- Bootstrap Core JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/jquery.sticky.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/i18next/1.6.3/i18next-1.6.3.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        //Using i18n for localization, for more info please visit http://i18next.com/
+        i18n.init({preload: [getStorage().primary_locale,getStorage().secondary_locale],resGetPath: '../__lng__.json',fallbackLng: false }, function(t) {
+            var current_locale = "";
+            if(typeof(Cookies.get('current_locale')) != 'undefined' ){
+                current_locale = Cookies.get('current_locale')
+            }
+            if(current_locale == Cookies.get('primary_locale')){
+                setPrimaryLanguage();
+                $('#en-CA').removeClass('langSelect');
+                $('#fr-CA').addClass('langSelect');
+            }else{
+                setSecondaryLanguage();
+                $('#fr-CA').removeClass('langSelect');
+                $('#en-CA').addClass('langSelect');
+            }
+        });
         
-    
-        $(document).ready(function() {
-            
-            $("#my-menu").mmenu();
-            $("#mobile_menu_button").click(function() {
-                $("#my-menu").trigger("open.mm");
+        // If there is no language set it to the primary locale.
+        // log(Cookies.get('current_locale'))
+        if (!Cookies.get('current_locale')) {
+            setPrimaryLanguage();
+        }
+        
+        function setPrimaryLanguage(){
+            i18n.setLng(Cookies.get('primary_locale'), function(t) {
+                $(document).i18n();
             });
-            
-            //Using i18n for localization, for more info please visit http://i18next.com/
-            i18n.init({preload: ['en-CA','fr-CA'],resGetPath: '../__lng__.json',fallbackLng: false }, function(t) {
-                //load en-CA by default
-                i18n.setLng('en-CA', function(t) {
-                    $(document).i18n();
-                    $('.en-CA').show(); // Shows
-                    $('.fr-CA').hide();
-                });
+            Cookies.set('current_locale', Cookies.get('primary_locale'))
+            $('.primary-locale').show(); // Shows
+            $('.secondary-locale').hide();
+            $("#search_input").attr("placeholder", "Rechercher dans le site");
+            $("#search_input_mobile").attr("placeholder", "Rechercher dans le site");
+            stickySidebar();
+        }
+        
+        function setSecondaryLanguage(){
+            i18n.setLng(Cookies.get('secondary_locale'), function(t) {
+                $(document).i18n();
             });
-            
-            $('#en-CA').click(function(){
-                event.preventDefault();
-                i18n.setLng('en-CA', function(t) {
-                    $(document).i18n();
-                });
-                $('.en-CA').show(); // Shows
-                $('.fr-CA').hide();
-            });
-            
-            $('#fr-CA').click(function(){
-                event.preventDefault();
-                i18n.setLng('fr-CA', function(t) {
-                    $(document).i18n();
-                });
-                $('.en-CA').hide(); // Shows
-                $('.fr-CA').show();
-            });
-            
+            Cookies.set('current_locale', Cookies.get('secondary_locale'))
+            $('.secondary-locale').show();
+            $('.primary-locale').hide();
+            $("#search_input").attr("placeholder", "Search Site");
+            $("#search_input_mobile").attr("placeholder", "Search Site");
+            stickySidebar();
+        }
+        
+        function getUrlParameter(sParam){
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('#');
+            for (var i = 0; i < sURLVariables.length; i++){
+                if (sURLVariables[0] == sParam){
+                    return true;
+                }
+            }
+            return false;
+        } 
+
+        $('#en-CA').click(function(e){
+            e.preventDefault();
+            setSecondaryLanguage();
+            window.location.reload();
+        });
+        
+        $('#fr-CA').click(function(e){
+            e.preventDefault();
+            setPrimaryLanguage();
+            window.location.reload();
+        });
+        
+        $('#en-CA-mobile').click(function(e){
+            e.preventDefault();
+            setSecondaryLanguage();
+            window.location.reload();
+        });
+        
+        $('#fr-CA-mobile').click(function(e){
+            e.preventDefault();
+            setPrimaryLanguage();
+            window.location.reload();
+        });
+
+        function renderPageData(){
+            renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
+        
             var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
             $('#center_signature').html(centre_signature);
             
-            renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
+            var hash = window.location.hash.substring(1);
+            if(hash == 'open_hours'){
+                $(function() {
+                    $(document).scrollTop( $("#open_hours").offset().top );  
+                });
+            }
             
-            $("#nav_items_sticky").sticky({topSpacing:0});
+        }
+        
+        //loadMallData is located in mallmaverick.js, the call back method ensures the data is loaded
+        loadMallData(renderPageData);
+        
+        $("#nav_items_sticky").sticky({topSpacing:0});
             
-            
-            $('#search_results').hide();
-            $('#search_input').on('input', function() {
-                $('#search_results').show();
-                if($('#search_input').val().length == 0){
-                    $('#search_results').hide();
-                }else{
-                    var search_results = getSearchResults($('#search_input').val(),100,100);
-                    $('.search-results-count').html(search_results.summary.count);
-                    renderSearchResultsTemplate('#search_results_template','#search_results_items',search_results);
-                    
-                    //console.log(getSearchResults($('#search_input').val(),100));
-                }
-            });
-            
-            $('.close-search').click(function(){
+        //real time search
+        $('#search_input').keyup(function(e){
+            showSearchResults();
+        });
+
+        $('#search_input').on('input', function() {
+            showSearchResults();
+        });
+ 
+        function showSearchResults(){
+            $('#search_results').show();
+            if($('#search_input').val().length == 0){
                 $('#search_results').hide();
-            });
+            }else{
+                var search_results = getSearchResults($('#search_input').val(),10,100);
+                $('.search-results-count').html(search_results.summary.count);
+                renderSearchResultsTemplate('#search_results_template','#search_results_items',search_results);
+                $(document).i18n();
+            }
+        }
             
-            $('#search_results_mobile').hide();
-            $('#search_input_mobile').on('input', function() {
-                $('#search_results_mobile').show();
-                if($('#search_input_mobile').val().length == 0){
-                    var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
-                    renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
-                    $('#search_results_mobile').hide();
-                }else{
-                    var search_results = getSearchResults($('#search_input_mobile').val(),100,100);
-                    $('.search-results-count').html(search_results.summary.count);
-                    console.log('--------');
-                    renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
-                    //console.log(getSearchResults($('#search_input').val(),100));
-                }
-            });
+        $('.close-search').click(function(){
+            $('#search_results').hide();
+        });
             
-            $('.close-search-mobile').click(function(){
+        $('#search_results_mobile').hide();
+        $('#search_input_mobile').on('input', function() {
+            $('#search_results_mobile').show();
+            if($('#search_input_mobile').val().length == 0){
                 var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
                 renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
-                $('#search_input_mobile').val('')
-            });
+                $(document).i18n();
+                $('#search_results_mobile').hide();
+            }else{
+                var search_results = getSearchResults($('#search_input_mobile').val(),10,100);
+                $('.search-results-count').html(search_results.summary.count);
+                renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+                $(document).i18n();
+            }
+        });
             
-            
-            
-        
+        $('.close-search-mobile').click(function(){
+            var search_results = getSearchResults('xxxxxxxxxxxxxxxx',0,0);
+            renderSearchResultsTemplate('#search_results_template','#search_results_items_mobile',search_results);
+            $(document).i18n();
+            $('#search_input_mobile').val('')
         });
         
+    });
         
-        
-        
-        
-        
-        
-        
-        
-        
-     
-     
-        
-    </script>
+    function checkErrorPage(detailObj){
+        if (typeof detailObj === "undefined") {
+            window.location.replace("/404");
+        }
+    }
+       
+    //sticky sidebar
+    function stickySidebar(){
+        if( $(window).width() < 767){
+            $('#sidebar').removeAttr('id');
+        } else {
+          jQuery(window).scroll(function(){ 
+                var navHeight = $('nav').height();
+                var windowTop = $(window).scrollTop() - navHeight + 40; 
+                var sidebarHeight = $('#sidebar').height();
+                var contentHeight = $('#right-content').height();
+                if(sidebarHeight + windowTop < contentHeight){
+                    if ($(window).scrollTop() >95) {
+                        jQuery('#sidebar').css('top',windowTop); 
+                    }else{
+                        jQuery('#sidebar').css('top',0);
+                    }
+                }
+            });
+        }
+    }
+</script>
 </body>
 
 </html>
