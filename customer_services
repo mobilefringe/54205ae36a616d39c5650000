@@ -1,0 +1,700 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <h1 class="visible-xs" data-i18n="nav.services"><!--Customer Services--></h1>
+            
+            <!--GIFT CARDS-->
+            <a name="gift_cards"></a>
+            <h2 data-i18n="nav.subnav.gift_cards"><!--GIFT CARDS--></h2>
+            <div class="en-CA">
+                <!-- Gift Cards (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_54470f7f6e6f646765000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54470f7f6e6f646765000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_54470f7f6e6f646765000000'>
+                	  <%=content_block_54470f7f6e6f646765000000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_54470f7f6e6f646765000000').editable != 'undefined') {
+                			$('#content_block_54470f7f6e6f646765000000').show();
+                	        $('#edit_54470f7f6e6f646765000000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Gift Cards (English)', id: '54470f7f6e6f646765000000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/f5458e109ea146b856a036713f622a15/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMTo1OToyNy4yNDhaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: '/ErXJvL8vGkoT58kJZIBlvFfQkg=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_54470f7f6e6f646765000000').hide();
+                        
+                        $('#content_block_54470f7f6e6f646765000000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_54470f7f6e6f646765000000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Gift Cards (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Gift Cards (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_54470f986e6f641e8b000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54470f986e6f641e8b000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_54470f986e6f641e8b000000'>
+                	  <%=content_block_54470f986e6f641e8b000000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_54470f986e6f641e8b000000').editable != 'undefined') {
+                			$('#content_block_54470f986e6f641e8b000000').show();
+                	        $('#edit_54470f986e6f641e8b000000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Gift Cards (French)', id: '54470f986e6f641e8b000000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/bb421cc3a09048c211cf90f8ddbef682/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMTo1OTo1Mi4wOTBaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'm35QOfO37z8yd13JEWelM8D3i5A=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_54470f986e6f641e8b000000').hide();
+                        
+                        $('#content_block_54470f986e6f641e8b000000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_54470f986e6f641e8b000000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Gift Cards (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--CUSTOMER SERVICES-->
+            <a name="customer_services" ></a>
+            <h2 data-i18n="nav.subnav.customer_services"><!--CUSTOMER SERVICES--></h2>
+            <div class="en-CA">
+                <!-- Customer Services (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_54470fd56e6f646765010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54470fd56e6f646765010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_54470fd56e6f646765010000'>
+                	  <%=content_block_54470fd56e6f646765010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_54470fd56e6f646765010000').editable != 'undefined') {
+                			$('#content_block_54470fd56e6f646765010000').show();
+                	        $('#edit_54470fd56e6f646765010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Customer Services (English)', id: '54470fd56e6f646765010000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/3520ff5de89b5fad3993d9ef3783e612/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowMDo1My42OTlaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'AyDRv2Ae60rTzyQ94yKrFRLzKa4=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_54470fd56e6f646765010000').hide();
+                        
+                        $('#content_block_54470fd56e6f646765010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_54470fd56e6f646765010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Customer Services (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Customer Services (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_54470ff36e6f641e8b010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54470ff36e6f641e8b010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_54470ff36e6f641e8b010000'>
+                	  <%=content_block_54470ff36e6f641e8b010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_54470ff36e6f641e8b010000').editable != 'undefined') {
+                			$('#content_block_54470ff36e6f641e8b010000').show();
+                	        $('#edit_54470ff36e6f641e8b010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Customer Services (French)', id: '54470ff36e6f641e8b010000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/768dd47883460c6fe8bb9c81b403505a/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowMToyMy4xMDNaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'sM9GSCbUdcRSU6vnHjru/IoPGBQ=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_54470ff36e6f641e8b010000').hide();
+                        
+                        $('#content_block_54470ff36e6f641e8b010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_54470ff36e6f641e8b010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Customer Services (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--FITNESS WALKING CLUB-->
+            <a name="fitness_walking_club" ></a>
+            <h2 data-i18n="nav.subnav.fitness_walking_club"><!--FITNESS WALKING CLUB--></h2>
+            <div class="en-CA">
+                <!-- Walking Club (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544710366e6f641e8b020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544710366e6f641e8b020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544710366e6f641e8b020000'>
+                	  <%=content_block_544710366e6f641e8b020000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544710366e6f641e8b020000').editable != 'undefined') {
+                			$('#content_block_544710366e6f641e8b020000').show();
+                	        $('#edit_544710366e6f641e8b020000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Walking Club (English)', id: '544710366e6f641e8b020000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/f1672c0154fe500c627da068a71a5dd7/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowMjozMC43MTRaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'f2X1OD4VJnf6Y3Nvw3ckwvoyJkg=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544710366e6f641e8b020000').hide();
+                        
+                        $('#content_block_544710366e6f641e8b020000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544710366e6f641e8b020000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Walking Club (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Walking Club (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544710696e6f646765020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544710696e6f646765020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544710696e6f646765020000'>
+                	  <%=content_block_544710696e6f646765020000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544710696e6f646765020000').editable != 'undefined') {
+                			$('#content_block_544710696e6f646765020000').show();
+                	        $('#edit_544710696e6f646765020000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Walking Club (French)', id: '544710696e6f646765020000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/c09ead868c05d755b5d3dd0874850c0d/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowMzoyMS4yNDNaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: '5wvVDRmecTXffY0JyDRRdfB1ohs=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544710696e6f646765020000').hide();
+                        
+                        $('#content_block_544710696e6f646765020000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544710696e6f646765020000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Walking Club (French) CONTENT BLOCK END -->
+            </div>
+            
+            
+            <!--WELCOME TO FAMILIES-->
+            <a name="welcome_to_families"></a>
+            <h2 data-i18n="nav.subnav.welcome_to_families"><!--WELCOME TO FAMILIES--></h2>
+            <div class="en-CA">
+                <!-- Welcome Families (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5447108b6e6f641e8b030000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5447108b6e6f641e8b030000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5447108b6e6f641e8b030000'>
+                	  <%=content_block_5447108b6e6f641e8b030000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5447108b6e6f641e8b030000').editable != 'undefined') {
+                			$('#content_block_5447108b6e6f641e8b030000').show();
+                	        $('#edit_5447108b6e6f641e8b030000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Welcome Families (English)', id: '5447108b6e6f641e8b030000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/e2a3fd0be25261b4a958f0c30b92bdc9/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowMzo1NS42MjBaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'R5n+jfsnf60puh8mF5VYB55oVsQ=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5447108b6e6f641e8b030000').hide();
+                        
+                        $('#content_block_5447108b6e6f641e8b030000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5447108b6e6f641e8b030000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Welcome Families (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Welcome Families (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5447109e6e6f646765030000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5447109e6e6f646765030000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5447109e6e6f646765030000'>
+                	  <%=content_block_5447109e6e6f646765030000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5447109e6e6f646765030000').editable != 'undefined') {
+                			$('#content_block_5447109e6e6f646765030000').show();
+                	        $('#edit_5447109e6e6f646765030000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Welcome Families (French)', id: '5447109e6e6f646765030000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/f1bf70f574962b67faaab49f44db79a2/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowNDoxNC43NjZaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: '4l0ihKfz5IPobsBgonyjBDKGrtY=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5447109e6e6f646765030000').hide();
+                        
+                        $('#content_block_5447109e6e6f646765030000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5447109e6e6f646765030000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Welcome Families (French) CONTENT BLOCK END -->
+            </div>
+
+            <!--WIFI-->
+            <a name="wifi"></a>
+            <h2 data-i18n="nav.subnav.wifi"><!--WIFI--></h2>
+            <div class="en-CA">
+                <!-- WIFI (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544710b76e6f646765040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544710b76e6f646765040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544710b76e6f646765040000'>
+                	  <%=content_block_544710b76e6f646765040000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544710b76e6f646765040000').editable != 'undefined') {
+                			$('#content_block_544710b76e6f646765040000').show();
+                	        $('#edit_544710b76e6f646765040000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'WIFI (English)', id: '544710b76e6f646765040000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/a2f82da99e122eb24e956e0a00db3aad/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowNDozOS44NjRaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'PPnF/z7z8ebbCjXKxSgNXxVyqdc=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544710b76e6f646765040000').hide();
+                        
+                        $('#content_block_544710b76e6f646765040000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544710b76e6f646765040000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- WIFI (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- WIFI (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element" style="margin-top:22px">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_544710c86e6f641e8b040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_544710c86e6f641e8b040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_544710c86e6f641e8b040000'>
+                	  <%=content_block_544710c86e6f641e8b040000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_544710c86e6f641e8b040000').editable != 'undefined') {
+                			$('#content_block_544710c86e6f641e8b040000').show();
+                	        $('#edit_544710c86e6f641e8b040000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'WIFI (French)', id: '544710c86e6f641e8b040000',web_page_id: '5431987c6e6f64102a160000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 400,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/5c67cc3bff4ec0003adcb987b67a20a0/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMjowNDo1Ni4wOTVaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'uRB9VMrt1d2NDnCiQ38f2SlMdC4=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_544710c86e6f641e8b040000').hide();
+                        
+                        $('#content_block_544710c86e6f641e8b040000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_544710c86e6f641e8b040000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- WIFI (French) CONTENT BLOCK END -->
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs" data-i18n="nav.services"><!--Customer Services--></h1>
+            <img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_customerservices.jpg" class="hidden-xs" alt="">
+            <ul class="button-panel">
+                <li><a href="#gift_cards" class="btn btn-default"><span data-i18n="nav.subnav.gift_cards"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--GIFT CARDS--></a></li>
+                <li><a href="#customer_services" class="btn btn-default"><span data-i18n="nav.subnav.customer_services"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--CUSTOMER SERVICES--></a></li>
+                <li><a href="#fitness_walking_club" class="btn btn-default"><span data-i18n="nav.subnav.fitness_walking_club"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--FITNESS WALKING CLUB--></a></li>
+                <li><a href="#welcome_to_families" class="btn btn-default"><span data-i18n="nav.subnav.welcome_to_families"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--WELCOME TO FAMILIES--></a></li>
+                <li><a href="#wifi" class="btn btn-default"><span data-i18n="nav.subnav.wifi"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--WIFI--></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
