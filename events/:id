@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3">
+            <h1><a href="../events" data-i18n="nav.events"></a></h1>
+            <center id="cal1" class="cal1">
+                <div class="date" id="clndr"></div>
+            </center>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <div class="events" id="events_details_id">
+                <!-- START MUSTACHE TEMPLATE FOR EVENT ITEM-->
+                <script id="event_details_template" type="x-tmpl-mustache">
+                    <div class="event-details">
+                        <div class="event-name">
+                            <h3>{{ name }}</h3>
+                        </div>
+                        <div class="event-dates">
+                            {{ start_date }} to {{ end_date }}
+                        </div>
+                        <div class="event-description">
+                            {{ description }}
+                        </div>
+                        <div class="event-image">
+                            <img src="{{event_image_url}}">
+                        </div>
+                    </div>
+                </script>
+                <!-- END MUSTACHE TEMPLATE FOR EVENT ITEM-->
+                    
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        
+        //renders the events list by referencing the template id and the html id
+        //for where to place the rendered content. See mallmaverick.js for implementation
+        var pathArray = window.location.pathname.split( '/' );
+        var slug = pathArray[pathArray.length-1];
+        var event_details = getEventDetailsBySlug(slug);
+        renderEventDetailsTemplate('#event_details_template','#events_details_id',event_details);
+    
+        //please see //kylestetz.github.io/CLNDR/
+        $('#clndr').clndr({
+            events:getEventsList(),
+              multiDayEvents: {
+                startDate: 'start_date',
+                endDate: 'end_date'
+              },
+              clickEvents: {
+                click: function(target) {
+                  
+                },
+                onMonthChange: function(month) {
+                  $('.clndr-previous-button').html("<");
+                  $('.clndr-next-button').html(">");
+                }
+              },
+              doneRendering: function() {
+                
+              }
+        });
+        
+        $('.clndr-previous-button').html("<");
+        $('.clndr-next-button').html(">");
+    });
+    
+</script>
