@@ -7,7 +7,7 @@
 <script>
     $("#mapsvg_main").show();
     $('#mapsvg_main').mapSvg({
-        source: 'http://testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/ee40fe2c3ac56c49726144bfcad2d0ed/OC__WebMap_0.2.svg',
+        source: '//testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/ee40fe2c3ac56c49726144bfcad2d0ed/OC__WebMap_0.2.svg',
         colors: {stroke: '#aaaaaa', selected: -20, hover: "#000000"},
         regions: {
                 
