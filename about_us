@@ -1,0 +1,699 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <h1 class="visible-xs" data-i18n="nav.about"><!--About Us--></h1>
+            
+            <!--PARKING INFORMATION-->
+            <a name="place_vertu"></a>
+            <h2 data-i18n="nav.subnav.place_vertu"><!--PLACE VERTU--></h2>
+            <div class="en-CA">
+                <!-- About (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446f74f6e6f646896000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446f74f6e6f646896000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446f74f6e6f646896000000'>
+                	  <%=content_block_5446f74f6e6f646896000000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446f74f6e6f646896000000').editable != 'undefined') {
+                			$('#content_block_5446f74f6e6f646896000000').show();
+                	        $('#edit_5446f74f6e6f646896000000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'About (English)', id: '5446f74f6e6f646896000000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/b497805ad4c95740b1919ecb1a7dfd5b/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDoxNjoxNS41NTZaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'nJZqGHQPGAbMMfsoF5fvoMPbtzw=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446f74f6e6f646896000000').hide();
+                        
+                        $('#content_block_5446f74f6e6f646896000000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446f74f6e6f646896000000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+<!-- About (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- About (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446f7796e6f646896010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446f7796e6f646896010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446f7796e6f646896010000'>
+                	  <%=content_block_5446f7796e6f646896010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446f7796e6f646896010000').editable != 'undefined') {
+                			$('#content_block_5446f7796e6f646896010000').show();
+                	        $('#edit_5446f7796e6f646896010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'About (French)', id: '5446f7796e6f646896010000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/f8eb1881e863638dd33a839c52b864e7/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDoxNjo1Ny43OTBaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'QXsTZSD8pYdEgC9ZTM7B3Dw8HXE=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446f7796e6f646896010000').hide();
+                        
+                        $('#content_block_5446f7796e6f646896010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446f7796e6f646896010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- About (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--LEASING INFORMATION-->
+            <a name="leasing_information"></a>
+            <h2 data-i18n="nav.subnav.leasing_information"><!--LEASING INFORMATION--></h2>
+            <div class="en-CA">
+                <!-- Leasing (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fa1b6e6f64600f000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fa1b6e6f64600f000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fa1b6e6f64600f000000'>
+                	  <%=content_block_5446fa1b6e6f64600f000000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fa1b6e6f64600f000000').editable != 'undefined') {
+                			$('#content_block_5446fa1b6e6f64600f000000').show();
+                	        $('#edit_5446fa1b6e6f64600f000000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Leasing (English)', id: '5446fa1b6e6f64600f000000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/f147aa4831d0d1609e063f53995b581f/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDoyODoxMS4xODlaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'fmiO9jhPF7eR6sh+3WS8fSxAjXk=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fa1b6e6f64600f000000').hide();
+                        
+                        $('#content_block_5446fa1b6e6f64600f000000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fa1b6e6f64600f000000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Leasing (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Leasing (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fa3f6e6f64600f010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fa3f6e6f64600f010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fa3f6e6f64600f010000'>
+                	  <%=content_block_5446fa3f6e6f64600f010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fa3f6e6f64600f010000').editable != 'undefined') {
+                			$('#content_block_5446fa3f6e6f64600f010000').show();
+                	        $('#edit_5446fa3f6e6f64600f010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Leasing (French)', id: '5446fa3f6e6f64600f010000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/d8a29b48b6a7df879c8b09c49d7efad0/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDoyODo0Ny42MTJaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'crlL4nW2CYyvoD1Cn16HHg6uxtI=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fa3f6e6f64600f010000').hide();
+                        
+                        $('#content_block_5446fa3f6e6f64600f010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fa3f6e6f64600f010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Leasing (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--CHARITIES-->
+            <a name="charities"></a>
+            <h2 data-i18n="nav.subnav.charities"><!--CHARITIES--></h2>
+            <div class="en-CA">
+                <!-- Charities (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fa556e6f64174d000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fa556e6f64174d000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fa556e6f64174d000000'>
+                	  <%=content_block_5446fa556e6f64174d000000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fa556e6f64174d000000').editable != 'undefined') {
+                			$('#content_block_5446fa556e6f64174d000000').show();
+                	        $('#edit_5446fa556e6f64174d000000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Charities (English)', id: '5446fa556e6f64174d000000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/eb6f6281bcd389ec7af9b8de599459c9/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDoyOTowOS43MDhaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'klUO695NL8ZrmUgYX6COGbA1zMk=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fa556e6f64174d000000').hide();
+                        
+                        $('#content_block_5446fa556e6f64174d000000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fa556e6f64174d000000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Charities (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Charities (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fa686e6f64600f020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fa686e6f64600f020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fa686e6f64600f020000'>
+                	  <%=content_block_5446fa686e6f64600f020000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fa686e6f64600f020000').editable != 'undefined') {
+                			$('#content_block_5446fa686e6f64600f020000').show();
+                	        $('#edit_5446fa686e6f64600f020000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Charities (French)', id: '5446fa686e6f64600f020000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/2e8b163596250339a60f7a4e80e673fc/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDoyOToyOC4xMzFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'IVErHzFT+3bhnE+hSIDkcn+GmjY=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fa686e6f64600f020000').hide();
+                        
+                        $('#content_block_5446fa686e6f64600f020000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fa686e6f64600f020000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Charities (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--GREEN INITIATIVES-->
+            <a name="green_initiatives"></a>
+            <h2 data-i18n="nav.subnav.green_initiatives"><!--GREEN INITIATIVES--></h2>
+            <div class="en-CA">
+                <!-- Green Initiatives (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fa9c6e6f64600f030000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fa9c6e6f64600f030000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fa9c6e6f64600f030000'>
+                	  <%=content_block_5446fa9c6e6f64600f030000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fa9c6e6f64600f030000').editable != 'undefined') {
+                			$('#content_block_5446fa9c6e6f64600f030000').show();
+                	        $('#edit_5446fa9c6e6f64600f030000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Green Initiatives (English)', id: '5446fa9c6e6f64600f030000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/7d8d250b0748c6887121b2a5e0d096df/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDozMDoyMC41MDFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'F/xjAHMKeAtxB41OjmDQiOBD7Jg=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fa9c6e6f64600f030000').hide();
+                        
+                        $('#content_block_5446fa9c6e6f64600f030000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fa9c6e6f64600f030000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Green Initiatives (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Green Initiatives (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fab56e6f64174d010000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fab56e6f64174d010000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fab56e6f64174d010000'>
+                	  <%=content_block_5446fab56e6f64174d010000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fab56e6f64174d010000').editable != 'undefined') {
+                			$('#content_block_5446fab56e6f64174d010000').show();
+                	        $('#edit_5446fab56e6f64174d010000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Green Initiatives (French)', id: '5446fab56e6f64174d010000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/4bbde4dc8072f24e5a3751a4c74f84ad/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDozMDo0NS43NDdaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'QXk0LVnw7L6lPX9OdoZrqGUfToA=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fab56e6f64174d010000').hide();
+                        
+                        $('#content_block_5446fab56e6f64174d010000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fab56e6f64174d010000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Green Initiatives (French) CONTENT BLOCK END -->
+            </div>
+            
+            <!--CONTRACT POLICY-->
+            <a name="contract_policy"></a>
+            <h2 data-i18n="nav.subnav.contract_policy"><!--CONTRACT POLICY--></h2>
+            <div class="en-CA">
+                <!-- Contract Policy (English) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446faea6e6f64174d020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446faea6e6f64174d020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446faea6e6f64174d020000'>
+                	  <%=content_block_5446faea6e6f64174d020000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446faea6e6f64174d020000').editable != 'undefined') {
+                			$('#content_block_5446faea6e6f64174d020000').show();
+                	        $('#edit_5446faea6e6f64174d020000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Contract Policy (English)', id: '5446faea6e6f64174d020000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/24be4ba47a203bd40510a0998a1c3509/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDozMTozOC40NDNaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'saoTFQ2qx/r1tJopkCNPZg2o96A=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446faea6e6f64174d020000').hide();
+                        
+                        $('#content_block_5446faea6e6f64174d020000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446faea6e6f64174d020000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Contract Policy (English) CONTENT BLOCK END -->
+            </div>
+            <div class="fr-CA">
+                <!-- Contract Policy (French) CONTENT BLOCK START-->    
+                <section id="editor" class="froala-element">
+                  <a href="#" style="font-size:20px;display:none" id="content_block_5446fafd6e6f64600f040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5446fafd6e6f64600f040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+                  <div id='edit_5446fafd6e6f64600f040000'>
+                	  <%=content_block_5446fafd6e6f64600f040000%>
+                  </div>
+                  <script>
+                      $(function(){
+                		if (typeof $('#edit_5446fafd6e6f64600f040000').editable != 'undefined') {
+                			$('#content_block_5446fafd6e6f64600f040000').show();
+                	        $('#edit_5446fafd6e6f64600f040000').editable({
+                				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+                				inlineMode: false,
+                                paragraphy: true,
+                                alwaysBlank: true,
+                                toolbarFixed: true,
+                                imageMove: true,
+                                saveURL: '../save_content_block',
+                                saveRequestType: 'POST',
+                	            saveParams: {name:'Contract Policy (French)', id: '5446fafd6e6f64600f040000',web_page_id: '5431987c6e6f64102a130000',authenticity_token: '<%=form_authenticity_token%>'},
+                	            autosave: false,
+                				minHeight: 200,
+                				imageUploadToS3: {
+                                    bucket: 'kodekloud',
+                                    region: 's3',
+                                    keyStart: 'site/5431987c6e6f64102a020000/2f919f67f532ad6f3c145fabff44323e/${filename}',
+                					callback: function (url, key) {
+                                      $.ajax({
+                                            url : "../add_upload_from_content_block",
+                                            type: "POST",
+                                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                                            success: function(data, textStatus, jqXHR)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown)
+                                            {
+                                                console.log('saved image to uploads');
+                                                console.log(textStatus);
+                                            }
+                                        });
+                                    },
+                                    params: {
+                					  utf8: '&#x2713;',
+                                      acl: 'public-read', // ACL according to Amazon Documentation.
+                                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOC0wNVQwMDozMTo1Ny44ODhaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                                      signature: 'x8ikk8tAkp9NV6Bg8R9cEnzDgYQ=', // Signature computed in the backend.
+                                    }
+                                }
+                            
+                	        })
+                		}
+                		$('#status_5446fafd6e6f64600f040000').hide();
+                        
+                        $('#content_block_5446fafd6e6f64600f040000').click(function(event){
+                            event.preventDefault();
+                            $('#edit_5446fafd6e6f64600f040000').editable("save");
+                        });
+                      });
+                  </script>
+                </section>    
+                <!-- Contract Policy (French) CONTENT BLOCK END -->
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs" data-i18n="nav.about"><!--About Us--></h1>
+            <img src="//d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_aboutus.jpg" class="hidden-xs">
+            <ul class="button-panel">
+                <li><a href="#place_vertu" class="btn btn-default" ><span data-i18n="nav.subnav.place_vertu"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--PLACE VERTU--></a></li>
+                <li><a href="#leasing_information" class="btn btn-default"><span data-i18n="nav.subnav.leasing_information"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--PLACE VERTU--><!--LEASING INFORMATION--></a></li>
+                <li><a href="#charities" class="btn btn-default"><span data-i18n="nav.subnav.charities"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--CHARITIES & NON-PROFIT --></a></li>
+                <li><a href="#green_initiatives"  class="btn btn-default" ><span data-i18n="nav.subnav.green_initiatives"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--GREEN INITIATIVES--></a></li>
+                <li><a href="#contract_policy" class="btn btn-default"><span data-i18n="nav.subnav.contract_policy"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--BUILDING CONTRACT POLICY--></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
