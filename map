@@ -1,0 +1,1642 @@
+<script type="text/javascript" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/b7e04f8956640b71a30cf7511b670c61/jquery_svg.js"></script>
+<script type="text/javascript" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/b7e04f8956640b71a30cf7511b670c61/raphael.js"></script>
+<script type="text/javascript" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/b7e04f8956640b71a30cf7511b670c61/mapsvg.js"></script>
+
+<div id="mapsvg_main"></div>
+
+<script>
+    $("#mapsvg_main").show();
+    $('#mapsvg_main').mapSvg({
+        source: 'http://testbucketblurt.s3-us-west-2.amazonaws.com/sites/540373d34a616d0cccaf0000/ee40fe2c3ac56c49726144bfcad2d0ed/OC__WebMap_0.2.svg',
+        colors: {stroke: '#aaaaaa', selected: -20, hover: "#000000"},
+        regions: {
+                
+                    
+            			"path401":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/882/original/A_W.jpg?1399849917'/><label class='store_name_map'>A&W</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.3800</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-a-w'
+        					}
+        				},
+        			
+        		
+                    
+            			"path413":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/883/original/aeropostale.jpg?1399849971'/><label class='store_name_map'>Aeropostale</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.720.4410</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-aeropostale'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"_x34_7":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/885/original/aldo.jpg?1399849992'/><label class='store_name_map'>Aldo Shoes</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.1746</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-aldo-shoes'
+        					}
+        				},
+        			
+        		
+                    
+            			"path336":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/886/original/aliantanjay.jpg?1400001506'/><label class='store_name_map'>Alia & Tan Jay</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.8745</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-alia-tan-jay'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+        		
+                    
+            			"_x32_53":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/889/original/americaneagle.png?1399850106'/><label class='store_name_map'>American Eagle Outfitters</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.7666</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-american-eagle-outfitters'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x31_3":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/890/original/ardene.jpg?1399850128'/><label class='store_name_map'>Ardene</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>1.877.606.4233x174</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-ardene'
+        					}
+        				},
+        			
+        		
+                    
+            			"path416":{
+                            tooltip:"<label class='store_name_map'>Balta Imports</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.720.3043</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-balta-imports'
+        					}
+        				},
+        			
+        		
+                    
+            			"path417":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/893/original/BMO.jpg?1400010764'/><label class='store_name_map'>Bank of Montreal</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.432.6740</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bank-of-montreal'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect470":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/895/original/bath_body.jpg?1399850161'/><label class='store_name_map'>Bath & Body Works</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.3111</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bath-body-works'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path461":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/897/original/bell.jpg?1399850189'/><label class='store_name_map'>Bell World</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bell-world'
+        					}
+        				},
+        			
+        		
+                    
+            			"path444":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/898/original/bellagio.jpg?1400001537'/><label class='store_name_map'>Bellagio Jewellers II</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.5795</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bellagio-jewellers-ii'
+        					}
+        				},
+        			
+        		
+                    
+            			"path474":{
+                            tooltip:"<label class='store_name_map'>Ben Moss Jewellers</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.1779</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-ben-moss-jewellers'
+        					}
+        				},
+        			
+        		
+                    
+            			"path472":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/900/original/bentley.jpg?1399850226'/><label class='store_name_map'>Bentley</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.1467</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bentley'
+        					}
+        				},
+        			
+        		
+                    
+            			"path339":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/901/original/bikinibay.jpg?1399850255'/><label class='store_name_map'>Bikini Bay</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.2108</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bikini-bay'
+        					}
+        				},
+        			
+        		
+                    
+            			"path434":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/902/original/blacks.jpg?1399850376'/><label class='store_name_map'>Black's Camera</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.2441</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-black-s-camera'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect368":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/903/original/bluenotes.jpg?1399850549'/><label class='store_name_map'>Bluenotes</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.5756</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bluenotes'
+        					}
+        				},
+        			
+        		
+                    
+            			"path455":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/904/original/boathouse.jpg?1399850574'/><label class='store_name_map'>Boathouse</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.0478</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-boathouse'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect203":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/905/original/bombay.jpg?1400001580'/><label class='store_name_map'>Bombay Company</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.721.7590</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bombay-company'
+        					}
+        				},
+        			
+        		
+                    
+            			"path459":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/906/original/bootlegger.jpg?1400001599'/><label class='store_name_map'>Bootlegger</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.4934</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-bootlegger'
+        					}
+        				},
+        			
+        		
+                    
+            			"path427":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/907/original/buildabear.jpg?1399850667'/><label class='store_name_map'>Build-A-Bear Workshop</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.7638</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-build-a-bear-workshop'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path326":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/909/original/carltoncards.png?1399850714'/><label class='store_name_map'>Carlton Cards</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.0378</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-carlton-cards'
+        					}
+        				},
+        			
+        		
+                    
+            			"path466":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/910/original/carylbaker.jpg?1399850747'/><label class='store_name_map'>Caryl Baker Visage</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.0223</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-caryl-baker-visage'
+        					}
+        				},
+        			
+        		
+                    
+            			"path436":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/911/original/default_storelogo.png?1406750184'/><label class='store_name_map'>Casey's Bar & Grill</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.3333</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-casey-s-bar-grill'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect391":{
+                            tooltip:"<label class='store_name_map'>Cell Icon</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-cell-icon'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path236":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/913/original/chapters.jpg?1400001622'/><label class='store_name_map'>Chapters</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.8593</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-chapters'
+        					}
+        				},
+        			
+        		
+                    
+            			"path475":{
+                            tooltip:"<label class='store_name_map'>Chelsea Home Furniture</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.0318</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-chelsea-home-furniture'
+        					}
+        				},
+        			
+        		
+                    
+            			"path424":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/916/original/church_hill.jpg?1400011104'/><label class='store_name_map'>Churchills-Crossings</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.728.8061</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-churchills-crossings'
+        					}
+        				},
+        			
+        		
+                    
+            			"path328":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/917/original/cinnabon.png?1399850855'/><label class='store_name_map'>Cinnabon</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.5222</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-cinnabon'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x32_48":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/918/original/clairdelune.jpg?1400001641'/><label class='store_name_map'>Clair de Lune</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.3097</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-clair-de-lune'
+        					}
+        				},
+        			
+        		
+                    
+            			"path317":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/919/original/claires.png?1399850902'/><label class='store_name_map'>Claire's</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.5233</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-claire-s'
+        					}
+        				},
+        			
+        		
+                    
+            			"path337":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/920/original/cleo.png?1399850940'/><label class='store_name_map'>Cleo</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.9451</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-cleo'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect365":{
+                            tooltip:"<label class='store_name_map'>Consumers Choice Windows and Doors</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-consumers-choice-windows-and-doors'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect481":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/922/original/continental.jpg?1400001708'/><label class='store_name_map'>Continental Currency Exchange</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.1600</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-continental-currency-exchange'
+        					}
+        				},
+        			
+        		
+                    
+            			"path399":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/923/original/countrystyle.jpg?1400001734'/><label class='store_name_map'>Country Style Donuts</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.240.3789</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-country-style-donuts'
+        					}
+        				},
+        			
+        		
+                    
+            			"path611":{
+                            tooltip:"<label class='store_name_map'>Customer Service</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905 686 6408</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-customer-service'
+        					}
+        				},
+        			
+        		
+                    
+            			"path404":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/925/original/DQorangejulius.png?1399851000'/><label class='store_name_map'>Dairy Queen/Orange Julius</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.2556</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-dairy-queen-orange-julius'
+        					}
+        				},
+        			
+        		
+                    
+            			"path362":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/926/original/danier.png?1399851038'/><label class='store_name_map'>Danier Leather</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.4938</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-danier-leather'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path476":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/928/original/dollarama.jpg?1399851074'/><label class='store_name_map'>Dollarama</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.2987</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-dollarama'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"_x32_55":{
+                            tooltip:"<label class='store_name_map'>Dr. Frank Gold's Source Dental</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.5757</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-dr-frank-gold-s-source-dental'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+        		
+                    
+        		
+                    
+        		
+                    
+            			"path405":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/935/original/druxy.png?1400001768'/><label class='store_name_map'>Druxy's</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.6789</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-druxy-s'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+        		
+                    
+            			"path415":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/939/original/dynamite.jpg?1399851130'/><label class='store_name_map'>Dynamite</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.728.7373</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-dynamite'
+        					}
+        				},
+        			
+        		
+                    
+            			"path415":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/940/original/ebgames.png?1399851167'/><label class='store_name_map'>EB Games</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.1398</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-eb-games'
+        					}
+        				},
+        			
+        		
+                    
+            			"path412":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/941/original/eddiebaur.png?1399851202'/><label class='store_name_map'>Eddie Bauer Outdoor Outfitter</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.9800</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-eddie-bauer'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path452":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/943/original/fairweather.jpg?1400001787'/><label class='store_name_map'>Fairweather</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.6537</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-fairweather'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect386":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/944/original/fido.jpg?1399851375'/><label class='store_name_map'>Fido</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.4056</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-fido'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path314":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/946/original/flightcentre.png?1399851415'/><label class='store_name_map'>Flight Centre</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.6270</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-flight-centre'
+        					}
+        				},
+        			
+        		
+                    
+            			"path333":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/947/original/footlocker.jpg?1399851445'/><label class='store_name_map'>Footlocker</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.443.0181</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-footlocker'
+        					}
+        				},
+        			
+        		
+                    
+            			"path460":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/948/original/footlocker.jpg?1399851473'/><label class='store_name_map'>Footlocker Kids</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.3020</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-footlocker-kids'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect390":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/949/original/freshly.jpg?1399851504'/><label class='store_name_map'>Freshly Squeezed</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.3727</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-freshly-squeezed'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path437":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/952/original/gap.jpg?1399851573'/><label class='store_name_map'>Gap/Gap Kids</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.0865</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-gap'
+        					}
+        				},
+        			
+        		
+                    
+            			"path432":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/954/original/garage.jpg?1399851612'/><label class='store_name_map'>Garage</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.743.0618</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-garage'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect370":{
+                            tooltip:"<label class='store_name_map'>Generations</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.5200</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-generations'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect378":{
+                            tooltip:"<label class='store_name_map'>Ghost Armor </label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-ghost-armour'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect379":{
+                            tooltip:"<label class='store_name_map'>Gold Buyers</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>1.888.812.6230</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-gold-buyers'
+        					}
+        				},
+        			
+        		
+                    
+            			"path167":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/955/original/goodlife.jpg?1400001813'/><label class='store_name_map'>GoodLife Fitness Club</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.1449</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-goodlife-fitness-club'
+        					}
+        				},
+        			
+        		
+                    
+            			"path478":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/956/original/greenearth.jpg?1400001833'/><label class='store_name_map'>Green Earth</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.9355</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-green-earth'
+        					}
+        				},
+        			
+        		
+                    
+            			"path438":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/957/original/guess.png?1399851652'/><label class='store_name_map'>Guess</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.1711</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-guess'
+        					}
+        				},
+        			
+        		
+                    
+            			"path431":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/958/original/gymboree.jpg?1399851682'/><label class='store_name_map'>Gymboree</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.0606</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-gymboree'
+        					}
+        				},
+        			
+        		
+                    
+            			"path303":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/959/original/h_m.jpg?1399851715'/><label class='store_name_map'>H&M</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.435.9956</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-h-m'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect367":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/960/original/hallmark.jpg?1399851749'/><label class='store_name_map'>Hallmark</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.8721</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-hallmark'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"_x31_2":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/962/original/hmv.jpg?1399851789'/><label class='store_name_map'>HMV</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.8488</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-hmv'
+        					}
+        				},
+        			
+        		
+                    
+            			"path445":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/963/original/homeessence.jpg?1400001863'/><label class='store_name_map'>Home Essence</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.240.3447</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-home-essence'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path289":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/965/original/hudsonsbay.jpg?1399851839'/><label class='store_name_map'>Hudson's Bay</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.1211</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-hudson-s-bay'
+        					}
+        				},
+        			
+        		
+                    
+            			"path433":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/966/original/icing.jpg?1399851871'/><label class='store_name_map'>Icing</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.429.2286</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-icing'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path453":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/968/original/international.jpg?1399851936'/><label class='store_name_map'>International Clothiers</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.5842</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-international-clothiers'
+        					}
+        				},
+        			
+        		
+                    
+            			"path316":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/971/original/jeanmachine.jpg?1399852042'/><label class='store_name_map'>Jean Machine</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.1879 </label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-jean-machine'
+        					}
+        				},
+        			
+        		
+                    
+            			"path421":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/972/original/jimmy.jpg?1399852095'/><label class='store_name_map'>Jimmy The Greek</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.8878</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-jimmy-the-greek'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x32_48_1_":{
+                            tooltip:"<label class='store_name_map'>Joseph's Hairstyling</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.9251</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-joseph-s-hairstyling'
+        					}
+        				},
+        			
+        		
+                    
+            			"path435":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/974/original/journeys.jpg?1399852142'/><label class='store_name_map'>Journeys</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.720.9915</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-journeys'
+        					}
+        				},
+        			
+        		
+                    
+            			"path338":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/975/original/default_storelogo.png?1406750202'/><label class='store_name_map'>Julie's</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.4318</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-julie-s'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect393":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/977/original/kernels.jpg?1399852177'/><label class='store_name_map'>Kernels</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.3648</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-kernels'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect388":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/978/original/keyman.jpg?1399852212'/><label class='store_name_map'>Key Man Engravables</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.7777</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-key-man-engravables'
+        					}
+        				},
+        			
+        		
+                    
+            			"path407":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/979/original/KFC.jpg?1399852248'/><label class='store_name_map'>KFC</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.3703</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-kfc'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect389":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/981/original/koodo.jpg?1399852295'/><label class='store_name_map'>Koodo</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.6227</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-koodo'
+        					}
+        				},
+        			
+        		
+                    
+            			"path409":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/982/original/lattitudes.jpg?1400001980'/><label class='store_name_map'>L'ATTITUDES Salon & Spa</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.5937</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-l-attitudes-salon-spa'
+        					}
+        				},
+        			
+        		
+                    
+            			"path469":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/983/original/lasenza.jpg?1399852334'/><label class='store_name_map'>La Senza</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.7447</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-la-senza'
+        					}
+        				},
+        			
+        		
+                    
+            			"path464":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/984/original/laurasecord.jpg?1399852378'/><label class='store_name_map'>Laura Secord</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.7363</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-laura-secord'
+        					}
+        				},
+        			
+        		
+                    
+            			"path363":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/985/original/laura.jpg?1399852416'/><label class='store_name_map'>Laura/Laura Petite </label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.9251</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-laura-laura-petite'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect180":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/987/original/LCBO.jpg?1399852455'/><label class='store_name_map'>LCBO</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.5721</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-lcbo'
+        					}
+        				},
+        			
+        		
+                    
+            			"path426":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/988/original/lechateau.jpg?1399852490'/><label class='store_name_map'>Le Chateau</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.0442</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-le-chateau'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x31_1":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/119/original/lenscrafters.jpg?1400010908'/><label class='store_name_map'>Lenscrafters</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.6666</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-lenscrafters'
+        					}
+        				},
+        			
+        		
+                    
+            			"path315":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/989/original/lids.jpg?1399852525'/><label class='store_name_map'>Lids</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.5022</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-lids'
+        					}
+        				},
+        			
+        		
+                    
+            			"path369":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/990/original/lululemon.jpg?1399852567'/><label class='store_name_map'>Lululemon Athletica</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.435.3721</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-lululemon-athletica'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect384":{
+                            tooltip:"<label class='store_name_map'>Mac's Sushi</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.245.0241</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-mac-s-sushi'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path463":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/993/original/marlintravel.jpg?1399852640'/><label class='store_name_map'>Marlin Travel</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.7726</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-marlin-travel'
+        					}
+        				},
+        			
+        		
+                    
+            			"path359":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/994/original/mcdonalds.jpg?1399852753'/><label class='store_name_map'>McDonald's</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.3400</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-mcdonald-s'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path411":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/996/original/melanielyne.jpg?1399852680'/><label class='store_name_map'>Melanie Lyne</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.7635</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-melanie-lyne'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect383":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/997/original/metalsmiths.jpg?1400011326'/><label class='store_name_map'>Metalsmiths</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.429.2113</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-metalsmiths'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect447":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/998/original/michaelhill.jpg?1400002343'/><label class='store_name_map'>Michael Hill Jeweller</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.0101</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-michael-hill-jeweller'
+        					}
+        				},
+        			
+        		
+                    
+            			"path479":{
+                            tooltip:"<label class='store_name_map'>Mind Games</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.6463</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-mind-games'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect369":{
+                            tooltip:"<label class='store_name_map'>Misha Collections</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-mischa-collections'
+        					}
+        				},
+        			
+        		
+                    
+            			"path423":{
+                            tooltip:"<label class='store_name_map'>mmmarvelous mmmuffins</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.0424</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-mmmarvelous-mmmuffins'
+        					}
+        				},
+        			
+        		
+                    
+            			"path406":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/001/original/mrsvanellies.jpg?1399852802'/><label class='store_name_map'>Mrs. Vanelli's</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.721.1238</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-mrs-vanelli-s'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path325":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/003/original/nailsforyou.jpg?1400002482'/><label class='store_name_map'>Nails for You</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.720.4545</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-nails-for-you'
+        					}
+        				},
+        			
+        		
+                    
+            			"path477":{
+                            tooltip:"<label class='store_name_map'>Natalie's Handbags</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.429.2307</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-natalie-s-handbags'
+        					}
+        				},
+        			
+        		
+                    
+            			"path332":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/005/original/naturalsolution.jpg?1400002516'/><label class='store_name_map'>Natural Solutions</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.8383</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-natural-solutions'
+        					}
+        				},
+        			
+        		
+                    
+            			"path442":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/006/original/naturalizer.jpg?1399852845'/><label class='store_name_map'>Naturalizer</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.2949</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-naturalizer'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path770":{
+                            tooltip:"<label class='store_name_map'>Ness</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-forever-flawless'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect395":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/009/original/newsteel.jpg?1400010796'/><label class='store_name_map'>New Steel Body Jewelry</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.728.3045</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-new-steel-body-jewelry'
+        					}
+        				},
+        			
+        		
+                    
+            			"path400":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/010/original/nyf.jpg?1399852891'/><label class='store_name_map'>New York Fries</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.1719</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-new-york-fries'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path300":{
+                            tooltip:"<label class='store_name_map'>Nova Hearing Services</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.0111</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-nova-hearing-services'
+        					}
+        				},
+        			
+        		
+                    
+            			"path172":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/014/original/on.jpg?1399663118'/><label class='store_name_map'>Old Navy</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.5681</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-old-navy'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect366":{
+                            tooltip:"<label class='store_name_map'>Oshawa Centre Administration</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.686.6408</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-oshawa-centre-administration'
+        					}
+        				},
+        			
+        		
+                    
+            			"path296":{
+                            tooltip:"<label class='store_name_map'>Oshawa Centre Dental Office</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.2443</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-oshawa-centre-dental-clinic'
+        					}
+        				},
+        			
+        		
+                    
+            			"path425":{
+                            tooltip:"<label class='store_name_map'>Oshawa Jewellery</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.728.5757</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-oshawa-jewellery'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path408":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/019/original/pandora.jpg?1399852955'/><label class='store_name_map'>Pandora</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.240.5756 </label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-pandora'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x32_52":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/020/original/paris.jpg?1400002597'/><label class='store_name_map'>Paris Jewellers</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.240.7889</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-paris-jewellers'
+        					}
+        				},
+        			
+        		
+                    
+            			"path449":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/021/original/parisnails.jpg?1400002615'/><label class='store_name_map'>Paris Nails</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.9145</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-paris-nails'
+        					}
+        				},
+        			
+        		
+                    
+            			"path334":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/022/original/payless.jpg?1399853001'/><label class='store_name_map'>Payless Shoes</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.7881</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-payless-shoes'
+        					}
+        				},
+        			
+        		
+                    
+            			"path319":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/023/original/peoples.jpg?1399853035'/><label class='store_name_map'>People's Jewellers</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.3315</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-people-s-jewellers'
+        					}
+        				},
+        			
+        		
+                    
+            			"path302":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/024/original/personally.jpg?1399853074'/><label class='store_name_map'>Personally Yours</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.728.6841</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-personally-yours'
+        					}
+        				},
+        			
+        		
+                    
+            			"path789":{
+                            tooltip:"<label class='store_name_map'>Phasion Village</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-phassion-village'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"rect355":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/026/original/proactive.jpg?1399853125'/><label class='store_name_map'>Proactiv</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.4004</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-proactiv'
+        					}
+        				},
+        			
+        		
+                    
+            			"path787":{
+                            tooltip:"<label class='store_name_map'>Proactiv</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-proactiv--2'
+        					}
+        				},
+        			
+        		
+                    
+            			"path443":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/028/original/purdys.jpg?1400002638'/><label class='store_name_map'>Purdys Chocolatier</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.435.9922</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-purdys-chocolatier'
+        					}
+        				},
+        			
+        		
+                    
+            			"path451":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/029/original/quilts.jpg?1400010941'/><label class='store_name_map'>Quilts Etc.</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.429.2248</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-quilts-etc'
+        					}
+        				},
+        			
+        		
+                    
+            			"path324":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/030/original/reeds.jpg?1400011370'/><label class='store_name_map'>Reed's Florists</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.2384</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-reed-s-florists'
+        					}
+        				},
+        			
+        		
+                    
+            			"path454":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/031/original/reitmans.jpg?1400010987'/><label class='store_name_map'>Reitmans</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.4361</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-reitmans'
+        					}
+        				},
+        			
+        		
+                    
+            			"path327":{
+                            tooltip:"<label class='store_name_map'>Revere Optical</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.1321</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-revere-optical'
+        					}
+        				},
+        			
+        		
+                    
+            			"path458":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/033/original/rickis.jpg?1399853282'/><label class='store_name_map'>Ricki's</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.8106 </label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-ricki-s'
+        					}
+        				},
+        			
+        		
+                    
+            			"path360":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/034/original/rockport.jpg?1400002682'/><label class='store_name_map'>Rockport</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.5114</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-rockport'
+        					}
+        				},
+        			
+        		
+                    
+            			"path318":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/035/original/rogersplus.jpg?1400011255'/><label class='store_name_map'>Rogers Plus</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.6663</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-rogers-plus'
+        					}
+        				},
+        			
+        		
+                    
+            			"path370":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/036/original/roots.jpg?1399853333'/><label class='store_name_map'>Roots</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.0451</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-roots'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect354":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/037/original/royal.jpg?1400002707'/><label class='store_name_map'>Royal LePage / Frank Real Estate</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.4111</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-royal-lepage-frank-real-estate'
+        					}
+        				},
+        			
+        		
+                    
+            			"path428":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/038/original/s_h.jpg?1399853377'/><label class='store_name_map'>S&H Health Foods</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.0158</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-s-h-health-foods'
+        					}
+        				},
+        			
+        		
+                    
+            			"path357":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/039/original/sears.jpg?1399904913'/><label class='store_name_map'>Sears</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.1711</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-sears'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+        		
+                    
+            			"path366":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/042/original/sephora.jpg?1399905079'/><label class='store_name_map'>Sephora</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.720.0276</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-sephora'
+        					}
+        				},
+        			
+        		
+                    
+            			"path792":{
+                            tooltip:"<label class='store_name_map'>Shades of Sun</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-shades-of-sun'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path480":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/044/original/shoe_warehouse.jpg?1400002729'/><label class='store_name_map'>Shoe Warehouse</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.721.0027</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-shoe-warehouse'
+        					}
+        				},
+        			
+        		
+                    
+            			"path235":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/045/original/shoppers.jpg?1399905120'/><label class='store_name_map'>Shoppers Drug Mart</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.720.0108</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-shoppers-drug-mart'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x32_50":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/046/original/showcase.jpg?1399905147'/><label class='store_name_map'>Showcase</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.435.0477</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-showcase'
+        					}
+        				},
+        			
+        		
+                    
+            			"path462":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/047/original/Sirens.jpg?1399905167'/><label class='store_name_map'>Sirens</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.1551</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-sirens'
+        					}
+        				},
+        			
+        		
+                    
+            			"path403":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/048/original/sizzlingwok.jpg?1400002750'/><label class='store_name_map'>Sizzling Wok</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.432.8818</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-sizzling-wok'
+        					}
+        				},
+        			
+        		
+                    
+            			"path365":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/049/original/smartset.jpg?1399905190'/><label class='store_name_map'>Smart Set</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.1736</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-smart-set'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect471":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/050/original/softmoc.jpg?1399905223'/><label class='store_name_map'>Soft Moc</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.0707</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-soft-moc'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect207":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/051/original/sportchek.jpg?1399905270'/><label class='store_name_map'>Sport Chek</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.2012</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-sport-chek'
+        					}
+        				},
+        			
+        		
+                    
+            			"path473":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/052/original/callitspring.png?1400011067'/><label class='store_name_map'>Spring</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.432.2606</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-spring'
+        					}
+        				},
+        			
+        		
+                    
+            			"path490":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/053/original/staples.jpg?1400011292'/><label class='store_name_map'>Staples</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.4392</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-staples'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path414":{
+                            tooltip:"<label class='store_name_map'>Stepss</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.3751</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-stepss'
+        					}
+        				},
+        			
+        		
+                    
+            			"path457":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/056/original/stichit.jpg?1399905385'/><label class='store_name_map'>Stitch It Clothing Alterations</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.721.0669</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-stitch-it-clothing-alterations'
+        					}
+        				},
+        			
+        		
+                    
+            			"path401":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/057/original/subway.jpg?1399905431'/><label class='store_name_map'>Subway</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.4584</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-subway'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect385":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/058/original/sunglasshut.jpg?1399905608'/><label class='store_name_map'>Sunglass Hut</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.721.1142</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-sunglass-hut'
+        					}
+        				},
+        			
+        		
+                    
+            			"path430":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/059/original/suzyshier.jpg?1399906680'/><label class='store_name_map'>Suzy Shier</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.9275</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-suzy-shier'
+        					}
+        				},
+        			
+        		
+                    
+            			"path402":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/060/original/tacobell.jpg?1399906701'/><label class='store_name_map'>Taco Bell</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.436.2725</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-taco-bell'
+        					}
+        				},
+        			
+        		
+                    
+            			"path321":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/061/original/tbooth.jpg?1399906719'/><label class='store_name_map'>Tbooth wireless</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.725.0233</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-tbooth-wireless'
+        					}
+        				},
+        			
+        		
+                    
+            			"path322":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/062/original/teavana.jpg?1399906740'/><label class='store_name_map'>Teavana</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.443.0279</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-teavana'
+        					}
+        				},
+        			
+        		
+                    
+            			"path313":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/063/original/telus.jpg?1399906777'/><label class='store_name_map'>Telus Mobility</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.1101</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-telus-mobility'
+        					}
+        				},
+        			
+        		
+                    
+            			"path420":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/064/original/teriyaki.jpg?1399906828'/><label class='store_name_map'>Teriyaki Experience</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.435.8165</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-teriyaki-experience'
+        					}
+        				},
+        			
+        		
+                    
+            			"path419":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/065/original/thai.jpg?1399906855'/><label class='store_name_map'>Thai Express</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.433.8883</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-thai-express'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"path361":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/067/original/bodyshop.jpg?1399906895'/><label class='store_name_map'>The Body Shop</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.0674</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-the-body-shop'
+        					}
+        				},
+        			
+        		
+                    
+            			"path439":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/951/original/face.jpg?1400084320'/><label class='store_name_map'>The Face Shop</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905-429-3510</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-fruits-passion'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect265":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/068/original/thekeg.jpg?1400002806'/><label class='store_name_map'>The Keg</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.571.3212</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-the-keg'
+        					}
+        				},
+        			
+        		
+                    
+            			"path468":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/069/original/source.jpg?1399906930'/><label class='store_name_map'>The Source</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.8952</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-the-source'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x34_6":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/070/original/timhortons.jpg?1399906955'/><label class='store_name_map'>Tim Hortons</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'></label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-tim-hortons'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x32_51":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/071/original/tiptop.jpg?1399906984'/><label class='store_name_map'>Tip Top Tailors</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.8611</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-tip-top-tailors'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x31_4":{
+                            tooltip:"<label class='store_name_map'>Tonyc</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.438.0002</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-tonyc'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect373":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/073/original/townshoes.jpg?1399907009'/><label class='store_name_map'>Town Shoes</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.5838</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-town-shoes'
+        					}
+        				},
+        			
+        		
+                    
+            			"path467":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/074/original/trade.jpg?1399907034'/><label class='store_name_map'>Trade Secrets</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.5507</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-trade-secrets'
+        					}
+        				},
+        			
+        		
+                    
+        		
+                    
+            			"_x32_49":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/076/original/trillium.jpg?1400011394'/><label class='store_name_map'>Trillium College</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.1163</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-trillium-college'
+        					}
+        				},
+        			
+        		
+                    
+            			"_x32_31":{
+                            tooltip:"<label class='store_name_map'>Unique Shoe Repair</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.429.2441</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-unique-shoe-repair'
+        					}
+        				},
+        			
+        		
+                    
+            			"path448":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/078/original/victorias.jpg?1399907115'/><label class='store_name_map'>Victoria's Secret and PINK</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.723.7627</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-victoria-s-secret-and-pink'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect355":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/118/original/virgin.jpg?1400011151'/><label class='store_name_map'>Virgin Mobile</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.434.2208</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-virgin-mobile'
+        					}
+        				},
+        			
+        		
+                    
+            			"path335":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/079/original/walkingonacloud.jpg?1400002878'/><label class='store_name_map'>Walking On A Cloud</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.432.1729</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-walking-on-a-cloud'
+        					}
+        				},
+        			
+        		
+                    
+            			"path343":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/080/original/west49.jpg?1399907156'/><label class='store_name_map'>West 49</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.1645</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-west-49'
+        					}
+        				},
+        			
+        		
+                    
+            			"path331":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/081/original/wind.jpg?1399907179'/><label class='store_name_map'>Wind Mobile</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>289.481.1021</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-wind-mobile'
+        					}
+        				},
+        			
+        		
+                    
+            			"path440":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/082/original/wirelesswave.jpg?1399907213'/><label class='store_name_map'>WirelessWave</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.404.9283</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-wirelesswave'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect398":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/009/914/original/wow.jpg?1400002900'/><label class='store_name_map'>Wow! Mobile Boutique </label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.579.8693</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-chatr-wireless'
+        					}
+        				},
+        			
+        		
+                    
+            			"rect353":{
+                            tooltip:"<label class='store_name_map'>X-Press</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.432.7716</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-x-press'
+        					}
+        				},
+        			
+        		
+                    
+            			"path399":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/084/original/yogenfruz.jpg?1399907239'/><label class='store_name_map'>Yogen Fruz</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.728.1302</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-yogen-fruz'
+        					}
+        				},
+        			
+        		
+                    
+            			"path320":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/085/original/yourgood.jpg?1400011225'/><label class='store_name_map'>Your Good Health Store</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.3766</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-your-good-health-store'
+        					}
+        				},
+        			
+        		
+                    
+            			"path330":{
+                            tooltip:"<img class='tooltip_img' src='//mallmaverick.cdn.speedyrails.net/system/stores/store_fronts/000/010/086/original/yvesrocher.jpg?1399907259'/><label class='store_name_map'>Yves Rocher</label><div class='map_contact'><div class='map_contact_section'><img class='map_contact_phone_icon' src='//mallmaverick.cdn.speedyrails.net/system/site_images/photos/000/002/027/original/icon_phone20x22.png?1394824463'><label class='map_contact_label'>905.576.3091</label><label class='map_label_right'>CLICK FOR MORE DETAIL</label></div></div>",
+                        attr:{
+        						href:'/stores/oshawa-yves-rocher'
+        					}
+        				},
+        			
+        		
+        },
+        tooltipsMode:'custom',
+        zoom: true,
+        pan:true,
+        cursor:'pointer',
+        responsive:true,
+        zoomLimit: [0,10]
+    });
+    
+</script>
+
+
