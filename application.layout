@@ -397,14 +397,14 @@
                 </span>
                 <span class="signature-item">|</span>
                 <span class="signature-item">
-                    <a href="http://www.mallmaverick.com" target="_blank" data-i18n="general.powered_by_mall_maverick"><!--Powered by Mall Maverick--></a>
+                    <a href="//www.mallmaverick.com" target="_blank" data-i18n="general.powered_by_mall_maverick"><!--Powered by Mall Maverick--></a>
                 </span>
                 <span class="signature-item">|</span>
                 <span class="signature-item">
                     {{site_version}}
                 </span>
                 <span class="signature-item property-logo">
-                    <a href="http://www.20vic.com" target="_blank"><img class="left" src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/icon_20vic.png" ></a>
+                    <a href="http://www.20vic.com" target="_blank"><img class="left" src="//testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/icon_20vic.png" ></a>
                 </span>
             </div>
         </div>
