@@ -711,8 +711,7 @@
         function renderPageData(){
             renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
         
-            // var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
-            var centre_signature = moment().year() + " " + getPropertyDetails().name;
+            var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
             $('#center_signature').html(centre_signature);
             
             var hash = window.location.hash.substring(1);
