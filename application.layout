@@ -600,9 +600,9 @@
                             <a href="https://www.mallmaverick.com" target="_blank" data-i18n="general.powered_by_mall_maverick"><!--Powered by Mall Maverick--></a>
                         </span>
                         <span class="signature-item hidden-xs">|</span>
-                        <span class="signature-item">
-                            {{site_version}}
-                        </span>
+                        <!--<span class="signature-item">-->
+                        <!--    {{site_version}}-->
+                        <!--</span>-->
                         
                     </div>
                 </div>
