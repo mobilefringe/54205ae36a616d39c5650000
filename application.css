@@ -912,7 +912,8 @@ footer .nav>li>a{
 
 .newsletter-sign-up .checkbox{
     margin-top:5px !important;
-    margin-bottom:20px !important;
+    /*margin-bottom:20px !important;*/
+    margin-bottom: 0px !important;
 }
 
 .checkbox input[type=checkbox]{
